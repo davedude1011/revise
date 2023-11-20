@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: sans-serif;
+                color: rgb(240, 240, 240);
+            }
+
+            body {
+                width: 100vw;
+                height: 100vh;
+            
+                display: flex;
+                flex-direction: column;
+            
+                background-color: #444654;
+                overflow-x: hidden;
+            }
+
+            .top-nav {
+                width: 100vw;
+                padding: 5vh;
+                background-color: #343541;
+            
+                display: flex;
+                align-items: center;
+            }
+            .top-nav-text {
+                font-size: large;
+                font-weight: bold;
+            
+                margin-left: 15.5vw;
+            }
+
+            embed {
+                height: 100vh;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('../../../index.html', '_self')" style="cursor: pointer;">
+            <a href="../../../index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <embed src="https://www.ysgolbrynalyn.co.uk/assets/Uploads/An-Inspector-Calls-Study-Guide-1-compressed.pdf"/>
+    </body>
+</html>

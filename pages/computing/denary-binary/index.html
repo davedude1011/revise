@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('../../../index.html', '_self')" style="cursor: pointer;">
+            <a href="../../../index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="subject">Computing</div>
+            <div class="title">Unit Conversion - Denary ⇆ Binary</div>
+            <br>
+            <div class="date">23/09/23</div>
+            <br><br><br>
+            <div class="header">Chapter 1: Introduction to Denary and Binary Conversion</div>
+            <div class="text">Denary, or decimal, is a base-10 number system, while binary is a base-2 system. Conversion between these systems is fundamental in computing. To convert denary to binary, you can use the process of repeated division by 2, recording remainders each time. For binary to denary, it's about summing the values of the bits, considering their positional weights.</div>
+                    
+            <img src="https://www.schoolcoders.com/img/data-representation/numbers/places-byte.png" alt="#Table#">
+            
+            <div class="header">Chapter 2: Converting Denary to Binary</div>
+            <div class="text">Converting denary to binary starts with dividing the denary number by 2 repeatedly. The remainders in each division, read from bottom to top, give the binary representation. Integer and fractional parts are handled separately. For example, converting 25.75 in denary to binary involves converting 25 to binary (11001) and 0.75 to binary (0.11).</div>
+            
+            <div class="header">Chapter 3: Converting Binary to Denary</div>
+            <div class="text">When converting binary to denary, each binary digit's positional weight is considered. Starting from the left, you add up the decimal values of bits with a '1' value. For instance, to convert 11001 in binary to denary, you calculate 2^4 + 2^3 + 2^0, which equals 25 in denary.</div>
+                    
+            <img src="https://www.wikihow.com/images/thumb/9/96/Convert-from-Binary-to-Decimal-Step-4-Version-6.jpg/v4-460px-Convert-from-Binary-to-Decimal-Step-4-Version-6.jpg.webp" alt="" width="80%">
+
+            <div class="header">Chapter 4: Fractional Denary to Binary Conversion</div>
+            <div class="text">Converting fractional denary numbers to binary is akin to converting the integer part. You multiply the fractional part by 2, recording the whole number part and continuing until you reach the desired precision. For example, converting 0.375 in denary to binary results in 0.011.</div>
+                    
+            <div class="header">Chapter 5: Binary Coded Decimal (BCD)</div>
+            <div class="text">Binary Coded Decimal (BCD) represents each decimal digit with a 4-bit binary code. To convert denary to BCD, you encode each digit separately. For instance, converting the denary number 357 to BCD results in 0011 0101 0111. BCD is often used in applications where decimal representation is crucial.</div>
+                    
+            <div class="header">Chapter 6: Practical Applications</div>
+            <div class="text">Converting between denary and binary is invaluable in various fields. In computer programming, it's essential for encoding text characters and managing data. Digital communication relies on binary representation, and understanding conversion is crucial for encoding and decoding messages.</div>
+                    
+            <div class="header">Chapter 7: Binary Arithmetic</div>
+            <div class="text">Binary arithmetic operations like addition, subtraction, multiplication, and division are foundational in computing. Converting numbers to a common base (either denary or binary) is necessary for these operations. While this chapter provides an overview, binary arithmetic is a more extensive topic that warrants a separate discussion.</div>
+            
+            <a href="https://www.youtube.com/watch?v=a2FpnU9Mm3E" class="link">video recource (1/3)</a><br>
+            <iframe src="https://www.youtube.com/embed/a2FpnU9Mm3E?si=SY1yXxCjj8PXUy7j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <a href="https://www.youtube.com/watch?v=64bXbK104qk" class="link">video recource (2/3)</a><br>
+            <iframe src="https://www.youtube.com/embed/64bXbK104qk?si=LIBhY2-81dAhR4vo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <a href="https://www.youtube.com/watch?v=VLflTjd3lWA" class="link">video recource (3/3)</a><br>
+            <iframe src="https://www.youtube.com/embed/VLflTjd3lWA?si=dUMeJ1LmI3GAHgRa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+</html>

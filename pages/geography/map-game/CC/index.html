@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="style.css">
+        <script src="function.js" defer></script>
+    </head>
+    <body>
+        <div class="timer">60</div>
+        <div class="dropdown">
+            <input type="text" class="dropdown-input" id="myInput" oninput="filterFunction()" placeholder="Type to search...">
+            <div class="dropdown-content" id="myDropdown">
+              <!-- Dropdown content will be dynamically populated here -->
+            </div>
+        </div>
+        <div class="points">0</div>
+        <div class="image"></div>
+        <button class="skip" onclick="skip()">Skip (-1)</button>
+    </body>
+</html>
