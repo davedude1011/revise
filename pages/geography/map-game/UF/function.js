@@ -2585,8 +2585,11 @@ function filterFunction() {
 function wrong() {
     var elements = document.getElementsByClassName('image-block');
     if (elements.length > 0) {
-      var randomIndex = Math.floor(Math.random() * elements.length);
-      var randomElement = elements[randomIndex];
+      for (let i = 0; i < elements.length; i++) {
+        var randomIndex = Math.floor(Math.random() * elements.length);
+        var randomElement = elements[randomIndex];
+        if (randomElement.style.filter != "opacity(0)") { break }
+      }
       randomElement.style.filter = "opacity(0)"
       document.querySelector(".points").textContent = Score
       document.querySelector("#myInput").value = ""
