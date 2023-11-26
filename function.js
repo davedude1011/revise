@@ -194,6 +194,8 @@ var Menus = [
     {Type: "menu", Emoji: "🧪", Title: "Chemical Reactions", MenuID: 4, OnclickID: 90},
     {Type: "menu-direct", Emoji: "🧂", Title: "Neutralization Reactions", MenuID: 90, OnclickID: 91, Link: "pages/chemistry/neutralization-reaction/"},
     {Type: "menu-direct", Emoji: "🔀", Title: "Displacement Reactions", MenuID: 90, OnclickID: 92, Link: "pages/chemistry/displacement-reaction/"},
+    {Type: "menu-direct", Emoji: "📉", Title: "Oxidation Reactions", MenuID: 90, OnclickID: 140, Link: "pages/chemistry/oxidation-reaction/"},
+    {Type: "menu-direct", Emoji: "📈", Title: "Reduction Reactions", MenuID: 90, OnclickID: 141, Link: "pages/chemistry/reduction-reaction/"},
 
 
     {Type: "box", Emoji: "🧲", Title: "Physics", Color: "#F8312F", MenuID: 0, OnclickID: 5},
@@ -204,6 +206,15 @@ var Menus = [
     {Type: "menu-direct", Emoji: "💨", Title: "Convection", MenuID: 19, OnclickID: 22, Link: "pages/physics/convection/"},
     {Type: "menu-direct", Emoji: "♨️", Title: "Specific Heat Capacity", MenuID: 5, OnclickID: 49, Link: "pages/physics/specific-heat-capacity/"},
     {Type: "menu-direct", Emoji: "⚡", Title: "Energy Sources", MenuID: 5, OnclickID: 93, Link: "pages/physics/energy-sources/"},
+    {Type: "menu", Emoji: "⚡", Title: "Electricity", MenuID: 5, OnclickID: 131},
+    {Type: "menu-direct", Emoji: "⚡", Title: "Overview", MenuID: 131, OnclickID: 132, Link: "pages/physics/electricity-overview/"},
+    {Type: "menu-direct", Emoji: "🌊", Title: "Current", MenuID: 131, OnclickID: 133, Link: "pages/physics/current/"},
+    {Type: "menu-direct", Emoji: "⛰️", Title: "Potential Difference", MenuID: 131, OnclickID: 134, Link: "pages/physics/potential-difference/"},
+    {Type: "menu-direct", Emoji: "🚫", Title: "Resistance", MenuID: 131, OnclickID: 135, Link: "pages/physics/resistance/"},
+    {Type: "menu-direct", Emoji: "⚡", Title: "Curcuit Types", MenuID: 131, OnclickID: 136, Link: "pages/physics/circuit-types/"},
+    {Type: "menu-direct", Emoji: "⛵", Title: "Energy Transfer", MenuID: 131, OnclickID: 137, Link: "pages/physics/energy-transfer/"},
+    {Type: "menu-direct", Emoji: "🔌", Title: "Static Electricity", MenuID: 131, OnclickID: 138, Link: "pages/physics/static-electricity/"},
+    {Type: "menu-direct", Emoji: "⚡", Title: "Keywords", MenuID: 131, OnclickID: 139, Link: "pages/physics/electricity-keywords/"},
 
 
     {Type: "box", Emoji: "🖥️", Title: "Computing", Color: "#26c9fc", MenuID: 0, OnclickID: 6},
