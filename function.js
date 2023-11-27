@@ -182,6 +182,7 @@ var Menus = [
     {Type: "menu-direct", Emoji: "🥞", Title: "Enzymes - Induced Fit", MenuID: 47, OnclickID: 67, Link: "pages/biology/enzyme-induced-fit/"},
     {Type: "menu-direct", Emoji: "🍔", Title: "The Digestive Organ System", MenuID: 3, OnclickID: 65, Link: "pages/biology/digestive-organ-system/"},
     {Type: "menu-direct", Emoji: "🫀", Title: "Blood Vessels", MenuID: 3, OnclickID: 89, Link: "pages/biology/blood-vessels/"},
+    {Type: "menu-direct", Emoji: "🫁", Title: "Lungs", MenuID: 3, OnclickID: 142, Link: "pages/biology/lungs/"},
 
 
     {Type: "box", Emoji: "⚗️", Title: "Chemistry", Color: "#aeddff", MenuID: 0, OnclickID: 4},
@@ -282,6 +283,12 @@ var Menus = [
     {Type: "menu", Emoji: "🕵️", Title: "An Inspector Calls", MenuID: 61, OnclickID: 105},
     {Type: "menu-direct", Emoji: "🔎", Title: "An Inspector Calls", MenuID: 105, OnclickID: 63, Link: "pages/english/an-inspector-calls/"},
     {Type: "menu-direct", Emoji: "📒", Title: "An Inspector Calls PDF", MenuID: 105, OnclickID: 63, Link: "pages/english/an-inspector-calls-study-guide/"},
+    {Type: "menu", Emoji: "🎄", Title: "A Christmas Carol", MenuID: 61, OnclickID: 143},
+    {Type: "menu-direct", Emoji: "🔔", Title: "Intro", MenuID: 143, OnclickID: 144, Link: "pages/english/christmas-intro/"},
+    {Type: "menu-direct", Emoji: "🎅", Title: "Past", MenuID: 143, OnclickID: 145, Link: "pages/english/christmas-past/"},
+    {Type: "menu-direct", Emoji: "🎁", Title: "Present", MenuID: 143, OnclickID: 146, Link: "pages/english/christmas-present/"},
+    {Type: "menu-direct", Emoji: "🌟", Title: "Future", MenuID: 143, OnclickID: 147, Link: "pages/english/christmas-future/"},
+    {Type: "menu-direct", Emoji: "👼", Title: "Outro", MenuID: 143, OnclickID: 148, Link: "pages/english/christmas-outro/"},
 
 
     {Type: "box", Emoji: "✏️", Title: "Notepad", Color: "#E1742A", MenuID: 0, OnclickID: 8, Link: "pages/special/notepad/"},
