@@ -236,6 +236,8 @@ var Menus = [
     {Type: "menu-direct", Emoji: "🔤", Title: "Storing Text", MenuID: 94, OnclickID: 95, Link: "pages/computing/storing-text/"},
     {Type: "menu-direct", Emoji: "🖼️", Title: "Storing Images", MenuID: 94, OnclickID: 96, Link: "pages/computing/storing-images/"},
     {Type: "menu-direct", Emoji: "🔊", Title: "Storing Audio", MenuID: 94, OnclickID: 97, Link: "pages/computing/storing-audio/"},
+    {Type: "menu-direct", Emoji: "🗜️", Title: "Compression", MenuID: 6, OnclickID: 149, Link: "pages/computing/compression/"},
+    {Type: "menu-direct", Emoji: "🏷️", Title: "Metadata", MenuID: 6, OnclickID: 150, Link: "pages/computing/metadata/"},
 
 
     {Type: "box", Emoji: "🌍", Title: "Geography", Color: "#00d26a", MenuID: 0, OnclickID: 7},
