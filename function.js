@@ -195,8 +195,13 @@ var Menus = [
     {Type: "menu", Emoji: "🧪", Title: "Chemical Reactions", MenuID: 4, OnclickID: 90},
     {Type: "menu-direct", Emoji: "🧂", Title: "Neutralization Reactions", MenuID: 90, OnclickID: 91, Link: "pages/chemistry/neutralization-reaction/"},
     {Type: "menu-direct", Emoji: "🔀", Title: "Displacement Reactions", MenuID: 90, OnclickID: 92, Link: "pages/chemistry/displacement-reaction/"},
-    {Type: "menu-direct", Emoji: "📉", Title: "Oxidation Reactions", MenuID: 90, OnclickID: 140, Link: "pages/chemistry/oxidation-reaction/"},
-    {Type: "menu-direct", Emoji: "📈", Title: "Reduction Reactions", MenuID: 90, OnclickID: 141, Link: "pages/chemistry/reduction-reaction/"},
+    {Type: "menu", Emoji: "⚛", Title: "Ionic Equations", MenuID: 4, OnclickID: 151},
+    {Type: "menu-direct", Emoji: "🔗", Title: "Ionic Compounds", MenuID: 151, OnclickID: 153, Link: "pages/chemistry/ionic-compounds/"},
+    {Type: "menu", Emoji: "💨", Title: "Redox Reactions", MenuID: 151, OnclickID: 152},
+    {Type: "menu-direct", Emoji: "📉", Title: "Oxidation Reactions", MenuID: 152, OnclickID: 140, Link: "pages/chemistry/oxidation-reaction/"},
+    {Type: "menu-direct", Emoji: "📈", Title: "Reduction Reactions", MenuID: 152, OnclickID: 141, Link: "pages/chemistry/reduction-reaction/"},
+    {Type: "menu-direct", Emoji: "🧪", Title: "Acids", MenuID: 4, OnclickID: 154, Link: "pages/chemistry/acids/"},
+    {Type: "menu-direct", Emoji: "📏", Title: "PH scale", MenuID: 4, OnclickID: 154, Link: "pages/chemistry/ph-scale/"},
 
 
     {Type: "box", Emoji: "🧲", Title: "Physics", Color: "#F8312F", MenuID: 0, OnclickID: 5},
