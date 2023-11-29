@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('../../../index.html', '_self')" style="cursor: pointer;">
+            <a href="../../../index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="subject">Computing</div>
+            <div class="title">File Handling</div>
+            <br>
+            <div class="date">29/11/23</div>
+            <br><br><br>
+            <div class="header">File Handling in Python</div>
+
+            <div class="text">File handling is an essential part of programming, allowing you to read from and write to files on your computer. Python provides built-in functions for working with files, making it straightforward to manipulate data stored in different file formats.</div>
+
+            <div class="text">Here's a basic example of reading from a file:</div>
+
+            <div class="text">
+                try:<br>
+                ㅤ with open("example.txt", "r") as file:<br>
+                ㅤㅤ content = file.read()<br>
+                ㅤ print(content)<br>
+                except FileNotFoundError as e:<br>
+                ㅤ print(f"Error: {e}")
+            </div>
+
+            <div class="text">In this example, the <code>open</code> function is used to open a file in read mode ("r"). The <code>with</code> statement ensures that the file is properly closed after reading its content.</div>
+
+            <div class="text">For writing to a file, you can use the "w" mode:</div>
+
+            <div class="text">
+                try:<br>
+                ㅤ with open("example.txt", "w") as file:<br>
+                ㅤㅤ file.write("Hello, File!")<br>
+                except Exception as e:<br>
+                ㅤ print(f"Error: {e}")
+            </div>
+
+            <div class="header">Conclusion</div>
+
+            <div class="text">Understanding file handling in Python allows you to interact with external data sources efficiently. Whether reading or writing, the built-in file functions provide a convenient way to incorporate file operations into your programs.</div>
+
+            <a href="https://www.youtube.com/watch?v=Uh2ebFW8OYM" class="link">video recource (1/4)</a><br>
+            <iframe src="https://www.youtube.com/embed/Uh2ebFW8OYM?si=RieqgiFi-7Yc4ma9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=DmHSwTiD5Tk" class="link">video recource (2/4)</a><br>
+            <iframe src="https://www.youtube.com/embed/DmHSwTiD5Tk?si=J5JJ_ibpeGm96tcH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=xyMLzaGS3vY" class="link">video recource (3/4)</a><br>
+            <iframe src="https://www.youtube.com/embed/xyMLzaGS3vY?si=NeUV-y3ivHeDJnC9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=BRrem1k3904" class="link">video recource (4/4)</a><br>
+            <iframe src="https://www.youtube.com/embed/BRrem1k3904?si=B5KL7oWxzH5ORx6Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+</html>

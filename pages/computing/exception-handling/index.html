@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('../../../index.html', '_self')" style="cursor: pointer;">
+            <a href="../../../index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="subject">Computing</div>
+            <div class="title">Exception Handling</div>
+            <br>
+            <div class="date">29/11/23</div>
+            <br><br><br>
+            <div class="header">Exception Handling in Python</div>
+
+            <div class="text">Exception handling is a crucial aspect of programming that allows you to gracefully handle errors and unexpected situations. In Python, you use the <code>try</code>, <code>except</code>, and optionally <code>finally</code> blocks to implement exception handling.</div>
+
+            <div class="text">Here's a basic example:</div>
+
+            <div class="text">
+                try:<br>
+                ㅤ# Code that might raise an exception<br>
+                ㅤ result = 10 / 0<br>
+                except ZeroDivisionError as e:<br>
+                ㅤ print(f"Error: {e}")
+            </div>
+
+            <div class="text">In this example, a <code>ZeroDivisionError</code> will be caught by the <code>except</code> block, preventing the program from crashing.</div>
+
+            <div class="text">You can also use a generic <code>except</code> block to catch any exception:</div>
+
+            <div class="text">
+                try:<br>
+                ㅤ# Code that might raise an exception<br>
+                ㅤ result = int("string")<br>
+                except Exception as e:<br>
+                ㅤ print(f"Error: {e}")
+            </div>
+
+            <div class="text">The <code>finally</code> block, if present, will be executed regardless of whether an exception occurred or not. It's often used for cleanup tasks.</div>
+
+            <div class="header">Conclusion</div>
+
+            <div class="text">Exception handling enhances the robustness of your Python programs by allowing you to anticipate and manage errors effectively. Whether dealing with specific or generic exceptions, understanding how to use <code>try</code>, <code>except</code>, and <code>finally</code> is a valuable skill.</div>
+
+            <a href="https://www.youtube.com/watch?v=j_q6NGOwDJo" class="link">video recource (1/3)</a><br>
+            <iframe src="https://www.youtube.com/embed/j_q6NGOwDJo?si=LJVaO0nd93ifUjWW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=NIWwJbo-9_8" class="link">video recource (2/3)</a><br>
+            <iframe src="https://www.youtube.com/embed/NIWwJbo-9_8?si=xum9mKcZs_iTytLn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=ZUqGMDppEDs" class="link">video recource (3/3)</a><br>
+            <iframe src="https://www.youtube.com/embed/ZUqGMDppEDs?si=_a_bLyDLel04_Ku8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+</html>
