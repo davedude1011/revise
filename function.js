@@ -184,6 +184,7 @@ var Menus = [
     {Type: "menu-direct", Emoji: "🍔", Title: "The Digestive Organ System", MenuID: 3, OnclickID: 65, Link: "pages/biology/digestive-organ-system/"},
     {Type: "menu-direct", Emoji: "🫀", Title: "Blood Vessels", MenuID: 3, OnclickID: 89, Link: "pages/biology/blood-vessels/"},
     {Type: "menu-direct", Emoji: "🫁", Title: "Lungs", MenuID: 3, OnclickID: 142, Link: "pages/biology/lungs/"},
+    {Type: "menu-direct", Emoji: "🪴", Title: "Transpiration", MenuID: 3, OnclickID: 170, Link: "pages/biology/transpiration/"},
 
 
     {Type: "box", Emoji: "⚗️", Title: "Chemistry", Color: "#aeddff", MenuID: 0, OnclickID: 4},
@@ -202,8 +203,11 @@ var Menus = [
     {Type: "menu", Emoji: "💨", Title: "Redox Reactions", MenuID: 151, OnclickID: 152},
     {Type: "menu-direct", Emoji: "📉", Title: "Oxidation Reactions", MenuID: 152, OnclickID: 140, Link: "pages/chemistry/oxidation-reaction/"},
     {Type: "menu-direct", Emoji: "📈", Title: "Reduction Reactions", MenuID: 152, OnclickID: 141, Link: "pages/chemistry/reduction-reaction/"},
-    {Type: "menu-direct", Emoji: "🧪", Title: "Acids", MenuID: 4, OnclickID: 154, Link: "pages/chemistry/acids/"},
-    {Type: "menu-direct", Emoji: "📏", Title: "PH scale", MenuID: 4, OnclickID: 154, Link: "pages/chemistry/ph-scale/"},
+    {Type: "menu", Emoji: "♾️", Title: "Acids & Alkalies", MenuID: 4, OnclickID: 172},
+    {Type: "menu-direct", Emoji: "📏", Title: "PH scale", MenuID: 172, OnclickID: 154, Link: "pages/chemistry/ph-scale/"},
+    {Type: "menu-direct", Emoji: "🧪", Title: "Acids", MenuID: 172, OnclickID: 154, Link: "pages/chemistry/acids/"},
+    {Type: "menu-direct", Emoji: "🧪", Title: "Alkalies", MenuID: 172, OnclickID: 171, Link: "pages/chemistry/alkali/"},
+    {Type: "menu-direct", Emoji: "🔎", Title: "Identifying Acids and Alkalies", MenuID: 172, OnclickID: 171, Link: "pages/chemistry/identifying-acids-and-alkali/"},
     {Type: "menu-direct", Emoji: "🪨", Title: "Extracting Metals", MenuID: 4, OnclickID: 155, Link: "pages/chemistry/extracting-metals/"},
 
 
