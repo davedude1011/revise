@@ -168,6 +168,7 @@ var Menus = [
     {Type: "menu", Emoji: "▲", Title: "Trigonometric Equations", MenuID: 33, OnclickID: 111},
     {Type: "menu-direct", Emoji: "△", Title: "Unit Triangle", MenuID: 111, OnclickID: 112, Link: "pages/maths+/unit-triangle/"},
     {Type: "menu-direct", Emoji: "θ", Title: "Solving for x", MenuID: 111, OnclickID: 113, Link: "pages/maths+/solving-for-trig/"},
+    {Type: "menu-direct", Emoji: "📈", Title: "Triple Simultaneous Equations", MenuID: 33, OnclickID: 157, Link: "pages/maths+/triple-sim-equations/"},
 
 
     {Type: "box", Emoji: "🦠", Title: "Biology", Color: "#00F397", MenuID: 0, OnclickID: 3},
@@ -192,6 +193,7 @@ var Menus = [
     {Type: "menu-direct", Emoji: "⚛️", Title: "Metallic Bonds", MenuID: 74, OnclickID: 75, Link: "pages/chemistry/metallic-bonds/"},
     {Type: "menu-direct", Emoji: "⚪", Title: "Covalent Structures", MenuID: 4, OnclickID: 52, Link: "pages/chemistry/covalent-structures/"},
     {Type: "menu-direct", Emoji: "🔴", Title: "Allotropes", MenuID: 4, OnclickID: 53, Link: "pages/chemistry/allotropes/"},
+    {Type: "menu-direct", Emoji: "📊", Title: "Reactivity Series", MenuID: 4, OnclickID: 156, Link: "pages/chemistry/reactivity-series/"},
     {Type: "menu", Emoji: "🧪", Title: "Chemical Reactions", MenuID: 4, OnclickID: 90},
     {Type: "menu-direct", Emoji: "🧂", Title: "Neutralization Reactions", MenuID: 90, OnclickID: 91, Link: "pages/chemistry/neutralization-reaction/"},
     {Type: "menu-direct", Emoji: "🔀", Title: "Displacement Reactions", MenuID: 90, OnclickID: 92, Link: "pages/chemistry/displacement-reaction/"},
@@ -202,6 +204,7 @@ var Menus = [
     {Type: "menu-direct", Emoji: "📈", Title: "Reduction Reactions", MenuID: 152, OnclickID: 141, Link: "pages/chemistry/reduction-reaction/"},
     {Type: "menu-direct", Emoji: "🧪", Title: "Acids", MenuID: 4, OnclickID: 154, Link: "pages/chemistry/acids/"},
     {Type: "menu-direct", Emoji: "📏", Title: "PH scale", MenuID: 4, OnclickID: 154, Link: "pages/chemistry/ph-scale/"},
+    {Type: "menu-direct", Emoji: "🪨", Title: "Extracting Metals", MenuID: 4, OnclickID: 155, Link: "pages/chemistry/extracting-metals/"},
 
 
     {Type: "box", Emoji: "🧲", Title: "Physics", Color: "#F8312F", MenuID: 0, OnclickID: 5},
@@ -228,6 +231,18 @@ var Menus = [
     {Type: "link-direct", Emoji: "🥷", Title: "Know It All Ninja", MenuID: 98, OnclickID: 79, Link: "https://www.knowitallninja.com"},
     {Type: "link-direct", Emoji: "🧠", Title: "Smart Revise", MenuID: 98, OnclickID: 80, Link: "https://smartrevise.online"},
     {Type: "menu-direct", Emoji: "🖥️", Title: "Python IDE", MenuID: 98, OnclickID: 64, Link: "pages/computing/python-ide/"},
+    {Type: "menu", Emoji: "🐍", Title: "Python Syntax", MenuID: 6, OnclickID: 158},
+    {Type: "menu-direct", Emoji: "🖥️", Title: "Variables and Data types", MenuID: 158, OnclickID: 159, Link: "pages/computing/variables/"},
+    {Type: "menu-direct", Emoji: "🖥️", Title: "Operators", MenuID: 158, OnclickID: 160, Link: "pages/computing/operators/"},
+    {Type: "menu-direct", Emoji: "🖥️", Title: "If Statements", MenuID: 158, OnclickID: 161, Link: "pages/computing/if-statements/"},
+    {Type: "menu-direct", Emoji: "🖥️", Title: "Data Structures", MenuID: 158, OnclickID: 162, Link: "pages/computing/data-structure/"},
+    {Type: "menu-direct", Emoji: "🖥️", Title: "Functions", MenuID: 158, OnclickID: 163, Link: "pages/computing/functions/"},
+    {Type: "menu-direct", Emoji: "🖥️", Title: "For and While Loops", MenuID: 158, OnclickID: 164, Link: "pages/computing/for-and-while-loops/"},
+    {Type: "menu-direct", Emoji: "🖥️", Title: "Libraries", MenuID: 158, OnclickID: 165, Link: "pages/computing/libraries/"},
+    {Type: "menu-direct", Emoji: "🖥️", Title: "Exception Handling", MenuID: 158, OnclickID: 166, Link: "pages/computing/exception-handling/"},
+    {Type: "menu-direct", Emoji: "🖥️", Title: "File Handling", MenuID: 158, OnclickID: 167, Link: "pages/computing/file-handling/"},
+    {Type: "menu-direct", Emoji: "🖥️", Title: "Object Oriented Programming", MenuID: 158, OnclickID: 168, Link: "pages/computing/object-oriented-programming/"},
+    {Type: "menu-direct", Emoji: "🖥️", Title: "Regular Expression", MenuID: 158, OnclickID: 169, Link: "pages/computing/regular-expression/"},
     {Type: "menu-direct", Emoji: "📦", Title: "Data Storage", MenuID: 6, OnclickID: 9, Link: "pages/computing/data-storage/"},
     {Type: "menu", Emoji: "µ", Title: "Unit Conversion", MenuID: 6, OnclickID: 44},
     {Type: "menu-direct", Emoji: "✨", Title: "Denary ⇆ Binary", MenuID: 44, OnclickID: 45, Link: "pages/computing/denary-binary/"},
