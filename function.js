@@ -205,9 +205,9 @@ var Menus = [
     {Type: "menu-direct", Emoji: "📈", Title: "Reduction Reactions", MenuID: 152, OnclickID: 141, Link: "pages/chemistry/reduction-reaction/"},
     {Type: "menu", Emoji: "♾️", Title: "Acids & Alkalies", MenuID: 4, OnclickID: 172},
     {Type: "menu-direct", Emoji: "📏", Title: "PH scale", MenuID: 172, OnclickID: 154, Link: "pages/chemistry/ph-scale/"},
-    {Type: "menu-direct", Emoji: "🧪", Title: "Acids", MenuID: 172, OnclickID: 154, Link: "pages/chemistry/acids/"},
+    {Type: "menu-direct", Emoji: "🧪", Title: "Acids", MenuID: 172, OnclickID: 174, Link: "pages/chemistry/acids/"},
     {Type: "menu-direct", Emoji: "🧪", Title: "Alkalies", MenuID: 172, OnclickID: 171, Link: "pages/chemistry/alkali/"},
-    {Type: "menu-direct", Emoji: "🔎", Title: "Identifying Acids and Alkalies", MenuID: 172, OnclickID: 171, Link: "pages/chemistry/identifying-acids-and-alkali/"},
+    {Type: "menu-direct", Emoji: "🔎", Title: "Identifying Acids and Alkalies", MenuID: 172, OnclickID: 175, Link: "pages/chemistry/identifying-acids-and-alkali/"},
     {Type: "menu-direct", Emoji: "🪨", Title: "Extracting Metals", MenuID: 4, OnclickID: 155, Link: "pages/chemistry/extracting-metals/"},
 
 
@@ -273,7 +273,7 @@ var Menus = [
     {Type: "menu-direct", Emoji: "🏞️", Title: "LIC vs HIC", MenuID: 28, OnclickID: 30, Link: "pages/geography/earthquake-lic-hic/"},
     {Type: "menu-direct", Emoji: "🌀", Title: "Hurricanes", MenuID: 99, OnclickID: 78, Link: "pages/geography/hurricanes/"},
     {Type: "menu-direct", Emoji: "🌋", Title: "Volcanoes", MenuID: 99, OnclickID: 100, Link: "pages/geography/volcanoes/"},
-    {Type: "menu-direct", Emoji: "💨", Title: "Atmospheric Air Circulation and Wind Cells", MenuID: 7, OnclickID: 68, Link: "pages/geography/air-circulation-and-cells/"},
+    {Type: "menu-direct", Emoji: "💨", Title: "Atmospheric Air Circulation and Wind Cells", MenuID: 7, OnclickID: 173, Link: "pages/geography/air-circulation-and-cells/"},
     {Type: "menu-direct", Emoji: "🗺", Title: "Plate Margins", MenuID: 7, OnclickID: 101, Link: "pages/geography/plate-margins/"},
 
     
@@ -311,10 +311,13 @@ var Menus = [
     {Type: "menu-direct", Emoji: "📒", Title: "An Inspector Calls PDF", MenuID: 105, OnclickID: 63, Link: "pages/english/an-inspector-calls-study-guide/"},
     {Type: "menu", Emoji: "🎄", Title: "A Christmas Carol", MenuID: 61, OnclickID: 143},
     {Type: "menu-direct", Emoji: "🔔", Title: "Intro", MenuID: 143, OnclickID: 144, Link: "pages/english/christmas-intro/"},
-    {Type: "menu-direct", Emoji: "🎅", Title: "Past", MenuID: 143, OnclickID: 145, Link: "pages/english/christmas-past/"},
-    {Type: "menu-direct", Emoji: "🎁", Title: "Present", MenuID: 143, OnclickID: 146, Link: "pages/english/christmas-present/"},
-    {Type: "menu-direct", Emoji: "🌟", Title: "Future", MenuID: 143, OnclickID: 147, Link: "pages/english/christmas-future/"},
+    {Type: "menu-direct", Emoji: "🎅", Title: "Ghost of Christmas Past", MenuID: 143, OnclickID: 145, Link: "pages/english/christmas-past/"},
+    {Type: "menu-direct", Emoji: "🎁", Title: "Ghost of Christmas Present", MenuID: 143, OnclickID: 146, Link: "pages/english/christmas-present/"},
+    {Type: "menu-direct", Emoji: "🌟", Title: "Ghost of Christmas yet to Come", MenuID: 143, OnclickID: 147, Link: "pages/english/christmas-future/"},
     {Type: "menu-direct", Emoji: "👼", Title: "Outro", MenuID: 143, OnclickID: 148, Link: "pages/english/christmas-outro/"},
+
+
+    {Type: "box", Emoji: "🃏", Title: "Flashcards", Color: "#7E5BAE", MenuID: 0, OnclickID: 8, Link: "pages/special/flashcards/"},
 
 
     {Type: "box", Emoji: "✏️", Title: "Notepad", Color: "#E1742A", MenuID: 0, OnclickID: 8, Link: "pages/special/notepad/"},
@@ -345,7 +348,7 @@ function MakeMenu() {
             Title.classList.add("menu-title");
             Arrow.classList.add("menu-arrow");
         }
-        if (CurrentMenu.Type === "menu-direct" || CurrentMenu.Title == "AI Chatbot" || CurrentMenu.Title == "Notepad") {
+        if (CurrentMenu.Type === "menu-direct" || CurrentMenu.Title == "AI Chatbot" || CurrentMenu.Title == "Notepad" || CurrentMenu.Title == "Flashcards") {
             Outer.onclick = function() {
                 window.open(CurrentMenu.Link + "index.html", "_self")
             }
