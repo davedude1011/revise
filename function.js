@@ -185,6 +185,7 @@ var Menus = [
     {Type: "menu-direct", Emoji: "🫀", Title: "Blood Vessels", MenuID: 3, OnclickID: 89, Link: "pages/biology/blood-vessels/"},
     {Type: "menu-direct", Emoji: "🫁", Title: "Lungs", MenuID: 3, OnclickID: 142, Link: "pages/biology/lungs/"},
     {Type: "menu-direct", Emoji: "🪴", Title: "Transpiration", MenuID: 3, OnclickID: 170, Link: "pages/biology/transpiration/"},
+    {Type: "menu-direct", Emoji: "🪴", Title: "Translocation", MenuID: 3, OnclickID: 176, Link: "pages/biology/translocation/"},
 
 
     {Type: "box", Emoji: "⚗️", Title: "Chemistry", Color: "#aeddff", MenuID: 0, OnclickID: 4},
