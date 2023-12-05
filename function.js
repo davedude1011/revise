@@ -229,6 +229,10 @@ var Menus = [
     {Type: "menu-direct", Emoji: "⛵", Title: "Energy Transfer", MenuID: 131, OnclickID: 137, Link: "pages/physics/energy-transfer/"},
     {Type: "menu-direct", Emoji: "🔌", Title: "Static Electricity", MenuID: 131, OnclickID: 138, Link: "pages/physics/static-electricity/"},
     {Type: "menu-direct", Emoji: "⚡", Title: "Keywords", MenuID: 131, OnclickID: 139, Link: "pages/physics/electricity-keywords/"},
+    {Type: "menu", Emoji: "💪", Title: "Power", MenuID: 5, OnclickID: 177},
+    {Type: "menu-direct", Emoji: "💪", Title: "Power", MenuID: 177, OnclickID: 178, Link: "pages/physics/power/"},
+    {Type: "menu-direct", Emoji: "🕗", Title: "Efficiency", MenuID: 177, OnclickID: 179, Link: "pages/physics/efficiency/"},
+    {Type: "menu-direct", Emoji: "⚖️", Title: "Change in Energy Demand", MenuID: 177, OnclickID: 180, Link: "pages/physics/change-in-energy-demand/"},
 
 
     {Type: "box", Emoji: "🖥️", Title: "Computing", Color: "#26c9fc", MenuID: 0, OnclickID: 6},
