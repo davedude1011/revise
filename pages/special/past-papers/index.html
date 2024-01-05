@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF.js Example</title>
+  <!-- PDF.js CDN links -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.js"></script>
+
+  <!-- fabric.js CDN link -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.0.0/fabric.min.js"></script>
+
+  <style>
+    body {
+        width: 100vw;
+        height: fit-content;
+        min-height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pdf-page {
+      margin-bottom: 10px;
+      position: relative;
+
+      max-width: 100vw !important;
+    }
+
+    .overlay-canvas, canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      max-width: 100vw !important;
+      aspect-ratio: 1/1.41;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="pdfContainer"></div>
+
+  <script>
+    // Path to your PDF file
+    const pdfPath = 'AQA-83001F-QP-JUN22.PDF';
+
+    // PDF.js setup
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.js';
+
+    let pdf;
+
+    function renderAllPages() {
+      // Fetch the PDF document
+      const loadingTask = pdfjsLib.getDocument(pdfPath);
+
+      loadingTask.promise.then(function (pdfDocument) {
+        pdf = pdfDocument;
+        const pdfContainer = document.getElementById('pdfContainer');
+
+        for (let i = 1; i <= pdf.numPages; i++) {
+          pdf.getPage(i).then(function (page) {
+            const container = document.createElement('div');
+            container.classList.add('pdf-page');
+            pdfContainer.appendChild(container);
+
+            const pdfCanvas = document.createElement('canvas');
+            pdfCanvas.width = page.getViewport({ scale: 1 }).width;
+            pdfCanvas.height = page.getViewport({ scale: 1 }).height;
+            container.appendChild(pdfCanvas);
+
+            const overlayCanvas = document.createElement('canvas');
+            overlayCanvas.width = pdfCanvas.width;
+            overlayCanvas.height = pdfCanvas.height;
+            overlayCanvas.classList.add('overlay-canvas');
+            container.appendChild(overlayCanvas);
+
+            const pdfContext = pdfCanvas.getContext('2d');
+            const overlayContext = overlayCanvas.getContext('2d');
+
+            const renderContext = {
+              canvasContext: pdfContext,
+              viewport: page.getViewport({ scale: 1 })
+            };
+
+            // Initialize fabric.js on the overlay canvas
+            const fabricCanvas = new fabric.Canvas(overlayCanvas);
+            fabricCanvas.isDrawingMode = true; // Enable drawing mode
+
+            // Set up drawing properties (optional)
+            fabricCanvas.freeDrawingBrush.width = 5;
+            fabricCanvas.freeDrawingBrush.color = 'black';
+
+            // Render the PDF page on the PDF canvas
+            page.render(renderContext);
+          });
+        }
+      });
+    }
+
+    // Render all pages when the script runs
+    renderAllPages();
+  </script>
+</body>
+
+</html>
