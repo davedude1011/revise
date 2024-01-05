@@ -143,10 +143,11 @@ var Menus = [
     {Type: "menu-direct", Emoji: "🧮", Title: "Simultaneous Equations", MenuID: 2, OnclickID: 60, Link: "pages/maths/sim-equations/"},
     {Type: "menu", Emoji: "⌒", Title: "Quadratics", MenuID: 2, OnclickID: 80},
     {Type: "menu-direct", Emoji: "🟩", Title: "Quadratic Equations Overview", MenuID: 80, OnclickID: 81, Link: "pages/maths/quadratic-equation-overview/"},
-    {Type: "menu-direct", Emoji: "⏹️", Title: "Factorising Quadratics with a Coefficient of 1", MenuID: 80, OnclickID: 82, Link: "pages/maths/factorising-one-x/"},
-    {Type: "menu-direct", Emoji: "🟦", Title: "Factorising Quadratics with a Coefficient of more than 1", MenuID: 80, OnclickID: 83, Link: "pages/maths/factorising-more-x/"},
-    {Type: "menu-direct", Emoji: "🔲", Title: "Completing the Square with a Coefficient of 1", MenuID: 80, OnclickID: 84, Link: "pages/maths/completing-square-one-x/"},
-    {Type: "menu-direct", Emoji: "⬛", Title: "Completing the Square with a Coefficient of more than 1", MenuID: 80, OnclickID: 85, Link: "pages/maths/completing-square-more-x/"},
+    {Type: "menu-direct", Emoji: "⏹️", Title: "Factorising - Coefficient of 1", MenuID: 80, OnclickID: 82, Link: "pages/maths/factorising-one-x/"},
+    {Type: "menu-direct", Emoji: "🟦", Title: "Factorising - Coefficient of >1", MenuID: 80, OnclickID: 83, Link: "pages/maths/factorising-more-x/"},
+    {Type: "menu-direct", Emoji: "🔲", Title: "Completing the Square - Coefficient of 1", MenuID: 80, OnclickID: 84, Link: "pages/maths/completing-square-one-x/"},
+    {Type: "menu-direct", Emoji: "⬛", Title: "Completing the Square - Coefficient of >1", MenuID: 80, OnclickID: 85, Link: "pages/maths/completing-square-more-x/"},
+    {Type: "menu-direct", Emoji: "±", Title: "Quadratic Formula", MenuID: 80, OnclickID: 181, Link: "pages/maths/quadratic-formula/"},
     {Type: "menu", Emoji: "📉", Title: "Graphing", MenuID: 2, OnclickID: 114},
     {Type: "menu-direct", Emoji: "⌒", Title: "Graphing Inequalities", MenuID: 114, OnclickID: 115, Link: "pages/maths/graphing-inequalities/"},
     {Type: "menu-direct", Emoji: "∼", Title: "Graph Types", MenuID: 114, OnclickID: 116, Link: "pages/maths/graph-types/"},
@@ -169,6 +170,7 @@ var Menus = [
     {Type: "menu-direct", Emoji: "△", Title: "Unit Triangle", MenuID: 111, OnclickID: 112, Link: "pages/maths+/unit-triangle/"},
     {Type: "menu-direct", Emoji: "θ", Title: "Solving for x", MenuID: 111, OnclickID: 113, Link: "pages/maths+/solving-for-trig/"},
     {Type: "menu-direct", Emoji: "📈", Title: "Triple Simultaneous Equations", MenuID: 33, OnclickID: 157, Link: "pages/maths+/triple-sim-equations/"},
+    {Type: "menu-direct", Emoji: "f(x)", Title: "Functions", MenuID: 33, OnclickID: 203, Link: "pages/maths+/functions/"},
 
 
     {Type: "box", Emoji: "🦠", Title: "Biology", Color: "#00F397", MenuID: 0, OnclickID: 3},
@@ -210,6 +212,8 @@ var Menus = [
     {Type: "menu-direct", Emoji: "🧪", Title: "Alkalies", MenuID: 172, OnclickID: 171, Link: "pages/chemistry/alkali/"},
     {Type: "menu-direct", Emoji: "🔎", Title: "Identifying Acids and Alkalies", MenuID: 172, OnclickID: 175, Link: "pages/chemistry/identifying-acids-and-alkali/"},
     {Type: "menu-direct", Emoji: "🪨", Title: "Extracting Metals", MenuID: 4, OnclickID: 155, Link: "pages/chemistry/extracting-metals/"},
+    {Type: "menu-direct", Emoji: "⚡", Title: "Electrolysis", MenuID: 4, OnclickID: 188, Link: "pages/chemistry/electrolysis/"},
+    {Type: "menu-direct", Emoji: "½", Title: "Half Equations", MenuID: 4, OnclickID: 189, Link: "pages/chemistry/half-equations/"},
 
 
     {Type: "box", Emoji: "🧲", Title: "Physics", Color: "#F8312F", MenuID: 0, OnclickID: 5},
@@ -280,6 +284,17 @@ var Menus = [
     {Type: "menu-direct", Emoji: "🌋", Title: "Volcanoes", MenuID: 99, OnclickID: 100, Link: "pages/geography/volcanoes/"},
     {Type: "menu-direct", Emoji: "💨", Title: "Atmospheric Air Circulation and Wind Cells", MenuID: 7, OnclickID: 173, Link: "pages/geography/air-circulation-and-cells/"},
     {Type: "menu-direct", Emoji: "🗺", Title: "Plate Margins", MenuID: 7, OnclickID: 101, Link: "pages/geography/plate-margins/"},
+    {Type: "menu", Emoji: "🧊", Title: "Climate Change", MenuID: 7, OnclickID: 182},
+    {Type: "menu-direct", Emoji: "🌡️", Title: "Overview", MenuID: 182, OnclickID: 183, Link: "pages/geography/climate-change/"},
+    {Type: "menu-direct", Emoji: "🕵️", Title: "Evidence", MenuID: 182, OnclickID: 184, Link: "pages/geography/climate-change-evidence/"},
+    {Type: "menu-direct", Emoji: "🌳", Title: "Adaptation", MenuID: 182, OnclickID: 185, Link: "pages/geography/climate-change-adaptation/"},
+    {Type: "menu-direct", Emoji: "☁", Title: "Mitigation", MenuID: 182, OnclickID: 186, Link: "pages/geography/climate-change-mitigation/"},
+    {Type: "menu", Emoji: "🏞", Title: "Rivers", MenuID: 7, OnclickID: 198},
+    {Type: "menu-direct", Emoji: "🏞", Title: "Rivers Summary", MenuID: 198, OnclickID: 187, Link: "pages/geography/rivers/"},
+    {Type: "menu-direct", Emoji: "🏞", Title: "Meanders", MenuID: 198, OnclickID: 199, Link: "pages/geography/meandering-rivers/"},
+    {Type: "menu-direct", Emoji: "🏞", Title: "Oxbow Lakes", MenuID: 198, OnclickID: 200, Link: "pages/geography/ox-bow-lakes/"},
+    {Type: "menu-direct", Emoji: "🏞", Title: "Waterfalls", MenuID: 198, OnclickID: 201, Link: "pages/geography/waterfalls/"},
+    {Type: "menu-direct", Emoji: "🏞", Title: "Keywords", MenuID: 198, OnclickID: 202, Link: "pages/geography/river-keywords/"},
 
     
     {Type: "box", Emoji: "📜", Title: "History", Color: "#FFDEA7", MenuID: 0, OnclickID: 102},
@@ -320,6 +335,14 @@ var Menus = [
     {Type: "menu-direct", Emoji: "🎁", Title: "Ghost of Christmas Present", MenuID: 143, OnclickID: 146, Link: "pages/english/christmas-present/"},
     {Type: "menu-direct", Emoji: "🌟", Title: "Ghost of Christmas yet to Come", MenuID: 143, OnclickID: 147, Link: "pages/english/christmas-future/"},
     {Type: "menu-direct", Emoji: "👼", Title: "Outro", MenuID: 143, OnclickID: 148, Link: "pages/english/christmas-outro/"},
+    {Type: "menu", Emoji: "🎭", Title: "Macbeth", MenuID: 61, OnclickID: 190},
+    {Type: "menu-direct", Emoji: "🔮", Title: "Macbeth - Summary", MenuID: 190, OnclickID: 191, Link: "pages/english/macbeth-summary/"},
+    {Type: "menu-direct", Emoji: "🤴🏼", Title: "Macbeth - Character analysis", MenuID: 190, OnclickID: 192, Link: "pages/english/macbeth-character-analysis/"},
+    {Type: "menu-direct", Emoji: "🗡️", Title: "Macbeth - Themes", MenuID: 190, OnclickID: 193, Link: "pages/english/macbeth-themes/"},
+    {Type: "menu-direct", Emoji: "👑", Title: "Macbeth - Symbolism", MenuID: 190, OnclickID: 194, Link: "pages/english/macbeth-symbolism/"},
+    {Type: "menu-direct", Emoji: "📙", Title: "Macbeth - Language", MenuID: 190, OnclickID: 195, Link: "pages/english/macbeth-language/"},
+    {Type: "menu-direct", Emoji: "📜", Title: "Macbeth - History", MenuID: 190, OnclickID: 196, Link: "pages/english/macbeth-history/"},
+    {Type: "menu-direct", Emoji: "🔎", Title: "Macbeth - Comparison", MenuID: 190, OnclickID: 197, Link: "pages/english/macbeth-comparison/"},
 
 
     {Type: "box", Emoji: "🃏", Title: "Flashcards", Color: "#7E5BAE", MenuID: 0, OnclickID: 8, Link: "pages/special/flashcards/"},
