@@ -9,6 +9,7 @@ function OpenMenu(MenuID, Box) {
                 }
                 setTimeout(function() {
                     CurrentElement.style.translate = "-100%";
+                    setTimeout(AlternateBackgroundColors, 60)
                     setTimeout(function() { CurrentElement.style.display = "none" }, 50)
                 }, i * 100); // i * 200 will create a delay that increases with each iteration
             }
@@ -19,6 +20,7 @@ function OpenMenu(MenuID, Box) {
                 let CurrentElement = MenuElement[i];
                 setTimeout(function() {
                     CurrentElement.style.display = "flex";
+                    setTimeout(AlternateBackgroundColors, 60)
                     setTimeout(function() { CurrentElement.style.translate = "0" }, 50);
                 }, i * 100); // i * 200 will create a delay that increases with each iteration
             }
@@ -31,29 +33,11 @@ function OpenMenu(MenuID, Box) {
             let CurrentElement = MenuElement[i];
             setTimeout(function() {
                 CurrentElement.style.display = "flex";
+                setTimeout(AlternateBackgroundColors, 60)
                 setTimeout(function() { CurrentElement.style.translate = "0" }, 50);
             }, i * 100); // i * 200 will create a delay that increases with each iteration
         }
     }
-}
-
-function applyAlternateBackgroundColors() {
-    const boxOuterElements = document.querySelectorAll('.box-outer');
-
-    let isOdd = true; // To track odd and even elements
-
-    boxOuterElements.forEach(element => {
-        // Check if the element is displayed (not "display: none")
-        if (window.getComputedStyle(element).getPropertyValue('display') !== 'none') {
-            // Apply background color based on odd/even
-            if (isOdd) {
-                element.style.backgroundColor = 'var(--box-outer-background-dark-1)';
-            } else {
-                element.style.backgroundColor = 'var(--box-outer-background-dark-2)';
-            }
-            isOdd = !isOdd; // Toggle odd/even for the next element
-        }
-    });
 }
 
 try {
@@ -173,6 +157,39 @@ var Menus = [
     {Type: "menu-direct", Emoji: "θ", Title: "Solving for x", MenuID: 111, OnclickID: 113, Link: "pages/maths+/solving-for-trig/"},
     {Type: "menu-direct", Emoji: "📈", Title: "Triple Simultaneous Equations", MenuID: 33, OnclickID: 157, Link: "pages/maths+/triple-sim-equations/"},
     {Type: "menu-direct", Emoji: "f(x)", Title: "Functions", MenuID: 33, OnclickID: 203, Link: "pages/maths+/functions/"},
+    {Type: "menu", Emoji: "📊", Title: "Matrices", MenuID: 33, OnclickID: 225},
+    {Type: "menu", Emoji: "📘", Title: "Introduction to Matrices", MenuID: 225, OnclickID: 226},
+    {Type: "menu-direct", Emoji: "❓", Title: "Definition and Basic Properties", MenuID: 226, OnclickID: 235, Link: "pages/maths+/matrices/definition/"},
+    {Type: "menu-direct", Emoji: "🔍", Title: "Matrix Notation", MenuID: 226, OnclickID: 236, Link: "pages/maths+/matrices/notation/"},
+    {Type: "menu", Emoji: "🧮", Title: "Matrix Operations", MenuID: 225, OnclickID: 227},
+    {Type: "menu-direct", Emoji: "➕➖", Title: "Addition and Subtraction", MenuID: 227, OnclickID: 237, Link: "pages/maths+/matrices/addition-subtraction/"},
+    {Type: "menu-direct", Emoji: "✖️", Title: "Scalar Multiplication", MenuID: 227, OnclickID: 238, Link: "pages/maths+/matrices/scalar-multiplication/"},
+    {Type: "menu-direct", Emoji: "✖️", Title: "Matrix Multiplication", MenuID: 227, OnclickID: 239, Link: "pages/maths+/matrices/matrix-multiplication/"},
+    {Type: "menu", Emoji: "🔷", Title: "Special Matrices", MenuID: 225, OnclickID: 228},
+    {Type: "menu-direct", Emoji: "🔄", Title: "Identity Matrix", MenuID: 228, OnclickID: 240, Link: "pages/maths+/matrices/identity-matrix/"},
+    {Type: "menu-direct", Emoji: "0️⃣", Title: "Zero Matrix", MenuID: 228, OnclickID: 241, Link: "pages/maths+/matrices/zero-matrix/"},
+    {Type: "menu-direct", Emoji: "🔳", Title: "Diagonal Matrix", MenuID: 228, OnclickID: 242, Link: "pages/maths+/matrices/diagonal-matrix/"},
+    {Type: "menu", Emoji: "🔍", Title: "Determinants", MenuID: 225, OnclickID: 229},
+    {Type: "menu-direct", Emoji: "Δ", Title: "Calculating Determinants", MenuID: 229, OnclickID: 243, Link: "pages/maths+/matrices/calculating-determinants/"},
+    {Type: "menu-direct", Emoji: "🔍", Title: "Properties of Determinants", MenuID: 229, OnclickID: 244, Link: "pages/maths+/matrices/determinants-properties/"},
+    {Type: "menu", Emoji: "🔄", Title: "Matrix Inverses", MenuID: 225, OnclickID: 230},
+    {Type: "menu-direct", Emoji: "🔄", Title: "Finding Inverses", MenuID: 230, OnclickID: 245, Link: "pages/maths+/matrices/finding-inverses/"},
+    {Type: "menu-direct", Emoji: "🔄", Title: "Properties of Inverses", MenuID: 230, OnclickID: 227, Link: "pages/maths+/matrices/inverses-properties/"},
+    {Type: "menu", Emoji: "🔍", Title: "Systems of Linear Equations", MenuID: 225, OnclickID: 231},
+    {Type: "menu-direct", Emoji: "🔄", Title: "Matrix Formulation", MenuID: 231, OnclickID: 246, Link: "pages/maths+/matrices/matrix-formulation/"},
+    {Type: "menu-direct", Emoji: "🔄", Title: "Gaussian Elimination", MenuID: 231, OnclickID: 247, Link: "pages/maths+/matrices/gaussian-ellimination/"},
+    {Type: "menu-direct", Emoji: "🔄", Title: "Matrix Inversion Method", MenuID: 231, OnclickID: 248, Link: "pages/maths+/matrices/matrix-inversion-method/"},
+    {Type: "menu", Emoji: "🔍", Title: "Eigenvalues and Eigenvectors", MenuID: 225, OnclickID: 232},
+    {Type: "menu-direct", Emoji: "🔍", Title: "Eigenvalue Problems", MenuID: 232, OnclickID: 249, Link: "pages/maths+/matrices/eigenvalue-problems/"},
+    {Type: "menu-direct", Emoji: "🔍", Title: "Applications in Physics and Engineering", MenuID: 232, OnclickID: 250, Link: "pages/maths+/matrices/applications-physics/"},
+    {Type: "menu", Emoji: "🔍", Title: "Applications of Matrices", MenuID: 225, OnclickID: 233},
+    {Type: "menu-direct", Emoji: "🔍", Title: "Markov Chains", MenuID: 233, OnclickID: 251, Link: "pages/maths+/matrices/markov-chains/"},
+    {Type: "menu-direct", Emoji: "🔍", Title: "Transformation Matrices in Geometry", MenuID: 233, OnclickID: 252, Link: "pages/maths+/matrices/transformations/"},
+    {Type: "menu-direct", Emoji: "🔍", Title: "Least Squares Regression", MenuID: 233, OnclickID: 253, Link: "pages/maths+/matrices/least-squares-regression/"},
+    {Type: "menu", Emoji: "🎓", Title: "Advanced Matrix Concepts (A-level)", MenuID: 225, OnclickID: 234},
+    {Type: "menu-direct", Emoji: "📉", Title: "Singular Value Decomposition (SVD)", MenuID: 234, OnclickID: 254, Link: "pages/maths+/matrices/singular-value-decomposition/"},
+    {Type: "menu-direct", Emoji: "🔍", Title: "Matrix Factorization Techniques", MenuID: 234, OnclickID: 255, Link: "pages/maths+/matrices/matrix-factorization/"},
+    {Type: "menu-direct", Emoji: "🔍", Title: "Applications in Data Science and Computer Science", MenuID: 234, OnclickID: 256, Link: "pages/maths+/matrices/applications-computing/"},
 
 
     {Type: "box", Emoji: "🦠", Title: "Biology", Color: "#00F397", MenuID: 0, OnclickID: 3},
@@ -190,7 +207,6 @@ var Menus = [
     {Type: "menu-direct", Emoji: "🫁", Title: "Lungs", MenuID: 3, OnclickID: 142, Link: "pages/biology/lungs/"},
     {Type: "menu-direct", Emoji: "🪴", Title: "Transpiration", MenuID: 3, OnclickID: 170, Link: "pages/biology/transpiration/"},
     {Type: "menu-direct", Emoji: "🪴", Title: "Translocation", MenuID: 3, OnclickID: 176, Link: "pages/biology/translocation/"},
-
     {Type: "menu", Emoji: "🦠", Title: "Microbes and Immune Defense", MenuID: 3, OnclickID: 204},
     {Type: "menu", Emoji: "🧫", Title: "Pathogens", MenuID: 204, OnclickID: 205},
     {Type: "menu-direct", Emoji: "🌐", Title: "Overview", MenuID: 205, OnclickID: 206, Link: "pages/biology/pathogens-overview/"},
@@ -438,7 +454,6 @@ function MakeMenu() {
 MakeMenu()
 console.log(AllTopics)
 console.log(HighestNumber)
-applyAlternateBackgroundColors();
 const elements = document.querySelectorAll('[menu-id]'); // adds spacing
 const lastElements = {};
 elements.forEach(element => {
@@ -517,3 +532,26 @@ inputBox.addEventListener("input", function () {
         }
     }
 });
+
+//.menu:nth-child(odd):not([style*="display: none"]) { background-color: var(--box-outer-background-dark-1); }
+//.menu:nth-child(even):not([style*="display: none"]) { background-color: var(--box-outer-background-dark-2); }
+
+function AlternateBackgroundColors() {
+    console.log("Alternate background colors")
+    let AllMenuItems = document.querySelectorAll('.menu, .box-outer')
+    let isOdd = true; // To track odd and even elements
+    AllMenuItems.forEach(element => {
+        // Check if the element is displayed (not "display: none")
+        if (window.getComputedStyle(element).getPropertyValue('display') !== 'none') {
+            // Apply background color based on odd/even
+            if (isOdd) {
+                element.style.backgroundColor = 'var(--box-outer-background-dark-1)';
+            } else {
+                element.style.backgroundColor = 'var(--box-outer-background-dark-2)';
+            }
+            isOdd = !isOdd; // Toggle odd/even for the next element
+        }
+    });
+}
+
+AlternateBackgroundColors()
