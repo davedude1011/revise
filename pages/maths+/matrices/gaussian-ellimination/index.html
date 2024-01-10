@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="../../../style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('../../../../index.html', '_self')" style="cursor: pointer;">
+            <a href="../../../../index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="subject">Further Maths</div>
+            <div class="title">Gaussian Elimination</div>
+            <br>
+            <div class="date">10/01/24</div>
+            <br><br><br>
+            <div class="header">Gaussian Elimination: Solving Systems of Linear Equations</div>
+
+            <div class="text">Gaussian elimination is a systematic method used to solve systems of linear equations by transforming an augmented matrix into row-echelon form and then back-substituting to find the solution. Let's explore the steps involved in Gaussian elimination.</div>
+
+            <div class="header">1. Augmented Matrix</div>
+            <div class="text">Consider a system of linear equations with \(m\) equations and \(n\) variables. Write the system in augmented matrix form \([A | \mathbf{B}]\), where \(A\) is the coefficient matrix, and \(\mathbf{B}\) is the column vector of constants.</div>
+
+            <div class="header">2. Row-Echelon Form</div>
+            <div class="text">Apply row operations to transform the augmented matrix into row-echelon form, where:</div>
+            <div class="text">- The leading entry (pivot) in each row is 1.</div>
+            <div class="text">- The leading entry of each subsequent row is to the right of the leading entry of the previous row.</div>
+            <div class="text">- Rows with all zero entries are below rows with non-zero entries.</div>
+
+            <div class="header">3. Back-Substitution</div>
+            <div class="text">Start from the bottom row of the row-echelon form and back-substitute to find the values of the variables. Continue upward until all variables are determined.</div>
+
+            <div class="header">4. Example</div>
+            <div class="text">Let's consider a system of equations:</div>
+            <div class="text">\[
+            \begin{align*}
+            2x + 3y - z &= 1 \\
+            4x - 5y + 3z &= -2 \\
+            6x - 9y + 5z &= 3
+            \end{align*}
+            \]</div>
+            <div class="text">The augmented matrix \([A | \mathbf{B}]\) is:</div>
+            <div class="text">\[
+            \begin{bmatrix}
+            2 & 3 & -1 & | & 1 \\
+            4 & -5 & 3 & | & -2 \\
+            6 & -9 & 5 & | & 3
+            \end{bmatrix}
+            \]</div>
+            
+            <div class="header">5. Applications</div>
+            <div class="text">Gaussian elimination is widely used in solving systems of linear equations in fields such as physics, engineering, computer science, and economics.</div>
+            
+            <div class="header">Conclusion</div>
+            <div class="text">Gaussian elimination provides a systematic approach to solving systems of linear equations, making it a valuable tool in various applications. The process simplifies complex algebraic problems and enables efficient solutions to real-world problems.</div>
+            
+            <a href="https://www.youtube.com/watch?v=yRwQ7A6jVLk" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/yRwQ7A6jVLk?si=sSs4eHR-8QZR6ddv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=kYB8IZa5AuE" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/kYB8IZa5AuE?si=N_jiY7l_ws3nYLgx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=0oGJTQCy4cQ" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/0oGJTQCy4cQ?si=_yKEv6b__ZkI-I5j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+</html>

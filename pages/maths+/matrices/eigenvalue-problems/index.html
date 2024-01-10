@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="../../../style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('../../../../index.html', '_self')" style="cursor: pointer;">
+            <a href="../../../../index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="subject">Further Maths</div>
+            <div class="title">Eigenvalue problems and diagonalization</div>
+            <br>
+            <div class="date">10/01/24</div>
+            <br><br><br>
+            <div class="header">Eigenvalue Problems and Diagonalization</div>
+
+            <div class="text">Eigenvalue problems are fundamental in linear algebra and matrix theory. They play a crucial role in various scientific and engineering applications, providing insights into the behavior of linear transformations. Let's explore eigenvalue problems and the concept of diagonalization.</div>
+
+            <div class="header">1. Eigenvalue and Eigenvector Definition</div>
+            <div class="text">For a square matrix \( A \), a scalar \( \lambda \) is called an eigenvalue if there exists a non-zero vector \( \mathbf{v} \) (eigenvector) such that \( A\mathbf{v} = \lambda\mathbf{v} \).</div>
+
+            <div class="header">2. Solving the Eigenvalue Problem</div>
+            <div class="text">To find the eigenvalues of a matrix \( A \), solve the characteristic equation \( \text{det}(A - \lambda I) = 0 \), where \( I \) is the identity matrix. The solutions to this equation are the eigenvalues \( \lambda \).</div>
+
+            <div class="header">3. Eigenspace and Diagonalization</div>
+            <div class="text">- The eigenspace corresponding to an eigenvalue \( \lambda \) is the set of all eigenvectors associated with that eigenvalue, along with the zero vector.</div>
+            <div class="text">- Diagonalization involves expressing a square matrix \( A \) as a product of three matrices: \( A = PDP^{-1} \), where \( P \) is a matrix whose columns are eigenvectors of \( A \), and \( D \) is a diagonal matrix with the corresponding eigenvalues on the main diagonal.</div>
+
+            <div class="header">4. Steps for Diagonalization</div>
+            <div class="text">a. Find the eigenvalues \( \lambda \) by solving \( \text{det}(A - \lambda I) = 0 \).</div>
+            <div class="text">b. For each eigenvalue \( \lambda \), find a basis for its eigenspace by solving \( (A - \lambda I)\mathbf{v} = \mathbf{0} \).</div>
+            <div class="text">c. Assemble the matrix \( P \) by placing the eigenvectors as columns.</div>
+            <div class="text">d. Form the diagonal matrix \( D \) with the corresponding eigenvalues on the main diagonal.</div>
+            <div class="text">e. Verify the diagonalization by confirming \( A = PDP^{-1} \).</div>
+
+            <div class="header">5. Applications</div>
+            <div class="text">Eigenvalue problems and diagonalization are essential in various fields:</div>
+            <div class="text">- Quantum mechanics: Eigenvalues represent possible energy levels of a system.</div>
+            <div class="text">- Structural analysis: Eigenvalues relate to natural frequencies and modes of vibration.</div>
+            <div class="text">- Data analysis: Principal component analysis involves eigenvalues and eigenvectors.</div>
+
+            <div class="header">Conclusion</div>
+            <div class="text">Eigenvalue problems and diagonalization provide powerful tools for understanding the behavior of linear transformations and matrices. Their applications extend across multiple disciplines, making them fundamental concepts in mathematical and scientific research.</div>
+
+            <a href="https://www.youtube.com/watch?v=yRwQ7A6jVLk" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/yRwQ7A6jVLk?si=sSs4eHR-8QZR6ddv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=kYB8IZa5AuE" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/kYB8IZa5AuE?si=N_jiY7l_ws3nYLgx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=0oGJTQCy4cQ" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/0oGJTQCy4cQ?si=_yKEv6b__ZkI-I5j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+</html>

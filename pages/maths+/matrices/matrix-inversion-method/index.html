@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="../../../style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('../../../../index.html', '_self')" style="cursor: pointer;">
+            <a href="../../../../index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="subject">Further Maths</div>
+            <div class="title">Matrix Inversion Method</div>
+            <br>
+            <div class="date">10/01/24</div>
+            <br><br><br>
+            <div class="header">Matrix Inversion Method: Solving Systems of Linear Equations</div>
+
+            <div class="text">The matrix inversion method is a powerful technique in linear algebra used to solve systems of linear equations. This method involves finding the inverse of the coefficient matrix to determine the values of the variables. Let's explore the matrix inversion method and its application in solving linear systems.</div>
+
+            <div class="header">1. System of Linear Equations</div>
+            <div class="text">Consider a system of \(n\) linear equations with \(n\) variables, represented in matrix form as \(AX = B\), where \(A\) is the coefficient matrix, \(X\) is the column vector of variables, and \(B\) is the column vector on the right-hand side.</div>
+
+            <div class="header">2. Inverse of the Coefficient Matrix</div>
+            <div class="text">For the matrix inversion method to be applicable, the coefficient matrix \(A\) must be invertible. The inverse of \(A\), denoted as \(A^{-1}\), exists if and only if the determinant of \(A\) is non-zero.</div>
+
+            <div class="header">3. Solution Vector</div>
+            <div class="text">Once the inverse \(A^{-1}\) is obtained, the solution vector \(X\) is determined by multiplying \(A^{-1}\) with the right-hand side vector \(B\): \(X = A^{-1}B\).</div>
+
+            <div class="header">4. Application</div>
+            <div class="text">The matrix inversion method is particularly useful when dealing with small to moderately sized systems of linear equations. It provides an explicit formula for the solution vector without the need for iterative methods.</div>
+
+            <div class="header">5. Limitations</div>
+            <div class="text">The matrix inversion method may become computationally expensive for large systems, as finding the inverse involves matrix multiplication and inversion, which can be resource-intensive.</div>
+
+            <div class="header">6. Example</div>
+            <div class="text">Consider a system of two linear equations:</div>
+            <div class="text">\[
+            \begin{align*}
+            2x + 3y &= 8 \\
+            4x - 2y &= 6
+            \end{align*}
+            \]</div>
+            <div class="text">The coefficient matrix \(A\) is invertible, and its inverse \(A^{-1}\) can be used to find the solution vector \(X\).</div>
+            
+            <div class="header">Conclusion</div>
+            <div class="text">The matrix inversion method provides a direct and algebraic approach to solving systems of linear equations. While computationally efficient for small to moderate-sized systems, it may face challenges in terms of computational cost for larger systems.</div>
+
+            <a href="https://www.youtube.com/watch?v=yRwQ7A6jVLk" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/yRwQ7A6jVLk?si=sSs4eHR-8QZR6ddv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=kYB8IZa5AuE" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/kYB8IZa5AuE?si=N_jiY7l_ws3nYLgx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=0oGJTQCy4cQ" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/0oGJTQCy4cQ?si=_yKEv6b__ZkI-I5j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="../../../style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('../../../../index.html', '_self')" style="cursor: pointer;">
+            <a href="../../../../index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="subject">Further Maths</div>
+            <div class="title">Least Squares Regression</div>
+            <br>
+            <div class="date">10/01/24</div>
+            <br><br><br>
+            <div class="header">Least Squares Regression using Matrices</div>
+
+            <div class="text">Least squares regression is a statistical method used to approximate the relationship between independent and dependent variables. When expressed in matrix form, it provides an efficient way to find the coefficients that minimize the sum of squared differences between observed and predicted values. Let's delve into the matrix representation of least squares regression.</div>
+
+            <div class="header">1. Linear Regression Model</div>
+            <div class="text">Consider a linear regression model with \(n\) data points and \(m\) independent variables. The model is expressed as:</div>
+            <div class="text">\[
+            \mathbf{Y} = \mathbf{X}\mathbf{B} + \mathbf{E}
+            \]</div>
+            <div class="text">where:</div>
+            <div class="text">\(\mathbf{Y}\) is the column vector of observed values,</div>
+            <div class="text">\(\mathbf{X}\) is the matrix of independent variables,</div>
+            <div class="text">\(\mathbf{B}\) is the column vector of coefficients to be estimated,</div>
+            <div class="text">\(\mathbf{E}\) is the column vector of errors or residuals.</div>
+            
+            <div class="header">2. Matrix Formulation</div>
+            <div class="text">The least squares solution for estimating \(\mathbf{B}\) is given by:</div>
+            <div class="text">\[
+            \mathbf{B} = (\mathbf{X}^T \mathbf{X})^{-1} \mathbf{X}^T \mathbf{Y}
+            \]</div>
+            <div class="text">where \(\mathbf{X}^T\) is the transpose of matrix \(\mathbf{X}\) and \((\mathbf{X}^T \mathbf{X})^{-1}\) is the inverse of the matrix product.</div>
+            
+            <div class="header">3. Applications</div>
+            <div class="text">Least squares regression is widely used in various fields such as statistics, economics, finance, and engineering for modeling relationships between variables and making predictions.</div>
+            
+            <div class="header">4. Example</div>
+            <div class="text">Let's consider a simple example with one independent variable:</div>
+            <div class="text">\[
+            \text{Model: } Y = B_0 + B_1X + E
+            \]</div>
+            <div class="text">The least squares solution for estimating \(B_0\) and \(B_1\) is found using the matrix formula mentioned above.</div>
+            
+            <div class="header">Conclusion</div>
+            <div class="text">Expressing least squares regression in matrix form provides a powerful and concise way to find the best-fitting line or plane through a set of data points. This method minimizes the sum of squared differences, making it a valuable tool in statistical analysis and predictive modeling.</div>
+            
+            <a href="https://www.youtube.com/watch?v=yRwQ7A6jVLk" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/yRwQ7A6jVLk?si=sSs4eHR-8QZR6ddv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=kYB8IZa5AuE" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/kYB8IZa5AuE?si=N_jiY7l_ws3nYLgx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=0oGJTQCy4cQ" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/0oGJTQCy4cQ?si=_yKEv6b__ZkI-I5j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+</html>

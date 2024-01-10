@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="../../../style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('../../../../index.html', '_self')" style="cursor: pointer;">
+            <a href="../../../../index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="subject">Further Maths</div>
+            <div class="title">Calculating Determinants</div>
+            <br>
+            <div class="date">10/01/24</div>
+            <br><br><br>
+            <div class="header">Calculating Determinants of Matrices</div>
+
+            <div class="text">The determinant of a matrix is a scalar value that provides important information about the properties of the matrix. Determinants find applications in various mathematical and scientific fields. Let's explore the methods for calculating determinants.</div>
+
+            <div class="header">1. Determinant of a 2x2 Matrix</div>
+            <div class="text">For a 2x2 matrix \( A = \begin{bmatrix} a & b \\ c & d \end{bmatrix} \), the determinant (\( \text{det}(A) \)) is calculated as:</div>
+            <div class="text">
+            \[ \text{det}(A) = ad - bc \]
+            </div>
+            <div class="text">- **Example:** If \( A = \begin{bmatrix} 2 & 3 \\ -1 & 4 \end{bmatrix} \), then \( \text{det}(A) = (2 \times 4) - (3 \times -1) = 11 \).</div>
+
+            <div class="header">2. Determinant of a 3x3 Matrix</div>
+            <div class="text">For a 3x3 matrix \( B = \begin{bmatrix} p & q & r \\ s & t & u \\ v & w & x \end{bmatrix} \), the determinant is calculated using the expansion by minors:</div>
+            <div class="text">
+            \[ \text{det}(B) = p \times \text{det}(M_p) - q \times \text{det}(M_q) + r \times \text{det}(M_r) \]
+            </div>
+            <div class="text">where \( M_p, M_q, \) and \( M_r \) are 2x2 matrices obtained by removing the row and column of the respective element. The process is repeated for each element in the first row.</div>
+
+            <div class="header">3. Determinant of a nxn Matrix</div>
+            <div class="text">For a general nxn matrix \( C = [c_{ij}] \), the determinant is calculated using the Laplace expansion:</div>
+            <div class="text">
+            \[ \text{det}(C) = \sum_{i=1}^{n} (-1)^{i+j} \times c_{ij} \times \text{det}(M_{ij}) \]
+            </div>
+            <div class="text">where \( M_{ij} \) is the (n-1)x(n-1) matrix obtained by removing the ith row and jth column.</div>
+
+            <div class="header">4. Properties of Determinants</div>
+            <div class="text">- The determinant of a matrix and its transpose are equal: \( \text{det}(A^T) = \text{det}(A) \).</div>
+            <div class="text">- If a matrix has a row or column of zeros, its determinant is zero.</div>
+            <div class="text">- Multiplying a row or column of a matrix by a scalar multiplies the determinant by that scalar.</div>
+
+            <div class="header">5. Applications</div>
+            <div class="text">- Solving systems of linear equations using Cramer's Rule, where determinants are used to find the coefficients of the variables.</div>
+            <div class="text">- Analyzing invertibility: A matrix is invertible if and only if its determinant is non-zero.</div>
+
+            <div class="header">Conclusion</div>
+            <div class="text">Determinants are valuable tools in linear algebra with applications ranging from solving equations to determining the invertibility of matrices. Understanding the methods for calculating determinants provides insights into the properties of matrices and their role in mathematical analysis.</div>
+
+            <a href="https://www.youtube.com/watch?v=yRwQ7A6jVLk" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/yRwQ7A6jVLk?si=sSs4eHR-8QZR6ddv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=kYB8IZa5AuE" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/kYB8IZa5AuE?si=N_jiY7l_ws3nYLgx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=0oGJTQCy4cQ" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/0oGJTQCy4cQ?si=_yKEv6b__ZkI-I5j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+</html>
