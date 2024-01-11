@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/index.html', '_self')" style="cursor: pointer;">
+            <a href="/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Geography</div>
+            <div class="title">Waterfalls</div>
+            <br>
+            <div class="date">11/01/24</div>
+            <br><br><br>
+            <div class="header">Waterfalls: Dynamics, Formation, and Interconnected Natural Processes</div>
+
+            <div class="text">Waterfalls, while mesmerizing in their own right, are integral components of broader geological and environmental processes. The interplay between waterfalls and other natural phenomena, such as river courses, erosion, and cultural significance, contributes to the rich tapestry of Earth's landscapes. Let's explore the dynamics of waterfalls, their formation, and how they intersect with various interconnected topics.</div>
+            
+            <div class="header">1. Dynamics of Waterfalls</div>
+            <div class="text">- **Gravity's Influence:** Waterfalls, like those encountered in the upper courses of rivers, are a testament to the gravitational forces shaping the Earth's surface. The steep descent of water over a cliff or ledge creates a spectacle driven by the relentless force of gravity.</div>
+            <div class="text">- **Erosional Processes:** Waterfalls are often formed through erosional processes, mirroring the broader patterns seen in river courses. The erosive action of water, intensified by geological features, contributes to the creation of these breathtaking natural features.</div>
+            
+            <div class="header">2. Formation of Waterfalls</div>
+            <div class="text">- **Resistant and Less Resistant Rock:** Waterfalls are frequently born where rivers transition from less resistant to more resistant rock layers. This echoes the geological principles seen in the formation of river valleys and the sculpting of landscapes over time.</div>
+            <div class="text">- **Plunge Pool Formation:** At the base of waterfalls, plunge pools form through erosion, showcasing a microcosm of geological processes seen on a larger scale in river systems. The plunge pool helps dissipate energy, preventing further erosion at the waterfall's base.</div>
+            
+            <div class="header">3. Interconnected Natural Phenomena</div>
+            <div class="text">- **Upper Course Geography:** The formation of waterfalls aligns with the characteristics of the upper course of rivers. Steep gradients, V-shaped valleys, and interlocking spurs are evident in both, highlighting the interconnectedness of these natural features.</div>
+            <div class="text">- **River Restoration:** Understanding the dynamics of waterfalls contributes to broader discussions on river restoration. Managing erosion, maintaining biodiversity, and considering cultural significance are aspects that extend beyond individual waterfalls to entire river systems.</div>
+            
+            <div class="header">4. Notable Waterfalls and Cultural Significance</div>
+            <div class="text">- **Niagara Falls:** Beyond its natural grandeur, Niagara Falls symbolizes the shared geological history and environmental management practices of the United States and Canada.</div>
+            <div class="text">- **Cultural Representations:** Waterfalls, including Niagara Falls, often find cultural representation, serving as symbols of natural power and beauty. This mirrors the cultural significance attributed to rivers and landscapes in diverse societies.</div>
+            
+            <div class="header">5. Environmental Impact and Hydroelectric Potential</div>
+            <div class="text">- **Habitat Influence:** The ecosystems around waterfalls showcase specialized adaptations, linking to broader discussions on the environmental impact of geological features and human interventions.</div>
+            <div class="text">- **Hydroelectric Potential:** Some waterfalls, including Niagara Falls, exemplify the intersection of natural wonders and human engineering. The potential for hydroelectric power generation highlights how geological features can be harnessed for sustainable energy.</div>
+            
+            <div class="header">Conclusion</div>
+            <div class="text">Waterfalls emerge not only as individual marvels but as integral components of Earth's dynamic systems. Their formation, cultural significance, and environmental impact provide lenses through which we can explore interconnected topics, fostering a deeper understanding of the planet's intricate tapestry.</div>
+            
+            <a href="https://www.youtube.com/watch?v=XFGFEb9MZcY" class="link">Specific Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/XFGFEb9MZcY?si=1el-FlK9L7GoXSzn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

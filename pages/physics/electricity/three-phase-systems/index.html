@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/index.html', '_self')" style="cursor: pointer;">
+            <a href="/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Physics</div>
+            <div class="title">Three Phase Systems</div>
+            <br>
+            <div class="date">11/01/24</div>
+            <br><br><br>
+            <div class="header">Three-Phase Systems: Powering the Electrical World with Efficiency</div>
+
+            <div class="text">Three-phase systems are a cornerstone of electrical power distribution, providing a more efficient and balanced way to transmit electrical energy. This configuration, commonly used in industrial and commercial settings, offers advantages in terms of power generation, transmission, and utilization. Let's delve into the key features and principles of three-phase systems.</div>
+
+            <div class="header">1. Basics of Three-Phase Systems</div>
+            <div class="text">- **Definition:** A three-phase system consists of three alternating current (AC) waveforms with a phase difference of 120 degrees between each waveform.</div>
+            <div class="text">- **Phases:** Labeled as Phase A, Phase B, and Phase C, each waveform represents a sinusoidal voltage or current.</div>
+
+            <div class="header">2. Advantages over Single-Phase Systems</div>
+            <div class="text">- **Constant Power:** Three-phase systems provide a constant and continuous power supply, ensuring a smoother and more efficient operation of electrical devices.</div>
+            <div class="text">- **Efficiency:** The balanced power delivery reduces the amount of copper and other materials needed for transmission, making three-phase systems more economical.</div>
+            <div class="text">- **Motor Performance:** Three-phase motors exhibit smoother operation and are more robust compared to single-phase motors.</div>
+
+            <div class="header">3. Generation and Transmission</div>
+            <div class="text">- **Power Generation:** Many power plants generate electricity in three-phase systems, especially in large-scale operations. This facilitates efficient energy production and distribution.</div>
+            <div class="text">- **Transmission Lines:** Three-phase transmission lines are common for long-distance power transmission, minimizing energy loss and voltage drop.</div>
+
+            <div class="header">4. Delta and Wye (Star) Configurations</div>
+            <div class="text">- **Delta (Δ) Connection:** In this configuration, each phase is connected in series to form a closed loop. It is commonly used in high-voltage transmission and distribution systems.</div>
+            <div class="text">- **Wye (Star) Connection:** In this configuration, one end of each phase is connected to a common point, forming a star shape. It is often used in lower voltage distribution networks.</div>
+
+            <div class="header">5. Power Calculation</div>
+            <div class="text">- **Power Formula:** The power (\(P\)) in a three-phase system is given by \(P = \sqrt{3} \cdot V_{\text{line}} \cdot I_{\text{line}} \cdot \cos(\theta)\), where \(V_{\text{line}}\) is the line voltage, \(I_{\text{line}}\) is the line current, and \(\theta\) is the phase angle between voltage and current.</div>
+
+            <div class="header">6. Industrial Applications</div>
+            <div class="text">- **Industrial Motors:** Three-phase motors are widely used in industrial applications for their efficiency and reliability.</div>
+            <div class="text">- **Power Distribution:** Many commercial and industrial buildings receive power in three-phase form for their electrical systems.</div>
+
+            <div class="header">Conclusion</div>
+            <div class="text">Three-phase systems form the backbone of modern electrical power distribution, offering efficiency, reliability, and balanced energy transmission. Understanding the principles of three-phase systems is crucial for electrical engineers and technicians working in power generation and distribution.</div>
+
+            <a href="https://www.youtube.com/watch?v=4oRT7PoXSS0" class="link">Specific Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/4oRT7PoXSS0?si=bGCaGewAroMQyD2z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=qthuFLNSrlg" class="link">Specific Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/qthuFLNSrlg?si=afiIhyD_KMycvpi9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=quABfe4Ev3s" class="link">Specific Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/quABfe4Ev3s?si=ObKdNo6vmgGVCXvg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <a href="https://www.youtube.com/watch?v=ybuhfEa-PrU" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/ybuhfEa-PrU?si=_AfaaCtF5x9aWi68" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/index.html', '_self')" style="cursor: pointer;">
+            <a href="/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Geography</div>
+            <div class="title">floodplain zoning</div>
+            <br>
+            <div class="date">11/01/24</div>
+            <br><br><br>
+            <div class="header">Floodplain Zoning: Balancing Development and Flood Risk Mitigation</div>
+
+            <div class="text">Floodplain zoning is a land-use planning strategy that aims to balance development goals with the need to minimize flood-related risks. By classifying and regulating the use of land within flood-prone areas, communities can enhance resilience, protect inhabitants, and reduce potential damage caused by flooding events. Let's explore the key elements and objectives of floodplain zoning.</div>
+            
+            <div class="header">1. Zoning Classifications</div>
+            <div class="text">- **Floodway Zone:** The floodway is the area where water is expected to flow with the highest velocity during a flood. Zoning in this area typically restricts development to essential structures that won't obstruct the flow of water, such as bridges or levees.</div>
+            <div class="text">- **Flood Fringe Zone:** This zone surrounds the floodway and experiences slower-moving floodwaters. Zoning here may permit certain types of development but often imposes regulations to minimize risk, such as elevated foundations or flood-resistant construction.</div>
+            <div class="text">- **Floodplain Zone:** This broader zone includes areas at risk of flooding, and zoning regulations aim to balance development needs with the need to mitigate flood risk. Requirements may include building elevation, flood-proofing, and land-use restrictions.</div>
+            
+            <div class="header">2. Objectives of Floodplain Zoning</div>
+            <div class="text">- **Risk Reduction:** The primary goal is to reduce the risk of flood damage to structures, infrastructure, and human life by guiding development away from high-risk flood areas.</div>
+            <div class="text">- **Community Safety:** Zoning ensures that critical facilities, such as schools and hospitals, are located outside high-risk zones, promoting community safety during flood events.</div>
+            <div class="text">- **Environmental Protection:** Zoning regulations may include provisions to protect environmentally sensitive areas within floodplains, preserving natural habitats and ecosystem functions.</div>
+            
+            <div class="header">3. Zoning Regulations</div>
+            <div class="text">- **Building Setbacks:** Establishing minimum distances between structures and water bodies to reduce the risk of flood damage and allow for natural floodplain functions.</div>
+            <div class="text">- **Elevation Requirements:** Requiring buildings to be elevated above the base flood elevation to minimize the risk of inundation and damage.</div>
+            <div class="text">- **Land Use Restrictions:** Controlling the types of activities allowed within flood-prone areas, with stricter regulations in higher-risk zones.</div>
+            
+            <div class="header">4. Floodplain Mapping</div>
+            <div class="text">- **Accurate Mapping:** Detailed and up-to-date floodplain maps are essential for effective zoning. These maps identify flood-prone areas, including floodways, fringes, and broader floodplain zones.</div>
+            <div class="text">- **Community Awareness:** Making floodplain maps accessible to the public increases awareness and understanding of flood risks, facilitating informed decision-making by property owners and developers.</div>
+            
+            <div class="header">5. Challenges and Considerations</div>
+            <div class="text">- **Changing Climate:** With the increasing frequency and severity of floods due to climate change, zoning regulations may need periodic updates to reflect evolving flood risk patterns.</div>
+            <div class="text">- **Community Engagement:** Involving the community in the zoning process fosters cooperation, understanding, and compliance with regulations.</div>
+            <div class="text">- **Balancing Development Needs:** Achieving a balance between supporting necessary development and safeguarding against flood risks requires careful planning and collaboration between government agencies and the private sector.</div>
+            
+            <div class="header">Conclusion</div>
+            <div class="text">Floodplain zoning is a critical tool in promoting sustainable development while minimizing the impact of floods. By carefully planning and regulating land use in flood-prone areas, communities can enhance resilience, protect lives and property, and contribute to the overall safety and well-being of their inhabitants.</div>
+            
+            <a href="https://www.youtube.com/watch?v=Y-bSOMI4WZI" class="link">Specific Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/Y-bSOMI4WZI?si=9Mnxk6MyVbA60IqC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

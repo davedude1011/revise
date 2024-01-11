@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/index.html', '_self')" style="cursor: pointer;">
+            <a href="/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Physics</div>
+            <div class="title">Electromagnetic Induction</div>
+            <br>
+            <div class="date">11/01/24</div>
+            <br><br><br>
+            <div class="header">Electromagnetic Induction: Generating Voltage through Magnetic Fields</div>
+
+            <div class="text">Electromagnetic induction is a fundamental principle in physics, describing the process by which a changing magnetic field induces an electromotive force (EMF) or voltage in a conductor. This phenomenon, discovered by Michael Faraday, has various applications and plays a key role in the functioning of electrical devices.</div>
+
+            <div class="header">1. Faraday's Law of Electromagnetic Induction</div>
+            <div class="text">- **Basic Principle:** A change in magnetic flux within a closed loop induces an electromotive force (EMF) in the conductor encircling the loop.</div>
+            <div class="text">- **Formula:** \(EMF = -\frac{d\Phi}{dt}\), where \(EMF\) is the induced electromotive force, \(\frac{d\Phi}{dt}\) is the rate of change of magnetic flux.</div>
+
+            <div class="header">2. Magnetic Flux</div>
+            <div class="text">- **Definition:** Magnetic flux (\(\Phi\)) is the product of the magnetic field (\(B\)) strength, the area (\(A\)) through which the magnetic field lines pass, and the cosine (\(\theta\)) of the angle between the magnetic field and the normal to the surface: \(\Phi = B \cdot A \cdot \cos(\theta)\).</div>
+            <div class="text">- **Unit:** Weber (Wb).</div>
+
+            <div class="header">3. Lenz's Law</div>
+            <div class="text">- **Principle:** The direction of the induced current creates a magnetic field opposing the change in magnetic flux that produced it.</div>
+            <div class="text">- **Conservation of Energy:** Lenz's law ensures that the system conserves energy by resisting changes in magnetic flux.</div>
+
+            <div class="header">4. Applications of Electromagnetic Induction</div>
+            <div class="text">- **Electric Generators:** Converting mechanical energy into electrical energy through the rotation of coils in a magnetic field.</div>
+            <div class="text">- **Transformers:** Altering the voltage of alternating current (AC) through mutual electromagnetic induction.</div>
+            <div class="text">- **Induction Cooktops:** Generating heat through electromagnetic induction for cooking.</div>
+
+            <div class="header">5. Eddy Currents and Eddy Current Losses</div>
+            <div class="text">- **Eddy Currents:** Circulating currents induced in conductive materials by changing magnetic fields.</div>
+            <div class="text">- **Eddy Current Losses:** Result in the conversion of electrical energy into heat within the material.</div>
+
+            <div class="header">6. Self-Inductance</div>
+            <div class="text">- **Definition:** The ability of a coil to induce an electromotive force (EMF) in itself when the current through the coil changes.</div>
+            <div class="text">- **Coefficient of Self-Inductance (L):** Measured in henrys (H).</div>
+
+            <div class="header">7. Mutual Inductance</div>
+            <div class="text">- **Definition:** The ability of one coil to induce an electromotive force (EMF) in another coil when the current through the first coil changes.</div>
+            <div class="text">- **Coefficient of Mutual Inductance (M):** Also measured in henrys (H).</div>
+
+            <div class="header">Conclusion</div>
+            <div class="text">Electromagnetic induction is a fundamental concept with wide-ranging applications, from power generation to cooking technologies. Understanding the principles of Faraday's law, magnetic flux, Lenz's law, and the various applications allows for the efficient utilization of this phenomenon in numerous electrical devices.</div>
+
+            <a href="https://www.youtube.com/watch?v=pkzY7QfTowM" class="link">Specific Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/pkzY7QfTowM?si=tHhUry-Y2sQQXxEG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <a href="https://www.youtube.com/watch?v=ybuhfEa-PrU" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/ybuhfEa-PrU?si=_AfaaCtF5x9aWi68" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

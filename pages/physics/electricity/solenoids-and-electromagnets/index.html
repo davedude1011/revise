@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/index.html', '_self')" style="cursor: pointer;">
+            <a href="/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Physics</div>
+            <div class="title">Solenoids and Electromagnets</div>
+            <br>
+            <div class="date">11/01/24</div>
+            <br><br><br>
+            <div class="header">Solenoids and Electromagnets: Unveiling the Electromagnetic Marvels</div>
+
+            <div class="text">Solenoids and electromagnets are electromagnetic devices that play crucial roles in various applications, from electronic locks to industrial machinery. Delving into their principles and functionalities enhances our understanding of electromagnetism.</div>
+
+            <div class="header">1. Solenoids</div>
+            <div class="text">- **Definition:** A solenoid is a coil of wire wound in the form of a helix. When an electric current flows through the coil, it produces a magnetic field.</div>
+            <div class="text">- **Functionality:** Solenoids are commonly used as actuators to create linear motion when an iron or steel core is placed within the coil.</div>
+            <div class="text">- **Applications:** Found in various devices, such as doorbells, hydraulic valves, and automotive starter systems.</div>
+
+            <div class="header">2. Electromagnets</div>
+            <div class="text">- **Definition:** An electromagnet is a coil of wire that becomes magnetic when an electric current flows through it. Unlike a permanent magnet, an electromagnet's magnetic field can be controlled.</div>
+            <div class="text">- **Construction:** Typically consists of a coil wound around a magnetic core, often made of iron or a ferrous material.</div>
+            <div class="text">- **Applications:** Widely used in electric relays, MRI machines, speakers, and magnetic locks.</div>
+
+            <div class="header">3. Principles of Operation</div>
+            <div class="text">- **Fleming's Right-Hand Rule:** Describes the direction of the force experienced by a current-carrying conductor in a magnetic field. The thumb represents the direction of the force, the index finger points in the direction of the magnetic field, and the middle finger points in the direction of the current.</div>
+            <div class="text">- **Magnetic Field Strength:** The strength of the magnetic field produced by a solenoid or electromagnet is directly proportional to the current flowing through the coil and the number of turns in the coil.</div>
+
+            <div class="header">4. Magnetic Field Polarity</div>
+            <div class="text">- **Polarity Control:** The direction of the current in a solenoid or electromagnet determines the polarity of the magnetic field it produces.</div>
+            <div class="text">- **Reversing Polarity:** Reversing the direction of the current reverses the polarity of the magnetic field.</div>
+
+            <div class="header">5. Applications and Uses</div>
+            <div class="text">- **Door Locks:** Electromagnetic locks use the principle of electromagnetism to secure doors, releasing the lock when an electric current is applied.</div>
+            <div class="text">- **Relays:** Electromagnetic relays use solenoids to switch high-current circuits with a low-current control signal.</div>
+            <div class="text">- **Magnetic Resonance Imaging (MRI):** Powerful electromagnets are used in medical imaging to create detailed images of the inside of the human body.</div>
+
+            <div class="header">6. Controlling Electromagnetic Devices</div>
+            <div class="text">- **Switching Mechanisms:** By controlling the current flow, solenoids and electromagnets can be turned on or off, allowing precise control of their magnetic effects.</div>
+            <div class="text">- **Magnetic Field Strength Control:** Adjusting the current or the number of turns in the coil allows control over the strength of the magnetic field produced.</div>
+
+            <div class="header">Conclusion</div>
+            <div class="text">Solenoids and electromagnets showcase the powerful synergy between electricity and magnetism. Their diverse applications highlight their significance in various technological and industrial domains, making them integral components in modern electromechanical systems.</div>
+
+            <a href="https://www.youtube.com/watch?v=lLQQjwuqdeg" class="link">Specific Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/lLQQjwuqdeg?si=CevgwwJEhuPZFZpQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=79_SF5AZtzo" class="link">Specific Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/79_SF5AZtzo?si=TxBKz-aIChZRZunD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=dMbWkodL12I" class="link">Specific Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/dMbWkodL12I?si=NoakLGJL1bB7Qqu0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <a href="https://www.youtube.com/watch?v=ybuhfEa-PrU" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/ybuhfEa-PrU?si=_AfaaCtF5x9aWi68" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

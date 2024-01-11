@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/index.html', '_self')" style="cursor: pointer;">
+            <a href="/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Physics</div>
+            <div class="title">Types of Power Stations</div>
+            <br>
+            <div class="date">11/01/24</div>
+            <br><br><br>
+            <div class="header">Types of Power Stations: Diverse Sources, Common Goal</div>
+
+            <div class="text">Power stations, also known as power plants or generating stations, are facilities designed to generate electrical power. These stations utilize various energy sources and technologies to meet the growing demand for electricity. Let's explore the different types of power stations, each harnessing a unique energy form to generate electrical power.</div>
+                    
+            <div class="header">1. Fossil Fuel Power Stations</div>
+            <div class="text">- **Coal Power Stations:** Burn coal to produce steam, which drives turbines connected to generators.</div>
+            <div class="text">- **Natural Gas Power Stations:** Utilize natural gas combustion to generate high-pressure steam for electricity generation.</div>
+            <div class="text">- **Oil Power Stations:** Burn oil to produce heat for steam generation, similar to coal-fired power plants.</div>
+                    
+            <div class="header">2. Nuclear Power Stations</div>
+            <div class="text">- **Nuclear Fission Reactors:** Splitting of atomic nuclei releases immense heat, used to generate steam for electricity production.</div>
+            <div class="text">- **Nuclear Fusion Research Reactors:** Experimental facilities researching controlled nuclear fusion for power generation.</div>
+                    
+            <div class="header">3. Renewable Energy Power Stations</div>
+            <div class="text">- **Solar Power Stations:** Convert sunlight into electricity using photovoltaic cells or concentrated solar power systems.</div>
+            <div class="text">- **Wind Power Stations:** Harness the kinetic energy of the wind to turn turbines connected to generators.</div>
+            <div class="text">- **Hydropower Stations:** Generate electricity by capturing the energy of flowing or falling water, often using dams.</div>
+            <div class="text">- **Geothermal Power Stations:** Tap into the Earth's internal heat to produce steam for electricity generation.</div>
+            <div class="text">- **Biomass Power Stations:** Burn organic materials or use biological processes to generate heat for power production.</div>
+                    
+            <div class="header">4. Hydrogen Power Stations</div>
+            <div class="text">- **Hydrogen Fuel Cells:** Combine hydrogen with oxygen to produce electricity and water as a byproduct.</div>
+            <div class="text">- **Hydrogen Combustion Power Stations:** Burn hydrogen to generate heat for conventional steam turbines.</div>
+                    
+            <div class="header">5. Battery Storage Power Stations</div>
+            <div class="text">- **Battery Energy Storage Stations:** Store excess electricity for later use, helping balance supply and demand on the electrical grid.</div>
+                    
+            <div class="header">6. Tidal and Wave Power Stations</div>
+            <div class="text">- **Tidal Power Stations:** Generate electricity by harnessing the movement of tides through turbines.</div>
+            <div class="text">- **Wave Power Stations:** Convert the kinetic energy of ocean waves into electrical power.</div>
+                    
+            <div class="header">7. Combined Heat and Power (CHP) Stations</div>
+            <div class="text">- **CHP Plants:** Simultaneously produce electricity and useful heat from the same energy source, enhancing overall efficiency.</div>
+                    
+            <div class="header">Conclusion</div>
+            <div class="text">Power stations, fueled by diverse energy sources, form the backbone of global electricity generation. Understanding the various types of power stations is crucial for sustainable and efficient energy production in the face of evolving technological and environmental challenges.</div>
+                    
+            <a href="https://www.youtube.com/watch?v=ybuhfEa-PrU" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/ybuhfEa-PrU?si=_AfaaCtF5x9aWi68" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

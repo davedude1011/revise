@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/index.html', '_self')" style="cursor: pointer;">
+            <a href="/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Physics</div>
+            <div class="title">Calculations (voltage, current and resistance)</div>
+            <br>
+            <div class="date">11/01/24</div>
+            <br><br><br>
+            <div class="header">Calculations Involving Voltage, Current, and Resistance: Ohm's Law and Power Formula</div>
+
+            <div class="text">Understanding the relationships between voltage (\(V\)), current (\(I\)), and resistance (\(R\)) is fundamental in electrical engineering. Ohm's Law and the power formula are essential tools for performing calculations involving these electrical parameters. Let's explore the key equations.</div>
+
+            <div class="header">1. Ohm's Law</div>
+            <div class="text">Ohm's Law establishes the relationship between voltage, current, and resistance in a circuit:</div>
+            <div class="text">\[
+            V = I \cdot R
+            \]</div>
+            <div class="text">Where:
+            <ul class="text">
+                <li>\(V\) is the voltage across the component in volts (V).</li>
+                <li>\(I\) is the current flowing through the component in amperes (A).</li>
+                <li>\(R\) is the resistance of the component in ohms (\(\Omega\)).</li>
+            </ul>
+            </div>
+
+            <div class="header">2. Rearranging Ohm's Law</div>
+            <div class="text">Ohm's Law can be rearranged to solve for current (\(I\)) or resistance (\(R\)):</div>
+            <div class="text">\[
+            I = \frac{V}{R} \quad \text{(To calculate current)}
+            </div>
+            <div class="text">\[
+            R = \frac{V}{I} \quad \text{(To calculate resistance)}
+            </div>
+
+            <div class="header">3. Power Formula</div>
+            <div class="text">The power (\(P\)) in a circuit can be calculated using the power formula:</div>
+            <div class="text">\[
+            P = V \cdot I
+            \]</div>
+            <div class="text">This equation can also be expressed using Ohm's Law:</div>
+            <div class="text">\[
+            P = I^2 \cdot R = \frac{V^2}{R}
+            \]</div>
+            
+            <div class="header">4. Example</div>
+            <div class="text">Consider a circuit with a voltage of 12V and a resistor with a resistance of 4 ohms. Calculate the current flowing through the circuit and the power dissipated by the resistor.</div>
+            
+            <div class="header">Conclusion</div>
+            <div class="text">Mastery of Ohm's Law and power calculations is essential for analyzing and designing electrical circuits. These formulas provide a foundation for understanding the behavior of components in various electrical systems.</div>
+            
+            <a href="https://www.youtube.com/watch?v=hRojfU77c38&list=PLKw0ZzfWn1yvMWfzF7gSmhTiAGCw8z4it&index=2" class="link">Specific Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/hRojfU77c38?si=q8Um8LQ7HkiXvS_r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <a href="https://www.youtube.com/watch?v=ybuhfEa-PrU" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/ybuhfEa-PrU?si=_AfaaCtF5x9aWi68" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

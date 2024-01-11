@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/index.html', '_self')" style="cursor: pointer;">
+            <a href="/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Physics</div>
+            <div class="title">Direct Current</div>
+            <br>
+            <div class="date">11/01/24</div>
+            <br><br><br>
+            <div class="header">Direct Current (DC) in Electrical Systems</div>
+
+            <div class="text">Direct Current (DC) is a type of electrical current where the flow of electric charge consistently travels in a single direction. Unlike Alternating Current (AC), which periodically changes direction, DC maintains a constant flow. Let's delve into the characteristics, generation, and applications of DC in various electronic systems.</div>
+
+            <div class="header">Characteristics of DC</div>
+            <div class="text">DC exhibits several key characteristics:</div>
+            <div class="text">- <strong>Unidirectional Flow:</strong> Electrons move in one direction, maintaining a constant polarity.</div>
+            <div class="text">- <strong>Steady Voltage:</strong> The voltage remains constant over time in a DC circuit.</div>
+            <div class="text">- <strong>Common Polarity:</strong> The positive and negative terminals do not interchange.</div>
+
+            <div class="header">Generation of DC</div>
+            <div class="text">DC can be generated through various methods:</div>
+            <div class="text">- <strong>Batteries:</strong> Chemical reactions within batteries produce a continuous flow of electric charge.</div>
+            <div class="text">- <strong>Rectifiers:</strong> Devices that convert Alternating Current (AC) to DC by allowing current flow in one direction.</div>
+            <div class="text">- <strong>Solar Cells:</strong> Convert sunlight directly into DC electrical energy.</div>
+
+            <div class="header">Applications of DC</div>
+            <div class="text">DC finds applications in a variety of electronic systems:</div>
+            <div class="text">- <strong>Electronic Devices:</strong> Many devices, such as smartphones and laptops, operate on DC power.</div>
+            <div class="text">- <strong>Lighting:</strong> LED lighting systems often run on low-voltage DC power.</div>
+            <div class="text">- <strong>Telecommunications:</strong> Certain aspects of telecommunications systems use DC components.</div>
+
+            <div class="header">Voltage Levels</div>
+            <div class="text">DC systems can operate at different voltage levels, ranging from low-voltage applications, such as portable devices, to high-voltage applications, like power distribution.</div>
+
+            <div class="header">Example Scenario</div>
+            <div class="text">Consider a scenario where a DC power supply is used to operate an LED lighting system. Discuss how the unidirectional flow of current contributes to the efficiency of the system.</div>
+
+            <div class="header">Conclusion</div>
+            <div class="text">Direct Current (DC) is a fundamental aspect of electrical systems, providing a stable and constant flow of electric charge. Understanding its characteristics and applications is essential for the design and operation of various electronic devices and circuits.</div>
+
+            <a href="https://www.youtube.com/watch?v=EY_EphcrpDI&list=PLKw0ZzfWn1yvMWfzF7gSmhTiAGCw8z4it&index=8" class="link">Specific Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/EY_EphcrpDI?si=HIC4kMCjdML_TEiZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=MEvO2rQFIWk&list=PL9IouNCPbCxXc2NQoIZN7-3jIKN7vW-Sq&index=20" class="link">Specific Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/MEvO2rQFIWk?si=owFZ_a8Qb1ejyavU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <a href="https://www.youtube.com/watch?v=ybuhfEa-PrU" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/ybuhfEa-PrU?si=_AfaaCtF5x9aWi68" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/index.html', '_self')" style="cursor: pointer;">
+            <a href="/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Physics</div>
+            <div class="title">Understanding Resistance</div>
+            <br>
+            <div class="date">11/01/24</div>
+            <br><br><br>
+            <div class="header">Understanding Resistance in Electrical Circuits</div>
+
+            <div class="text">Resistance is a fundamental property in electrical circuits that impedes the flow of electric current. It is a crucial concept in understanding and designing circuits, influencing the behavior of components and the overall performance of electronic systems. Let's explore the key aspects of resistance and its role in electrical circuits.</div>
+
+            <div class="header">1. Definition of Resistance</div>
+            <div class="text">- **Resistance Symbol:** Represented by the symbol \( R \).</div>
+            <div class="text">- **Definition:** Resistance is the opposition that a material presents to the flow of electric current. It is measured in ohms (\( \Omega \)).</div>
+
+            <div class="header">2. Ohm's Law</div>
+            <div class="text">- **Ohm's Law Equation:** Ohm's Law establishes the relationship between voltage (\( V \)), current (\( I \)), and resistance (\( R \)): \( V = I \cdot R \).</div>
+            <div class="text">- **Unit of Resistance:** 1 ohm is equivalent to 1 volt per ampere.</div>
+
+            <div class="header">3. Factors Affecting Resistance</div>
+            <div class="text">- **Material:** Different materials exhibit different levels of resistance. Conductors have low resistance, while insulators have high resistance.</div>
+            <div class="text">- **Length:** Longer conductors generally have higher resistance than shorter ones.</div>
+            <div class="text">- **Cross-Sectional Area:** Wider conductors typically have lower resistance than narrower ones.</div>
+            <div class="text">- **Temperature:** Resistance of most conductors increases with temperature.</div>
+
+            <div class="header">4. Types of Resistors</div>
+            <div class="text">- **Fixed Resistors:** Have a constant resistance value.</div>
+            <div class="text">- **Variable Resistors (Potentiometers):** Allow manual adjustment of resistance.</div>
+            <div class="text">- **Light-Dependent Resistors (LDRs):** Resistance varies with light intensity.</div>
+            <div class="text">- **Thermistors:** Resistance changes with temperature.</div>
+
+            <div class="header">5. Series and Parallel Resistance</div>
+            <div class="text">- **Series Resistance:** Total resistance in a series circuit is the sum of individual resistances.</div>
+            <div class="text">- **Parallel Resistance:** Total resistance in a parallel circuit is calculated differently and is generally less than the smallest individual resistance.</div>
+
+            <div class="header">6. Applications of Resistance</div>
+            <div class="text">- **Current Limiting:** Resistors are used to limit the current in electronic circuits.</div>
+            <div class="text">- **Voltage Dividers:** Resistors divide voltage in a circuit, providing specific voltage levels.</div>
+            <div class="text">- **Heating Elements:** High-resistance wires in devices like toasters and heaters generate heat when current flows through them.</div>
+
+            <div class="header">Conclusion</div>
+            <div class="text">Understanding resistance is fundamental for designing and analyzing electrical circuits. Whether in the form of fixed resistors, variable resistors, or specialized resistive devices, managing and utilizing resistance is essential for the reliable operation of electronic systems.</div>
+
+            <a href="https://www.youtube.com/watch?v=ue6w5aXhxjU&t=20s" class="link">Specific Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/ue6w5aXhxjU?si=WPqZzguxuzit-dFt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <a href="https://www.youtube.com/watch?v=ybuhfEa-PrU" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/ybuhfEa-PrU?si=_AfaaCtF5x9aWi68" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

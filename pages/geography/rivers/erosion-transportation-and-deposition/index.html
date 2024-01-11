@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/index.html', '_self')" style="cursor: pointer;">
+            <a href="/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Geography</div>
+            <div class="title">Erosion, Transportation, and Deposition</div>
+            <br>
+            <div class="date">11/01/24</div>
+            <br><br><br>
+            <div class="header">Erosion, Transportation, and Deposition: The Dynamic Forces Reshaping Earth's Surface</div>
+
+            <div class="text">Erosion, transportation, and deposition are interconnected processes that continually shape and transform the Earth's surface. These geological forces, driven by natural agents such as water, wind, and ice, play a pivotal role in sculpting landscapes and influencing ecosystems. Let's explore the fascinating dynamics of erosion, transportation, and deposition.</div>
+
+            <div class="header">1. Erosion: Wearing Away of Earth's Materials</div>
+            <div class="text">- **Definition:** Erosion is the process of wearing away and removal of soil, rock, or other surface materials through natural agents like water, wind, ice, or gravity.</div>
+            <div class="text">- **Agents of Erosion:** Water erosion (rivers, rainfall), wind erosion, glacial erosion, and gravitational erosion contribute to the breakdown and transport of materials.</div>
+            <div class="text">- **Landforms Resulting from Erosion:** Valleys, canyons, and sedimentary formations are often shaped by the erosive forces acting over time.</div>
+
+            <div class="header">2. Transportation: Movement of Eroded Materials</div>
+            <div class="text">- **Modes of Transportation:** Eroded materials are transported by various agents, including rivers, glaciers, wind, and gravity. The mode of transportation depends on the size and weight of the particles.</div>
+            <div class="text">- **Sorting:** During transportation, particles are sorted based on their size and density, leading to the formation of distinct layers in sedimentary deposits.</div>
+            <div class="text">- **Effects of Transportation:** Transportation contributes to the smoothing and rounding of particles as they collide with each other and the surrounding surfaces.</div>
+
+            <div class="header">3. Deposition: Settling of Transported Materials</div>
+            <div class="text">- **Definition:** Deposition occurs when transported materials come to rest or settle in a new location. This process is influenced by a decrease in transportation energy.</div>
+            <div class="text">- **Landforms Resulting from Deposition:** Deltas, alluvial fans, sand dunes, and sedimentary layers are formed through the deposition of transported materials.</div>
+            <div class="text">- **Sedimentary Structures:** Layering, cross-bedding, and ripple marks are common sedimentary structures formed during deposition.</div>
+
+            <div class="header">4. Environmental Significance</div>
+            <div class="text">- **Impact on Ecosystems:** Erosion, transportation, and deposition influence the availability of nutrients, the formation of habitats, and the overall structure of ecosystems.</div>
+            <div class="text">- **Geological Evolution:** These processes contribute to the continuous evolution of landscapes, shaping the Earth's surface over geological timescales.</div>
+            <div class="text">- **Human Interactions:** Understanding erosion, transportation, and deposition is essential for land use planning, infrastructure development, and addressing environmental challenges.</div>
+
+            <div class="header">5. Human Influences and Mitigation</div>
+            <div class="text">- **Anthropogenic Erosion:** Human activities, such as deforestation and improper land management, can accelerate erosion processes, leading to environmental degradation.</div>
+            <div class="text">- **Mitigation Strategies:** Implementing erosion control measures, afforestation, and sustainable land management practices help mitigate the adverse effects of erosion.</div>
+
+            <div class="header">Conclusion</div>
+            <div class="text">Erosion, transportation, and deposition form an intricate cycle that continuously shapes the Earth's surface. Their role in geological and ecological processes highlights the dynamic nature of our planet's landscape and the importance of sustainable practices to manage and adapt to these natural forces.</div>
+
+            <a href="https://www.youtube.com/watch?v=ruu9tRPS4-0" class="link">Specific Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/ruu9tRPS4-0?si=4hT437m-VbMX2lzx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

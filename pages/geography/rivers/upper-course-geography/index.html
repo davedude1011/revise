@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/index.html', '_self')" style="cursor: pointer;">
+            <a href="/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Geography</div>
+            <div class="title">Upper Course</div>
+            <br>
+            <div class="date">11/01/24</div>
+            <br><br><br>
+            <div class="header">The Upper Course Geography of Rivers: Origin and Formation</div>
+
+            <div class="text">The upper course of a river marks its initial journey from its source, featuring distinctive geographical characteristics that shape the landscape. This segment of the river, often situated in upland or mountainous regions, plays a crucial role in influencing downstream processes. Let's explore the key aspects of the upper course geography of rivers.</div>
+            
+            <div class="header">1. Source and Formation</div>
+            <div class="text">- **Headwaters:** The upper course typically begins at the river's source, commonly found in elevated areas such as mountains or hills. Springs, snowmelt, or rainfall accumulation contribute to the formation of the initial channel.</div>
+            <div class="text">- **Channel Characteristics:** Channels in the upper course are narrow, steep, and characterized by high gradients. The flow is often turbulent as the river descends rapidly, creating features like cascades and waterfalls.</div>
+            
+            <div class="header">2. V-Shaped Valleys and Interlocking Spurs</div>
+            <div class="text">- **Valley Formation:** The erosive power of the river in its early stages contributes to the creation of V-shaped valleys. The river cuts downwards, aided by processes such as hydraulic action and abrasion, shaping the surrounding landscape.</div>
+            <div class="text">- **Interlocking Spurs:** As the river winds through the landscape, it encounters resistant rock features. Interlocking spurs are formed as the river winds around these obstructions, creating a series of ridges that interlock like fingers along the valley sides.</div>
+            
+            <div class="header">3. Waterfalls and Rapids</div>
+            <div class="text">- **Formation of Waterfalls:** Steep gradients in the upper course may lead to the formation of waterfalls. Differential erosion, where softer rock is eroded more quickly than harder rock, contributes to the creation of these dramatic features.</div>
+            <div class="text">- **Rapids:** Fast-flowing, turbulent sections known as rapids are common in the upper course. These are characterized by swift currents and rocky channels, adding to the dynamic nature of the river.</div>
+            
+            <div class="header">4. Tributaries and Confluence</div>
+            <div class="text">- **Tributary Contributions:** The upper course is often marked by the convergence of smaller tributaries, adding to the volume and force of the main river. Tributaries may form through the gathering of water from adjacent hillsides or smaller valleys.</div>
+            <div class="text">- **Confluence Points:** The merging of tributaries at confluence points contributes to the development of a more significant river channel. The confluence may result in the formation of a larger and more powerful river.</div>
+            
+            <div class="header">5. Soil Erosion and Sediment Transport</div>
+            <div class="text">- **Erosion Processes:** Soil erosion is prevalent in the upper course due to the steep slopes and fast-flowing water. The river carries eroded material downstream, influencing sediment transport processes.</div>
+            <div class="text">- **Characteristics of Sediment:** Sediment in the upper course is often coarse, consisting of rocks, gravel, and sand. The abrasive action of these particles contributes to further channel erosion.</div>
+            
+            <div class="header">6. Vegetation and Wildlife</div>
+            <div class="text">- **Sparse Vegetation:** The upper course may exhibit sparse vegetation, especially in areas with harsh environmental conditions. Vegetation is often limited to hardy plants that can withstand the rugged terrain.</div>
+            <div class="text">- **Wildlife Adaptations:** Wildlife in the upper course is adapted to the challenging conditions. Species may include mountainous fauna and specialized aquatic life that thrives in the turbulent waters.</div>
+            
+            <div class="header">Conclusion</div>
+            <div class="text">The upper course of a river sets the stage for the intricate processes that unfold downstream. Its unique geography, marked by steep gradients, V-shaped valleys, and the formation of notable features, plays a fundamental role in shaping the overall dynamics of river systems.</div>
+            
+            <a href="https://www.youtube.com/watch?v=7XJINKay6ZU" class="link">Specific Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/7XJINKay6ZU?si=Decw2peCG3JK-n_T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

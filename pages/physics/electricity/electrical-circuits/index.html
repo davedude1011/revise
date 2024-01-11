@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/index.html', '_self')" style="cursor: pointer;">
+            <a href="/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Physics</div>
+            <div class="title">Electrical Circuits</div>
+            <br>
+            <div class="date">11/01/24</div>
+            <br><br><br>
+            <div class="header">Electrical Circuits: Components and Configurations</div>
+
+            <div class="text">Electrical circuits are the foundation of various devices and systems, allowing the controlled flow of electric current. Understanding the components and configurations of electrical circuits is essential for designing, analyzing, and troubleshooting these systems.</div>
+
+            <div class="header">1. Components of Electrical Circuits</div>
+            <div class="text">- **Voltage Source:** Provides the electromotive force (EMF) that drives the current in a circuit. Can be batteries, generators, or power supplies.</div>
+            <div class="text">- **Resistors:** Impede the flow of electric current, controlling its intensity. Measured in ohms (Ω).</div>
+            <div class="text">- **Capacitors:** Store and release electrical energy. Comprise two conductive plates separated by an insulating material.</div>
+            <div class="text">- **Inductors:** Store energy in a magnetic field when current flows through them. Comprise coils of wire.</div>
+
+            <div class="header">2. Types of Electrical Circuits</div>
+            <div class="text">- **Series Circuits:** Components connected in a single pathway. The same current flows through each component, and the total resistance is the sum of individual resistances.</div>
+            <div class="text">- **Parallel Circuits:** Components connected in multiple pathways. Voltage is the same across each component, and the reciprocal of the total resistance is the sum of reciprocals of individual resistances.</div>
+            <div class="text">- **Series-Parallel Circuits:** A combination of series and parallel configurations, providing flexibility in design.</div>
+
+            <div class="header">3. Kirchhoff's Laws</div>
+            <div class="text">- **Kirchhoff's Voltage Law (KVL):** The sum of the voltage drops in any closed loop of a circuit is equal to the applied voltage.</div>
+            <div class="text">- **Kirchhoff's Current Law (KCL):** The total current entering a junction is equal to the total current leaving the junction.</div>
+
+            <div class="header">4. Analysis Techniques</div>
+            <div class="text">- **Ohm's Law:** Describes the relationship between voltage (V), current (I), and resistance (R) in a circuit: \(V = I \times R\).</div>
+            <div class="text">- **Node Voltage Analysis:** Analyzing voltages at different nodes in a circuit.</div>
+            <div class="text">- **Mesh Current Analysis:** Analyzing currents in different loops (meshes) in a circuit.</div>
+
+            <div class="header">5. Transient and Steady-State Response</div>
+            <div class="text">- **Transient Response:** The circuit's behavior during the transition from one state to another (e.g., switching on or off).</div>
+            <div class="text">- **Steady-State Response:** The stable behavior of the circuit after the transient effects have subsided.</div>
+
+            <div class="header">6. Applications of Electrical Circuits</div>
+            <div class="text">- **Electronic Devices:** Circuits are the foundation of electronic devices, including smartphones, computers, and audio systems.</div>
+            <div class="text">- **Power Distribution:** Electrical circuits are used in power distribution systems to deliver electricity from sources to consumers.</div>
+            <div class="text">- **Control Systems:** Circuits play a crucial role in control systems for regulating processes and machinery.</div>
+
+            <div class="header">Conclusion</div>
+            <div class="text">Electrical circuits, whether simple or complex, form the backbone of modern technology. From basic components to advanced analysis techniques, a comprehensive understanding of electrical circuits is essential for anyone working in electronics, engineering, or related fields.</div>
+
+            <a href="https://www.youtube.com/watch?v=R3hdaLpq2AA" class="link">Specific Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/R3hdaLpq2AA?si=cq6opKWjVkDV29LN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <a href="https://www.youtube.com/watch?v=ybuhfEa-PrU" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/ybuhfEa-PrU?si=_AfaaCtF5x9aWi68" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

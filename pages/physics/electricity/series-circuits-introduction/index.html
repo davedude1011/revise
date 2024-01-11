@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/index.html', '_self')" style="cursor: pointer;">
+            <a href="/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Physics</div>
+            <div class="title">Series Circuits</div>
+            <br>
+            <div class="date">11/01/24</div>
+            <br><br><br>
+            <div class="header">Series Circuits: Exploring the Basics of Electrical Series Connections</div>
+
+            <div class="text">In series circuits, components are connected end-to-end, forming a single pathway for the flow of electric current. Understanding the characteristics and behavior of series circuits is fundamental to electrical engineering and circuit design.</div>
+
+            <div class="header">1. Definition and Configuration</div>
+            <div class="text">- **Definition:** A series circuit is a circuit arrangement where the components (resistors, bulbs, etc.) are connected sequentially, and there is only one path for the current to flow.</div>
+            <div class="text">- **Configuration:** Components share the same current, and the total resistance is the sum of individual resistances.</div>
+
+            <div class="header">2. Characteristics of Series Circuits</div>
+            <div class="text">- **Current Flow:** The same current flows through all components in a series circuit.</div>
+            <div class="text">- **Resistance:** The total resistance (\(R_{\text{total}}\)) in a series circuit is the sum of individual resistances (\(R_1, R_2, \ldots, R_n\)): \(R_{\text{total}} = R_1 + R_2 + \ldots + R_n\).</div>
+            <div class="text">- **Voltage Distribution:** Voltage is distributed across the components, and the total voltage (\(V_{\text{total}}\)) is the sum of individual voltages (\(V_1, V_2, \ldots, V_n\)).</div>
+
+            <div class="header">3. Ohm's Law in Series Circuits</div>
+            <div class="text">- **Ohm's Law for Voltage:** \(V_{\text{total}} = I \cdot R_{\text{total}}\), where \(V_{\text{total}}\) is the total voltage, \(I\) is the current, and \(R_{\text{total}}\) is the total resistance.</div>
+            <div class="text">- **Ohm's Law for Individual Resistors:** \(V_i = I \cdot R_i\), where \(V_i\) is the voltage across resistor \(i\) and \(R_i\) is its resistance.</div>
+
+            <div class="header">4. Voltage Divider Rule</div>
+            <div class="text">- **Voltage Distribution:** The voltage across each resistor in a series circuit is proportional to its resistance. The voltage divider rule states that \(V_i = \frac{R_i}{R_{\text{total}}} \cdot V_{\text{total}}\).</div>
+
+            <div class="header">5. Practical Applications</div>
+            <div class="text">- **Christmas Lights:** In a string of Christmas lights, the bulbs are often arranged in series. If one bulb fails, it breaks the circuit, and the entire string may go out.</div>
+            <div class="text">- **Electrical Wiring:** Household wiring often utilizes series connections in certain lighting circuits.</div>
+
+            <div class="header">6. Analysis and Calculations</div>
+            <div class="text">- **Calculating Total Resistance:** \(R_{\text{total}} = R_1 + R_2 + \ldots + R_n\).</div>
+            <div class="text">- **Calculating Total Voltage:** \(V_{\text{total}} = I \cdot R_{\text{total}}\).</div>
+
+            <div class="header">Conclusion</div>
+            <div class="text">Series circuits offer a straightforward configuration for understanding the relationships between current, voltage, and resistance. Mastering the principles of series circuits is essential for solving electrical engineering problems and designing effective circuits.</div>
+
+            <a href="https://www.youtube.com/watch?v=ZQurBlu35Fo&t=286s" class="link">Specific Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/ZQurBlu35Fo?si=aS_wmonngBgoSAEV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=7mdc-lRrW1c" class="link">Specific Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/7mdc-lRrW1c?si=FlIstvQrK4F9E5-a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=CEBfn4ndQWI&t=9s" class="link">Specific Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/CEBfn4ndQWI?si=4AA2-JnsfqZ1-2Ls" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <a href="https://www.youtube.com/watch?v=ybuhfEa-PrU" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/ybuhfEa-PrU?si=_AfaaCtF5x9aWi68" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

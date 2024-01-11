@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/index.html', '_self')" style="cursor: pointer;">
+            <a href="/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Geography</div>
+            <div class="title">Oxbow Lakes</div>
+            <br>
+            <div class="date">11/01/24</div>
+            <br><br><br>
+            <div class="header">Oxbow Lakes: Formation and Significance in River Dynamics</div>
+
+            <div class="text">Oxbow lakes are unique water features formed as a result of the dynamic processes within a river's course. These crescent-shaped lakes hold both geological and ecological significance. Let's delve into the formation and importance of oxbow lakes in the context of river dynamics.</div>
+            
+            <div class="header">1. Formation Process</div>
+            <div class="text">- **Meander Cutoff:** Oxbow lakes form through a process known as meander cutoff. Over time, as a river's meanders become more pronounced, the neck of the meander, or the narrow section between two bends, experiences increased erosion.</div>
+            <div class="text">- **Neck Erosion and Deposition:** Erosion on the outer bank of the meander's neck leads to the creation of a new channel. Simultaneously, deposition occurs on the inner bank. The continuous erosion and deposition processes contribute to the curvature of the meander.</div>
+            <div class="text">- **Cutoff Occurrence:** Eventually, the river erodes through the narrow neck, creating a shortcut. During periods of high discharge, such as floods, the river may abandon the old meander bend, leading to the formation of an oxbow lake.</div>
+            
+            <div class="header">2. Characteristics of Oxbow Lakes</div>
+            <div class="text">- **Crescent Shape:** Oxbow lakes typically exhibit a crescent or U-shaped form, resembling the former meander bend. The curved shape is a result of the meander cutoff process.</div>
+            <div class="text">- **Isolation from Main Channel:** Once formed, oxbow lakes are isolated from the main river channel. They may retain water from the last connection with the river or become disconnected altogether.</div>
+            
+            <div class="header">3. Ecological Significance</div>
+            <div class="text">- **Habitat Diversity:** Oxbow lakes create diverse aquatic habitats. The slow-flowing or stagnant water in these lakes fosters unique ecosystems, supporting various aquatic plants, fish, and bird species.</div>
+            <div class="text">- **Breeding Grounds:** The calm waters of oxbow lakes serve as valuable breeding and nursery areas for fish and amphibians. The sheltered environment promotes the survival of young aquatic life.</div>
+            
+            <div class="header">4. Human Interaction and Utilization</div>
+            <div class="text">- **Recreational Use:** Oxbow lakes often attract recreational activities such as fishing, boating, and birdwatching. Their serene surroundings and diverse wildlife make them popular destinations for nature enthusiasts.</div>
+            <div class="text">- **Historical Significance:** In some regions, oxbow lakes bear historical significance. They may mark the remnants of former river courses, offering insights into the geological evolution of the landscape.</div>
+            
+            <div class="header">5. Changes Over Time</div>
+            <div class="text">- **Ongoing Evolution:** Oxbow lakes are not static features. They may undergo changes over time, influenced by factors like sedimentation, vegetation growth, and human activities. Natural or anthropogenic alterations can impact their size and shape.</div>
+            <div class="text">- **Potential Reconnection:** In certain conditions, oxbow lakes may experience reconnection to the main river channel, especially during periods of high discharge. This reconnection is part of the dynamic nature of river systems.</div>
+            
+            <div class="header">Conclusion</div>
+            <div class="text">Oxbow lakes are captivating features shaped by the continuous processes within river systems. Their formation, unique characteristics, and ecological importance highlight the interconnectedness of geological and biological dynamics in riparian environments.</div>
+            
+            <a href="https://www.youtube.com/watch?v=WGiX3VT2vTM" class="link">Specific Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/WGiX3VT2vTM?si=JHp8vONr6MzgPhqn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/index.html', '_self')" style="cursor: pointer;">
+            <a href="/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Geography</div>
+            <div class="title">Channelization</div>
+            <br>
+            <div class="date">11/01/24</div>
+            <br><br><br>
+            <div class="header">Channelization: Altered Watercourses and Impacts on Rivers</div>
+
+            <div class="text">Channelization is a human-made alteration of natural watercourses, often involving the straightening, deepening, or widening of rivers and streams. While it is carried out with the intention of managing water flow, channelization can have significant ecological and environmental consequences. Let's explore the key aspects of channelization and its impacts on river ecosystems.</div>
+
+            <div class="header">1. Purpose of Channelization</div>
+            <div class="text">- **Flood Control:** Channelization is often undertaken to mitigate flooding by accelerating the drainage of water from rivers and reducing the risk of overflow.</div>
+            <div class="text">- **Navigation:** Straightening and deepening rivers can make them more navigable for boats and ships, facilitating transportation and commerce.</div>
+            <div class="text">- **Agricultural Use:** Altering river channels is sometimes done to reclaim land for agriculture by providing better drainage and flood protection.</div>
+
+            <div class="header">2. Techniques of Channelization</div>
+            <div class="text">- **Straightening:** The process of removing meanders or curves in a river to create a more direct and streamlined channel.</div>
+            <div class="text">- **Deepening:** Excavating the riverbed to increase the depth of the channel, allowing for greater water flow capacity.</div>
+            <div class="text">- **Widening:** Enlarging the width of the river channel to enhance its capacity for carrying water and reducing the risk of flooding.</div>
+
+            <div class="header">3. Ecological and Environmental Impacts</div>
+            <div class="text">- **Loss of Biodiversity:** Channelization can disrupt natural habitats, leading to the loss of biodiversity and negatively impacting aquatic ecosystems.</div>
+            <div class="text">- **Increased Sedimentation:** Altered flow patterns can result in increased sedimentation, affecting water quality and aquatic life.</div>
+            <div class="text">- **Erosion and Bank Instability:** Changes to river channels can lead to increased erosion and instability of riverbanks.</div>
+            <div class="text">- **Disruption of Natural Processes:** Channelization interferes with natural processes such as sediment transport, nutrient cycling, and habitat creation.</div>
+
+            <div class="header">4. Alternatives and Sustainable Practices</div>
+            <div class="text">- **Natural Channel Design:** Emphasizes mimicking natural river processes and structures to achieve ecological and hydrological balance.</div>
+            <div class="text">- **Floodplain Restoration:** Allowing rivers to access their floodplains during high water events to reduce the risk of downstream flooding.</div>
+            <div class="text">- **Vegetative Stabilization:** Planting vegetation along riverbanks to stabilize soil and prevent erosion.</div>
+
+            <div class="header">Conclusion</div>
+            <div class="text">While channelization may offer short-term benefits in terms of flood control and navigation, its long-term ecological impacts highlight the importance of considering alternative, sustainable approaches to river management. Balancing human needs with the preservation of natural river processes is crucial for the health and resilience of river ecosystems.</div>
+
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

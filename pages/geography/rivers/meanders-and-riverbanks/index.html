@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/index.html', '_self')" style="cursor: pointer;">
+            <a href="/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Geography</div>
+            <div class="title">Meanders and Riverbanks</div>
+            <br>
+            <div class="date">11/01/24</div>
+            <br><br><br>
+            <div class="header">Meanders and River Banks: Dynamic Features of River Courses</div>
+
+            <div class="text">Meanders are sinuous, winding curves in a river's course, and river banks are the elevated sides that contain and shape the flow of the water. Together, they form dynamic features that play a crucial role in the geomorphology of river systems. Let's delve into the characteristics and processes associated with meanders and river banks.</div>
+            
+            <div class="header">1. Formation of Meanders</div>
+            <div class="text">- **Erosion and Deposition:** Meanders form through a combination of erosion on the outer (convex) bank and deposition on the inner (concave) bank. The continuous flow of water erodes the outer bank, creating a curve, while sediment is deposited on the inner bank, accentuating the meander shape.</div>
+            <div class="text">- **Velocity Differences:** Faster-flowing water on the outer side of a bend (due to increased channel width) enhances erosion, while slower-flowing water on the inner side promotes sediment deposition.</div>
+            
+            <div class="header">2. Characteristics of Meanders</div>
+            <div class="text">- **Sinuosity:** Meanders increase the sinuosity or winding pattern of a river. The degree of sinuosity is influenced by factors such as the river's gradient, sediment load, and the underlying geology.</div>
+            <div class="text">- **Point Bars:** Accumulations of sediment on the inner bank form point bars, contributing to the gradual lateral migration of the meander.</div>
+            
+            <div class="header">3. Role of River Banks</div>
+            <div class="text">- **Containment of Flow:** River banks serve as natural boundaries that contain the flow of water within the river channel. They prevent lateral spreading and guide the water along a defined course.</div>
+            <div class="text">- **Bank Erosion:** While river banks provide containment, they are also subject to erosion, especially on the outer side of meanders. Bank erosion contributes to the widening of the river channel.</div>
+            
+            <div class="header">4. Changes Over Time</div>
+            <div class="text">- **Meander Migration:** Meanders are not static; they migrate laterally over time. This migration can lead to the abandonment of old meanders (oxbow lakes) and the formation of new ones.</div>
+            <div class="text">- **Bank Erosion and Sedimentation:** Continuous erosion on the outer bank and sediment deposition on the inner bank contribute to the dynamic evolution of meanders and their associated river banks.</div>
+            
+            <div class="header">5. Human Impacts and Management</div>
+            <div class="text">- **Urbanization:** Human activities, such as urban development and channelization, can alter natural meander patterns. Straightening river courses for navigation or flood control purposes can have ecological consequences.</div>
+            <div class="text">- **Bank Stabilization:** In some cases, measures are taken to stabilize river banks and prevent excessive erosion. This may involve the use of vegetation, revetments, or other engineering solutions.</div>
+            
+            <div class="header">Conclusion</div>
+            <div class="text">Meanders and river banks are integral components of river systems, contributing to the dynamic nature of these watercourses. Understanding the processes involved in meander formation and the role of river banks is essential for managing rivers sustainably and preserving their ecological integrity.</div>
+            
+            <a href="https://www.youtube.com/watch?v=WGiX3VT2vTM" class="link">Specific Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/WGiX3VT2vTM?si=JHp8vONr6MzgPhqn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>
