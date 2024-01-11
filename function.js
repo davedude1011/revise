@@ -416,6 +416,12 @@ function MakeMenu() {
         }
         if (CurrentMenu.Type === "menu-direct" || CurrentMenu.Title == "AI Chatbot" || CurrentMenu.Title == "Notepad" || CurrentMenu.Title == "Flashcards") {
             Outer.onclick = function() {
+                let MiniMenu = CreateMiniMenuArray()
+                for (let i = 0; i < MiniMenu.length; i++) {
+                    if (MiniMenu[i].Link == CurrentMenu.Link) {
+                        localStorage.setItem("PageNumber", i)
+                    }
+                }
                 window.open(CurrentMenu.Link + "index.html", "_self")
             }
             Arrow.textContent = "📄"
@@ -555,3 +561,17 @@ function AlternateBackgroundColors() {
 }
 
 AlternateBackgroundColors()
+
+
+function CreateMiniMenuArray() {
+    let MiniMenu = []
+    for (let i = 0; i < Menus.length; i++) {
+        if (Menus[i].Type == "menu-direct") {
+            MiniMenu.push({Title: Menus[i].Title, Link: Menus[i].Link})
+        }
+    }
+    return MiniMenu
+}
+localStorage.setItem("MiniMenu", JSON.stringify(CreateMiniMenuArray()))
+
+console.log(CreateMiniMenuArray())
