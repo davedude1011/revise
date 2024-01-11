@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="../../style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('../../../index.html', '_self')" style="cursor: pointer;">
+            <a href="../../../index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Maths</div>
+            <div class="title">Quadratic Formula</div>
+            <br>
+            <div class="date">7/12/23</div>
+            <br><br><br>
+            
+            <div class="header">Quadratic Formula: Unveiling the Roots of a Quadratic Equation</div>
+
+            <div class="text">The quadratic formula serves as a powerful tool for finding the roots of a quadratic equation of the form \(ax^2 + bx + c = 0\). This discussion provides insights into its derivation from completing the square and offers a clear, text-based explanation without complex symbols:</div>
+
+            <div class="header">1. **Completing the Square Method**</div>
+
+            <div class="text">To understand the quadratic formula, we first delve into the completing the square method. Starting with a general quadratic equation \(ax^2 + bx + c = 0\), the process involves transforming it into a perfect square trinomial of the form \((x + p)^2 = q\).</div>
+
+            <div class="header">2. **Derivation of the Quadratic Formula**</div>
+
+            <div class="text">The derivation begins by expressing the quadratic equation in the form \((x + p)^2 = q\). Expanding this expression yields \(x^2 + 2px + p^2 = q\). Comparing coefficients with the original quadratic equation, we equate terms and isolate \(p\) and \(q\).</div>
+
+            <div class="header">3. **Solving for \(x\)**</div>
+
+            <div class="text">Once the quadratic equation is transformed into the perfect square form, solving for \(x\) involves taking the square root of both sides and rearranging terms. This leads to the quadratic formula: \(x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\).</div>
+
+            <div class="header">4. **Understanding the Components**</div>
+
+            <div class="text">Breaking down the quadratic formula, \(x\) represents the variable, while \(a\), \(b\), and \(c\) are coefficients of the quadratic equation \(ax^2 + bx + c = 0\). The \(\pm\) indicates two possible solutions, and the discriminant \(\sqrt{b^2 - 4ac}\) determines the nature of these solutions.</div>
+
+            <div class="header">5. **Proof of the Quadratic Formula**</div>
+
+            <div class="text">A formal proof involves completing the square directly on the generic quadratic equation. By carefully manipulating the equation through algebraic steps, one arrives at the quadratic formula. This proof reinforces the validity and applicability of the formula in solving quadratic equations.</div>
+
+            <div class="header">Conclusion</div>
+
+            <div class="text">The quadratic formula stands as a foundational tool in algebra, providing an elegant solution to quadratic equations. Derived from the completing the square method, its proof illuminates the mathematical journey behind finding the roots of a quadratic equation.</div>
+
+            <a href="https://www.youtube.com/watch?v=maejPmUzqpM&t=150s" class="link">video recource (1/2)</a><br>
+            <iframe src="https://www.youtube.com/embed/maejPmUzqpM?si=ABvxuQlLOpVw684N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=IlNAJl36-10" class="link">video recource (2/2)</a><br>
+            <iframe src="https://www.youtube.com/embed/IlNAJl36-10?si=7MEXLBUY3MVczZVM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`../../../${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`../../../${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>
