@@ -105,41 +105,9 @@
         }
 
         ButtonBack.textContent = BackTitle
-        ButtonBack.onclick = function() { window.open(`../../../${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        ButtonBack.onclick = function() { window.open(`/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
         
         ButtonForward.textContent = ForwardTitle
-        ButtonForward.onclick = function() { window.open(`../../../${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
-    </script>
-</html>ript defer>
-        let ButtonBack = document.querySelector(".back")
-        let ButtonForward = document.querySelector(".forward")
-
-        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
-        let CurrentPageNumber = Number(localStorage.getItem("CurrentPageNumber"))
-
-        console.log(MiniMenu)
-
-        if (CurrentPageNumber > 0) {
-            var BackLink = MiniMenu[CurrentPageNumber-1].Link
-            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
-        }
-        else {
-            var BackLink = MiniMenu[MiniMenu.length-1].Link
-            var BackTitle = MiniMenu[MiniMenu.length-1].Title
-        }
-        if (CurrentPageNumber < MiniMenu.length-1) {
-            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
-            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
-        }
-        else {
-            var ForwardLink = MiniMenu[0].Link
-            var ForwardTitle = MiniMenu[0].Title
-        }
-
-        ButtonBack.textContent = BackTitle
-        ButtonBack.onclick = function() { window.open(`../../../${BackLink}`, "_self") }
-        
-        ButtonForward.textContent = ForwardTitle
-        ButtonForward.onclick = function() { window.open(`../../../${ForwardLink}`, "_self") }
+        ButtonForward.onclick = function() { window.open(`/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
     </script>
 </html>
