@@ -46,8 +46,8 @@
         </style>
     </head>
     <body>
-        <div class="top-nav" onclick="window.open('../../../index.html', '_self')" style="cursor: pointer;">
-            <a href="../../../index.html" class="top-nav-text">Back to menu</a>
+        <div class="top-nav" onclick="window.open('/index.html', '_self')" style="cursor: pointer;">
+            <a href="/index.html" class="top-nav-text">Back to menu</a>
         </div>
         <embed src="https://www.ysgolbrynalyn.co.uk/assets/Uploads/An-Inspector-Calls-Study-Guide-1-compressed.pdf"/>
     </body>
@@ -82,9 +82,9 @@
         }
 
         ButtonBack.textContent = BackTitle
-        ButtonBack.onclick = function() { window.open(`../../../${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        ButtonBack.onclick = function() { window.open(`/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
         
         ButtonForward.textContent = ForwardTitle
-        ButtonForward.onclick = function() { window.open(`../../../${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+        ButtonForward.onclick = function() { window.open(`/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
     </script>
 </html>
