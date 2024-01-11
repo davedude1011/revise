@@ -67,8 +67,8 @@
             <a href="https://www.youtube.com/watch?v=gUncqL1ul8Q" class="link">video recource (1/2)</a><br>
             <iframe src="https://www.youtube.com/embed/gUncqL1ul8Q?si=pVBQqZrOsFuW16uu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
             
-            <a href="https://www.youtube.com/watch?v=VNX9UQ08fZ4" class="link">video recource (2/2)</a><br>
-            <iframe src="https://www.youtube.com/embed/VNX9UQ08fZ4?si=r7EMr13jjh5Hm8oq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=n9He_FK6nao" class="link">video recource (2/2)</a><br>
+            <iframe src="https://www.youtube.com/embed/n9He_FK6nao?si=Jdx35V7HVcZfObv_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
         
             <div class="credits">Written by. gpt-3.5</div>
         </div>
@@ -108,69 +108,5 @@
         
         ButtonForward.textContent = ForwardTitle
         ButtonForward.onclick = function() { window.open(`../../../${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
-    </script>
-</html>ript defer>
-        let ButtonBack = document.querySelector(".back")
-        let ButtonForward = document.querySelector(".forward")
-
-        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
-        let CurrentPageNumber = Number(localStorage.getItem("CurrentPageNumber"))
-
-        console.log(MiniMenu)
-
-        if (CurrentPageNumber > 0) {
-            var BackLink = MiniMenu[CurrentPageNumber-1].Link
-            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
-        }
-        else {
-            var BackLink = MiniMenu[MiniMenu.length-1].Link
-            var BackTitle = MiniMenu[MiniMenu.length-1].Title
-        }
-        if (CurrentPageNumber < MiniMenu.length-1) {
-            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
-            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
-        }
-        else {
-            var ForwardLink = MiniMenu[0].Link
-            var ForwardTitle = MiniMenu[0].Title
-        }
-
-        ButtonBack.textContent = BackTitle
-        ButtonBack.onclick = function() { window.open(`../../../${BackLink}`, "_self") }
-        
-        ButtonForward.textContent = ForwardTitle
-        ButtonForward.onclick = function() { window.open(`../../../${ForwardLink}`, "_self") }
-    </script>
-</html>ript defer>
-        let ButtonBack = document.querySelector(".back")
-        let ButtonForward = document.querySelector(".forward")
-
-        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
-        let CurrentPageNumber = Number(localStorage.getItem("CurrentPageNumber"))
-
-        console.log(MiniMenu)
-
-        if (CurrentPageNumber > 0) {
-            var BackLink = MiniMenu[CurrentPageNumber-1].Link
-            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
-        }
-        else {
-            var BackLink = MiniMenu[MiniMenu.length-1].Link
-            var BackTitle = MiniMenu[MiniMenu.length-1].Title
-        }
-        if (CurrentPageNumber < MiniMenu.length-1) {
-            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
-            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
-        }
-        else {
-            var ForwardLink = MiniMenu[0].Link
-            var ForwardTitle = MiniMenu[0].Title
-        }
-
-        ButtonBack.textContent = BackTitle
-        ButtonBack.onclick = function() { window.open(`../../../${BackLink}`, "_self") }
-        
-        ButtonForward.textContent = ForwardTitle
-        ButtonForward.onclick = function() { window.open(`../../../${ForwardLink}`, "_self") }
     </script>
 </html>
