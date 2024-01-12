@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: rgb(240, 240, 240);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #444654;
+    overflow-x: hidden;
+}
+
+.top-nav {
+    width: 100vw;
+    padding: 5vh;
+    background-color: #343541;
+
+    display: flex;
+    align-items: center;
+}
+.top-nav-text {
+    font-size: large;
+    font-weight: bold;
+
+    margin-left: 15.5vw;
+}
+
+.main-block {
+    width: 42vw;
+    margin-left: 18vw;
+    padding-bottom: 20vh;
+
+    display: flex;
+    flex-direction: column;
+}
+.subject {
+    font-size: large;
+    color: #acacbe;
+    font-weight: bold;
+}
+.title {
+    font-size: xx-large;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+.date {
+    font-size: small;
+    color: #acacbe;
+}
+
+.header {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: x-large;
+}
+.text {
+    color: #d1d5db;
+    margin-bottom: 5vh;
+}
+
+.link {
+    color: rgb(115, 94, 235)
+}
+
+img {
+    margin-bottom: 5vh;
+}
+
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #b8b9c3 rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #b8b9c3;
+    border-radius: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+  }
+
+
+iframe {
+    width: 80%;
+    aspect-ratio: 560/315;
+}
+
+.credits {
+    color: white;
+    letter-spacing: 1.2px;
+    font-size: small;
+}
+
+@media screen and (orientation: portrait) {
+    .main-block {
+        width: 80vw;
+        margin-left: 0vw;
+        padding-bottom: 20vh;
+    }
+    body {
+        align-items: center;
+    }
+    .top-nav-text {
+        margin-left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    iframe {
+        width: 100%;
+        aspect-ratio: 560/315;
+    }
+    .header {
+        text-align: center;
+        margin-bottom: 2vh;
+    }
+}
+
+
+
+
+.buttons {
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.back, .forward {
+    padding: 15px;
+    background-color: #3435419d;
+    border-radius: 5px;
+
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+
+    cursor: pointer;
+    transition: 0.2s;
+    border: 1px solid transparent;
+}
+.back { margin-right: 1vh; }
+.forward { margin-left: 1vh; }
+
+.back:hover, .forward:hover {
+    border-color: #b8b9c3;
+}
