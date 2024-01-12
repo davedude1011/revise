@@ -6,7 +6,7 @@
         <title>Document</title>
 
         <link rel="stylesheet" href="/style.css">
-        <link rel="stylesheet" href="https://davedude1011.github.io/revise/style.css">
+        <link rel="stylesheet" href="https://davedude1011.github.io/revise/pages/style.css">
         <script type="text/javascript" async
           src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
         </script>
@@ -100,9 +100,9 @@
         }
 
         ButtonBack.textContent = BackTitle
-        ButtonBack.onclick = function() { window.open(`/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        ButtonBack.onclick = function() { window.open(`/revise/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
         
         ButtonForward.textContent = ForwardTitle
-        ButtonForward.onclick = function() { window.open(`/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+        ButtonForward.onclick = function() { window.open(`/revise/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
     </script>
 </html>
