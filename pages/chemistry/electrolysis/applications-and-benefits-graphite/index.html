@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="https://davedude1011.github.io/revise/pages/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/revise/index.html', '_self')" style="cursor: pointer;">
+            <a href="/revise/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Chemistry</div>
+            <div class="title">Applications and Benifits of Graphite</div>
+            <br>
+            <div class="date">12/01/24</div>
+            <br><br><br>
+            <div class="header">Applications and Benefits of Using Graphite Rods in Electrolysis</div>
+
+            <div class="text">Graphite rods, owing to their unique properties, find widespread applications in electrolysis processes. Delving into their distinct characteristics, we explore the diverse realms where graphite rods prove invaluable, from metal production to chemical synthesis.</div>
+            
+            <div class="header">1. Electrolytic Cells and Graphite Rods</div>
+            <div class="text">- **Conductivity:** Graphite's excellent electrical conductivity makes it an ideal choice for electrodes in electrolytic cells. The rods efficiently facilitate the flow of electrons during oxidation and reduction reactions.</div>
+            <div class="text">- **Inert Nature:** Graphite's inertness ensures minimal reactivity with the electrolyte, preserving its structural integrity over extended use. This makes it a durable and reliable electrode material.</div>
+            
+            <div class="header">2. Metal Electroplating</div>
+            <div class="text">- **Uniform Coating:** Graphite rods serve as anodes or cathodes in metal electroplating processes. Their ability to release or accept electrons allows for the controlled deposition of metal ions, resulting in a uniform and adherent metal coating on substrates.</div>
+            <div class="text">- **Versatility:** The use of graphite rods enables the electroplating of various metals, offering versatility in applications ranging from decorative finishes to corrosion protection.</div>
+            
+            <div class="header">3. Chlor-Alkali Electrolysis</div>
+            <div class="text">- **Sodium Hydroxide Production:** Graphite anodes play a crucial role in the chlor-alkali electrolysis process for sodium hydroxide production. Here, chlorine is liberated at the anode, while sodium hydroxide is formed at the cathode.</div>
+            <div class="text">- **Stability:** The stability of graphite in the harsh chemical environment ensures prolonged and consistent performance in chlor-alkali electrolysis cells.</div>
+            
+            <div class="header">4. Benefits of Graphite Rods</div>
+            <div class="text">- **High Temperature Resistance:** Graphite's high temperature resistance makes it suitable for electrolysis processes involving elevated temperatures, ensuring sustained performance under demanding conditions.</div>
+            <div class="text">- **Corrosion Resistance:** Graphite's resistance to corrosion enhances the lifespan of electrodes, reducing the need for frequent replacements and maintenance.</div>
+            
+            <div class="header">5. Environmental Considerations</div>
+            <div class="text">- **Green Chemistry:** The use of graphite rods aligns with principles of green chemistry, as graphite is a non-toxic and environmentally friendly material compared to certain alternative electrode materials.</div>
+            <div class="text">- **Recyclability:** Graphite's recyclability contributes to sustainable practices in industrial processes, minimizing waste and environmental impact.</div>
+            
+            <div class="header">Conclusion</div>
+            <div class="text">In the realm of electrolysis, graphite rods emerge as stalwart allies, seamlessly conducting electrical currents and withstanding the rigors of diverse applications. From metal electroplating to chlor-alkali electrolysis, their conductivity and durability make them indispensable in shaping the landscape of electrochemical processes.</div>
+            
+            <a href="https://www.youtube.com/watch?v=ilNOpROacf0" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/ilNOpROacf0?si=FH2UI2vGVf02iB7U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=dRtSjJCKkIo" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/dRtSjJCKkIo?si=6lCEl9_myg7ifU8e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=AhTRiL6xjBA&t=1s" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/AhTRiL6xjBA?si=CI8smzXEzKWFUdeY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/revise/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/revise/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="https://davedude1011.github.io/revise/pages/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/revise/index.html', '_self')" style="cursor: pointer;">
+            <a href="/revise/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Chemistry</div>
+            <div class="title">Electrolysis Definition</div>
+            <br>
+            <div class="date">12/01/24</div>
+            <br><br><br>
+            <div class="header">Electrolysis: Unveiling the Electrochemical Transformation</div>
+
+            <div class="text">Electrolysis is a fundamental electrochemical process that involves the decomposition of a substance through the application of an electric current. This transformative method plays a pivotal role in various industrial, scientific, and technological applications, enabling the selective breakdown of compounds into their constituent elements or ions.</div>
+            
+            <div class="header">Key Aspects of Electrolysis</div>
+            <div class="text">- **Electric Current Application:** Electrolysis necessitates the passage of an electric current through an electrolyte, a substance that conducts electricity when dissolved or molten.</div>
+            <div class="text">- **Electrolyte Decomposition:** The electric current induces chemical reactions within the electrolyte, leading to the breakdown of the substance into ions or elemental components.</div>
+            <div class="text">- **Anode and Cathode Reactions:** Electrolysis involves distinct reactions at the anode and cathode. At the anode, oxidation occurs, resulting in the release of electrons. At the cathode, reduction takes place, leading to the acceptance of electrons.</div>
+            
+            <div class="header">Applications of Electrolysis</div>
+            <div class="text">- **Metal Production:** Electrolysis is widely employed in the extraction and refining of metals from their ores. Processes such as aluminum smelting and the production of sodium, potassium, and magnesium rely on electrolytic principles.</div>
+            <div class="text">- **Chemical Synthesis:** Electrolysis plays a crucial role in chemical synthesis, enabling the controlled production of various compounds. It is integral to the manufacture of chlorine, hydrogen, and sodium hydroxide in the chlor-alkali industry.</div>
+            <div class="text">- **Electroplating:** In electroplating, electrolysis is utilized to deposit a layer of metal onto a substrate, enhancing corrosion resistance, appearance, or other desirable properties.</div>
+            
+            <div class="header">Electrolysis in Daily Life</div>
+            <div class="text">- **Water Electrolysis:** One common example is the electrolysis of water, where electric current triggers the decomposition of water into oxygen and hydrogen gases, a process employed in hydrogen fuel production.</div>
+            <div class="text">- **Batteries:** Rechargeable batteries incorporate electrolysis principles during the charging process, allowing for the conversion of electrical energy into chemical energy for storage.</div>
+            <div class="text">- **Electrolytic Cells:** Devices like electrolytic cells are designed specifically for electrolysis applications, finding use in laboratories, industries, and research settings.</div>
+            
+            <div class="header">Conclusion</div>
+            <div class="text">In essence, electrolysis stands as a transformative force, unraveling the intricate dance of electrons and ions under the influence of electric currents. From metal refinement to the synthesis of essential chemicals, electrolysis not only shapes industrial landscapes but also finds its way into everyday processes, influencing advancements across diverse scientific domains.</div>
+            
+            <a href="https://www.youtube.com/watch?v=ilNOpROacf0" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/ilNOpROacf0?si=FH2UI2vGVf02iB7U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=dRtSjJCKkIo" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/dRtSjJCKkIo?si=6lCEl9_myg7ifU8e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=AhTRiL6xjBA&t=1s" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/AhTRiL6xjBA?si=CI8smzXEzKWFUdeY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <a href="https://www.youtube.com/watch?v=IV4IUsholjg&t=28s" class="link">Specific Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/IV4IUsholjg?si=00oD8cNOVPS_uQMd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/revise/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/revise/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

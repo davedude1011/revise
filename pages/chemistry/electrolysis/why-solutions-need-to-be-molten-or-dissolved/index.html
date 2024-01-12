@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="https://davedude1011.github.io/revise/pages/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/revise/index.html', '_self')" style="cursor: pointer;">
+            <a href="/revise/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Chemistry</div>
+            <div class="title">Why solutions need to be Molten / Dissolved</div>
+            <br>
+            <div class="date">12/01/24</div>
+            <br><br><br>
+            <div class="header">Electrolysis: Importance of Molten or Dissolved Solutions</div>
+
+            <div class="text">In electrolysis, the use of molten salts or dissolved solutions is crucial for several reasons, influencing the efficiency and feasibility of the electrochemical process. Let's explore why solutions need to be molten or dissolved in electrolysis.</div>
+            
+            <div class="header">1. Enhanced Ionic Mobility</div>
+            <div class="text">- **Ion Transport:** Molten salts or dissolved solutions provide a medium for enhanced ionic mobility. Ions in these states can move freely, allowing for effective migration to the electrodes during electrolysis.</div>
+            
+            <div class="header">2. Facilitation of Current Flow</div>
+            <div class="text">- **Conductivity:** Molten or dissolved states significantly improve the electrical conductivity of the electrolyte. This conductivity is essential for the flow of current between the anode and cathode, ensuring efficient redox reactions.</div>
+            
+            <div class="header">3. Redox Reactions in Solution</div>
+            <div class="text">- **Solubility of Reactants:** Many substances undergo electrolysis more readily when in a dissolved state. The solubility of reactants ensures a higher concentration of ions in the solution, promoting a more effective electrochemical process.</div>
+            
+            <div class="header">4. Reduction of Operating Temperature</div>
+            <div class="text">- **Molten State:** In some cases, substances need to be in a molten state for electrolysis to occur. This reduces the operating temperature, making the process more practical for certain applications, such as the extraction of metals.</div>
+            
+            <div class="header">5. Minimization of Side Reactions</div>
+            <div class="text">- **Purity of Electrolyte:** Molten or dissolved states allow for better control over the purity of the electrolyte. This minimizes the occurrence of side reactions and ensures that the desired redox reactions take place without interference.</div>
+            
+            <div class="header">6. Practical Applications</div>
+            <div class="text">- **Industrial Electrolysis:** Many industrial electrolysis processes, such as the production of aluminum, chlorine, and sodium hydroxide, rely on molten salts or dissolved solutions due to their practicality and efficiency.</div>
+            
+            <div class="header">Conclusion</div>
+            <div class="text">The choice of using molten or dissolved solutions in electrolysis is driven by the need for improved ionic mobility, conductivity, and control over redox reactions. This strategic decision enhances the overall effectiveness of electrolytic processes across various scientific, industrial, and technological applications.</div>
+            
+            <a href="https://www.youtube.com/watch?v=ilNOpROacf0" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/ilNOpROacf0?si=FH2UI2vGVf02iB7U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=dRtSjJCKkIo" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/dRtSjJCKkIo?si=6lCEl9_myg7ifU8e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=AhTRiL6xjBA&t=1s" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/AhTRiL6xjBA?si=CI8smzXEzKWFUdeY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/revise/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/revise/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>
