@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="https://davedude1011.github.io/revise/pages/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/revise/index.html', '_self')" style="cursor: pointer;">
+            <a href="/revise/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Maths</div>
+            <div class="title">Intersecting Chords and Tangents</div>
+            <br>
+            <div class="date">16/01/24</div>
+            <br><br><br>
+            <div class="header">Intersecting Chords and Tangents in Circles: Geometric Relationships</div>
+
+            <div class="text">The interaction between intersecting chords and tangents in a circle unveils interesting geometric relationships that contribute to the understanding of circle properties. Let's explore the characteristics and applications of intersecting chords and tangents.</div>
+            
+            <div class="header">1. Intersecting Chords</div>
+            <div class="text">- **Property 1:** When two chords intersect within a circle, the product of the segments of one chord is equal to the product of the segments of the other chord. This is known as the Intersecting Chords Theorem.</div>
+            <div class="text">- **Property 2:** The angle between intersecting chords is equal to the average of the measures of the arcs intercepted by the chords.</div>
+            
+            <div class="header">2. Tangents and Chords</div>
+            <div class="text">- **Property 3:** A tangent to a circle at any point is perpendicular to the radius drawn to the point of tangency. This creates a right angle between the tangent and the radius.</div>
+            <div class="text">- **Property 4:** If a chord and a tangent intersect at a point on the circle, the product of the lengths of the chord segments is equal to the square of the length of the tangent from the point of intersection. This is known as the Tangent-Chord Theorem.</div>
+            
+            <div class="header">3. Applications in Problem Solving</div>
+            <div class="text">- **Geometry Proofs:** Intersecting chords and tangents are often used in geometric proofs, applying the aforementioned theorems to establish relationships within circles.</div>
+            <div class="text">- **Construction:** Understanding these properties aids in constructing circles with specific chord lengths or tangent points.</div>
+            
+            <div class="header">4. Real-World Relevance</div>
+            <div class="text">- **Engineering and Design:** Knowledge of intersecting chords and tangents is valuable in designing circular structures, ensuring stability and precise layouts.</div>
+            <div class="text">- **Physics:** Concepts related to tangents and chords find applications in physics, particularly in understanding circular motion and forces.</div>
+            
+            <div class="header">5. Conclusion</div>
+            <div class="text">Intersecting chords and tangents in circles offer a wealth of geometric relationships that are not only fascinating in theory but also find practical applications in various fields. Mastery of these concepts enhances problem-solving abilities and contributes to a deeper understanding of circular geometry.</div>
+            
+            <a href="https://www.youtube.com/watch?v=i1JFx-0mHYM" class="link">Specific Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/i1JFx-0mHYM?si=FvDTjtYTiC8z38a3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <a href="https://www.youtube.com/watch?v=X3ZyTM78ygk" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/X3ZyTM78ygk?si=fr02IIiABuatod5t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=Fzaof9cX-PM" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/Fzaof9cX-PM?si=fAMfLEmFGSbQvLb_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=Wcv0f5PpTv0" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/Wcv0f5PpTv0?si=HxHEIuQySgxCj3CT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=nDMpINuq1w0" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/nDMpINuq1w0?si=3KfzxaInUeVv96NH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/revise/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/revise/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

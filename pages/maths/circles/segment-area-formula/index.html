@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="https://davedude1011.github.io/revise/pages/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/revise/index.html', '_self')" style="cursor: pointer;">
+            <a href="/revise/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Maths</div>
+            <div class="title">Segment Area Formulas</div>
+            <br>
+            <div class="date">16/01/24</div>
+            <br><br><br>
+            <div class="header">Segment Area Formula and Variations: Calculating Areas in Circular Segments</div>
+
+            <div class="text">Circular segments, defined by a chord and the arc it subtends, possess unique geometric properties. The segment area formula, along with its variations, facilitates accurate area calculations. Let's delve into the segment area formula and explore its applications with a focus on degrees, as per your preference.</div>
+            
+            <div class="header">1. Segment Area Formula</div>
+            <div class="text">- **Segment Definition:** A segment is the region bounded by a chord and the arc it subtends.</div>
+            <div class="text">- **Formula:** The area (\(A_{seg}\)) of a segment with central angle \(n\) in degrees and radius \(r\) is given by \(A_{seg} = \frac{1}{2} r^2 \left(\frac{n}{360} \pi - \sin\frac{n}{2}\right)\).</div>
+            <div class="text">- **Explanation:** The formula combines the area of a sector with the area of a triangle formed by the radius and the chord.</div>
+            
+            <div class="header">2. Finding Central Angle</div>
+            <div class="text">- **Central Angle Formula:** To find the central angle \(n\) when given the segment area \(A_{seg}\) and radius \(r\), rearrange the segment area formula as \(n = \arcsin\left(1 - \frac{2A_{seg}}{\pi r^2}\right) \times 2\).</div>
+            <div class="text">- **Application:** This variation is useful when you have the segment area and need to determine the central angle.</div>
+            
+            <div class="header">3. Finding Radius</div>
+            <div class="text">- **Radius Formula:** If the segment area \(A_{seg}\) and central angle \(n\) are known, the radius \(r\) can be found using \(r = \sqrt{\frac{2A_{seg}}{\frac{\pi}{180} n - \sin n}}\).</div>
+            <div class="text">- **Purpose:** This formula is handy when you have the segment area and central angle but need to find the radius.</div>
+            
+            <div class="header">4. Practical Applications</div>
+            <div class="text">- **Architectural Design:** Calculating segment areas is crucial for designing arches and circular architectural elements.</div>
+            <div class="text">- **Mathematics and Physics:** These formulas find applications in solving problems related to circular segments in various fields.</div>
+            
+            <div class="header">5. Conclusion</div>
+            <div class="text">The segment area formula, accompanied by its variations, offers a versatile tool for calculating areas within circular segments. Whether applied in design or mathematical problem-solving, a solid understanding of these formulas enhances one's grasp of circle geometry.</div>
+            
+            <a href="https://www.youtube.com/watch?v=X3ZyTM78ygk" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/X3ZyTM78ygk?si=fr02IIiABuatod5t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=Fzaof9cX-PM" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/Fzaof9cX-PM?si=fAMfLEmFGSbQvLb_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=Wcv0f5PpTv0" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/Wcv0f5PpTv0?si=HxHEIuQySgxCj3CT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=nDMpINuq1w0" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/nDMpINuq1w0?si=3KfzxaInUeVv96NH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/revise/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/revise/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="https://davedude1011.github.io/revise/pages/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/revise/index.html', '_self')" style="cursor: pointer;">
+            <a href="/revise/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Maths</div>
+            <div class="title">3D Geometry with Circles</div>
+            <br>
+            <div class="date">16/01/24</div>
+            <br><br><br>
+            <div class="header">3D Geometry with Circles: Bridging Dimensions in Geometric Exploration</div>
+
+            <div class="text">While circles are inherently 2D shapes, their influence extends into the realm of 3D geometry, introducing intriguing concepts and relationships. Exploring the interplay between circles and three-dimensional spaces unveils unique geometric phenomena. Let's delve into the fascinating world of 3D geometry with circles.</div>
+            
+            <div class="header">1. Cylinder Geometry</div>
+            <div class="text">- **Cylinder Definition:** A cylinder is a three-dimensional geometric figure consisting of two parallel circular bases connected by a curved surface.</div>
+            <div class="text">- **Properties:** The circles at the top and bottom bases play a pivotal role in determining the dimensions and characteristics of the cylinder.</div>
+            
+            <div class="header">2. Cone Geometry</div>
+            <div class="text">- **Cone Definition:** A cone is a 3D geometric shape with a circular base that tapers to a single point, known as the apex.</div>
+            <div class="text">- **Relationship with Circles:** The circular base of the cone influences its volume, surface area, and overall geometry.</div>
+            
+            <div class="header">3. Sphere Encasement</div>
+            <div class="text">- **Spherical Enclosure:** Circles are integral to the concept of spheres, which can be visualized as a set of infinite circles with a common center point.</div>
+            <div class="text">- **Geometric Harmony:** Understanding the role of circles in forming and defining spheres enhances the comprehension of their 3D structure.</div>
+            
+            <div class="header">4. Circle in Space</div>
+            <div class="text">- **Spatial Positions:** Circles can exist in various spatial orientations, influencing the perception and properties of the shapes they are part of.</div>
+            <div class="text">- **Intersection and Projection:** Examining how circles intersect or project in 3D space provides valuable insights into their behavior.</div>
+            
+            <div class="header">5. Practical Applications</div>
+            <div class="text">- **Architectural Design:** The integration of circular elements in 3D spaces is prevalent in architectural structures, showcasing the aesthetic and structural significance of circles.</div>
+            <div class="text">- **Engineering Calculations:** Understanding how circles contribute to the geometry of 3D shapes is essential for precise calculations in engineering applications.</div>
+            
+            <div class="header">6. Conclusion</div>
+            <div class="text">The marriage of circles and 3D geometry introduces a captivating dimension to geometric exploration. Whether contemplating cylinders, cones, spheres, or circles in space, this intersection of 2D and 3D geometry enriches our understanding of shapes and their relationships in diverse contexts.</div>
+            
+            <a href="https://www.youtube.com/watch?v=X3ZyTM78ygk" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/X3ZyTM78ygk?si=fr02IIiABuatod5t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=Fzaof9cX-PM" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/Fzaof9cX-PM?si=fAMfLEmFGSbQvLb_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=Wcv0f5PpTv0" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/Wcv0f5PpTv0?si=HxHEIuQySgxCj3CT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=nDMpINuq1w0" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/nDMpINuq1w0?si=3KfzxaInUeVv96NH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/revise/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/revise/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

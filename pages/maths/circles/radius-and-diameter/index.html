@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="https://davedude1011.github.io/revise/pages/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/revise/index.html', '_self')" style="cursor: pointer;">
+            <a href="/revise/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Maths</div>
+            <div class="title">Radius and Diameter</div>
+            <br>
+            <div class="date">16/01/24</div>
+            <br><br><br>
+            <div class="header">Radius and Diameter in Circles: Fundamental Measurements</div>
+
+            <div class="text">The radius and diameter are fundamental measurements associated with circles, providing key insights into their size and proportions. Let's explore the definitions, relationships, and significance of the radius and diameter.</div>
+            
+            <div class="header">1. Radius</div>
+            <div class="text">- **Definition:** The radius of a circle is the distance from its center to any point on its circumference.</div>
+            <div class="text">- **Symbol:** Usually denoted by 'r.'</div>
+            <div class="text">- **Measurement:** The radius is half the length of the diameter, and it defines the size of the circle.</div>
+            
+            <div class="header">2. Diameter</div>
+            <div class="text">- **Definition:** The diameter of a circle is the distance across its center, passing through any two points on its circumference. It is twice the length of the radius.</div>
+            <div class="text">- **Symbol:** Often represented by 'd.'</div>
+            <div class="text">- **Relationship with Radius:** The diameter is always twice the length of the radius (d = 2r).</div>
+            
+            <div class="header">3. Relationship Formula</div>
+            <div class="text">- **Formula:** The relationship between the radius and diameter is expressed as d = 2r or, equivalently, r = d/2.</div>
+            <div class="text">- **Significance:** This formula highlights the direct proportionality between the diameter and the radius.</div>
+            
+            <div class="header">4. Significance in Geometry</div>
+            <div class="text">- **Central Role:** The radius and diameter are crucial for defining the size and proportions of circles, serving as fundamental parameters in geometry.</div>
+            <div class="text">- **Calculation Convenience:** Understanding the relationship between the two simplifies various geometric calculations.</div>
+            
+            <div class="header">5. Practical Applications</div>
+            <div class="text">- **Construction:** In construction and design, knowledge of the radius and diameter is vital for creating circular structures with specific dimensions.</div>
+            <div class="text">- **Engineering:** Engineers use these measurements in various applications, from designing gears to optimizing space in circular layouts.</div>
+            
+            <div class="header">6. Visual Representation</div>
+            <div class="text">- **Diagram:** A visual aid, such as a diagram with labeled radius and diameter, enhances the understanding of these concepts in educational contexts.</div>
+            
+            <div class="header">7. Conclusion</div>
+            <div class="text">The radius and diameter are foundational elements in the study of circles, offering valuable insights into their geometry and proportions. Whether applied in mathematics, design, or engineering, a solid grasp of these concepts is essential for a wide range of applications.</div>
+            
+            <a href="https://www.youtube.com/watch?v=X3ZyTM78ygk" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/X3ZyTM78ygk?si=fr02IIiABuatod5t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=Fzaof9cX-PM" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/Fzaof9cX-PM?si=fAMfLEmFGSbQvLb_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=Wcv0f5PpTv0" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/Wcv0f5PpTv0?si=HxHEIuQySgxCj3CT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=nDMpINuq1w0" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/nDMpINuq1w0?si=3KfzxaInUeVv96NH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/revise/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/revise/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>
