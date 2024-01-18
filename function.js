@@ -413,6 +413,12 @@ var Menus = [
     {Type: "menu-direct", Emoji: "🌳", Title: "Adaptation", MenuID: 182, OnclickID: 185, Link: "pages/geography/climate-change-adaptation/"},
     {Type: "menu-direct", Emoji: "☁", Title: "Mitigation", MenuID: 182, OnclickID: 186, Link: "pages/geography/climate-change-mitigation/"},
     {Type: "menu", Emoji: "🌊", Title: "Hydrology and River Systems", MenuID: 7, OnclickID: 298},
+    {Type: "menu", Emoji: "🍰", Title: "Educakes", MenuID: 298, OnclickID: 359},
+    {Type: "link-direct", Emoji: "🍰", Title: "River landscapes - river valleys", MenuID: 359, OnclickID: 360, Link: "https://my.educake.co.uk/my-educake/study-guide/open-book/2746"},
+    {Type: "link-direct", Emoji: "🍰", Title: "River landscapes - fluvial landforms 1", MenuID: 359, OnclickID: 361, Link: "https://my.educake.co.uk/my-educake/study-guide/open-book/2747"},
+    {Type: "link-direct", Emoji: "🍰", Title: "River landscapes - fluvial landforms 2", MenuID: 359, OnclickID: 362, Link: "https://my.educake.co.uk/my-educake/study-guide/open-book/2748"},
+    {Type: "link-direct", Emoji: "🍰", Title: "River landscapes - protection 1", MenuID: 359, OnclickID: 363, Link: "https://my.educake.co.uk/my-educake/study-guide/open-book/2749"},
+    {Type: "link-direct", Emoji: "🍰", Title: "River landscapes - protection 2", MenuID: 359, OnclickID: 364, Link: "https://my.educake.co.uk/my-educake/study-guide/open-book/2750"},
     {Type: "menu", Emoji: "🏞️", Title: "River Formation and Features", MenuID: 298, OnclickID: 299},
     {Type: "menu-direct", Emoji: "🔄", Title: "Oxbow Lakes", MenuID: 299, OnclickID: 306, Link: "pages/geography/rivers/oxbow-lakes/"},
     {Type: "menu-direct", Emoji: "💦", Title: "Waterfalls", MenuID: 299, OnclickID: 306, Link: "pages/geography/rivers/waterfalls/"},
@@ -495,6 +501,7 @@ var Menus = [
 
 AllTopics = []
 HighestNumber = 0
+let PrevNum = 0
 function MakeMenu() {
     for (let i = 0; i < Menus.length; i++) {
         let CurrentMenu = Menus[i];
@@ -559,6 +566,13 @@ function MakeMenu() {
         Outer.appendChild(Title);
         Outer.appendChild(Arrow);
         document.querySelector(".box-container").appendChild(Outer);
+
+        //if (PrevNum != CurrentMenu.MenuID) {
+        //    document.querySelector(".box-container").appendChild(document.createElement("br"))
+        //    console.log("hu")
+        //}
+
+        PrevNum = CurrentMenu.MenuID
     }
 }
 MakeMenu()
