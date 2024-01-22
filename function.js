@@ -159,7 +159,6 @@ var Menus = [
     {Type: "menu-direct", Emoji: "📐", Title: "Area Formula", MenuID: 334, OnclickID: 351, Link: "pages/maths/circles/area-formula/"},
     {Type: "menu-direct", Emoji: "📐", Title: "Sector Area Formula", MenuID: 334, OnclickID: 352, Link: "pages/maths/circles/sector-area-formula/"},
     {Type: "menu-direct", Emoji: "📏", Title: "Segment Area Formula", MenuID: 334, OnclickID: 353, Link: "pages/maths/circles/segment-area-formula/"},
-    {Type: "menu-direct", Emoji: "🔄", Title: "Using Formulas to Find Other Values", MenuID: 334, OnclickID: 354, Link: "pages/maths/circles/using-formulas-to-find-other-values/"},
     {Type: "menu", Emoji: "📐", Title: "Coordinate Geometry and Circles", MenuID: 329, OnclickID: 335},
     {Type: "menu-direct", Emoji: "🔄", Title: "Equations of Circles", MenuID: 335, OnclickID: 355, Link: "pages/maths/circles/equations-of-circles/"},
     {Type: "menu-direct", Emoji: "🔴", Title: "Intersecting Circles", MenuID: 335, OnclickID: 356, Link: "pages/maths/circles/intersecting-circles/"},
@@ -511,6 +510,8 @@ function MakeMenu() {
         let Title = document.createElement("div");
         let Arrow = document.createElement("div");
 
+        if (CurrentMenu.Type == "menu-direct") { Outer.classList.add("menu-direct"); }
+
         Arrow.textContent = "➜"
 
         if (CurrentMenu.Type === "box") {
@@ -567,10 +568,10 @@ function MakeMenu() {
         Outer.appendChild(Arrow);
         document.querySelector(".box-container").appendChild(Outer);
 
-        //if (PrevNum != CurrentMenu.MenuID) {
-        //    document.querySelector(".box-container").appendChild(document.createElement("br"))
-        //    console.log("hu")
-        //}
+        if (CurrentMenu.MenuID != Menus[i+1].MenuID) {
+            Outer.classList.add("margin")
+            console.log("hu")
+        }
 
         PrevNum = CurrentMenu.MenuID
     }

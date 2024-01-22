@@ -118,7 +118,10 @@ body {
 
     transition: 0.2s;
     translate: -100%;
-
+}
+.menu-direct.margin {
+    margin-bottom: 2vh;
+    border-bottom: 2px solid rgba(73, 243, 255, 0.35)
 }
 
 .menu-title {
