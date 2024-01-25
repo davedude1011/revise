@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="https://davedude1011.github.io/revise/pages/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/revise/index.html', '_self')" style="cursor: pointer;">
+            <a href="/revise/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">D.T.</div>
+            <div class="title">Chemical Resistance</div>
+            <br>
+            <div class="date">25/01/24</div>
+            <br><br><br>
+            <div class="header">Chemical Resistance of Plastics: Understanding Material Properties</div>
+
+            <div class="text">The chemical resistance of plastics refers to their ability to withstand exposure to various chemicals without undergoing significant degradation or damage. This property is crucial in applications where plastics come into contact with aggressive substances, such as acids, solvents, and corrosive materials. Let's explore the factors influencing the chemical resistance of plastics and their practical implications.</div>
+            
+            <div class="header">1. Polymer Composition</div>
+            <div class="text">- **Chemical Structure:** The molecular structure of the polymer determines its resistance to different chemicals. For example, polymers with highly cross-linked or saturated structures tend to exhibit greater chemical resistance compared to those with more reactive or polar groups.</div>
+            <div class="text">- **Polymer Type:** Different types of polymers, such as polyethylene (PE), polypropylene (PP), polyvinyl chloride (PVC), and fluoropolymers like polytetrafluoroethylene (PTFE), offer varying degrees of chemical resistance based on their chemical compositions and properties.</div>
+            
+            <div class="header">2. Environmental Factors</div>
+            <div class="text">- **Temperature:** Elevated temperatures can accelerate chemical reactions and increase the likelihood of chemical attack on plastics. Some polymers may exhibit reduced chemical resistance at higher temperatures, while others are specifically designed for high-temperature applications.</div>
+            <div class="text">- **Exposure Duration:** Prolonged exposure to chemicals can compromise the integrity of plastics over time, leading to degradation, swelling, or loss of mechanical properties. Short-term exposure to certain chemicals may be tolerable, but continuous contact can cause deterioration.</div>
+            
+            <div class="header">3. Chemical Compatibility</div>
+            <div class="text">- **Chemical Nature:** Plastics vary in their compatibility with different types of chemicals based on their chemical structures and properties. It's essential to consider the specific chemical composition, concentration, and temperature of the substances in contact with plastics to assess compatibility.</div>
+            <div class="text">- **Testing and Evaluation:** Chemical resistance testing involves exposing plastic samples to various chemicals under controlled conditions to assess their performance and durability. Standardized test methods help quantify chemical resistance and predict material behavior in real-world applications.</div>
+            
+            <div class="header">4. Practical Applications</div>
+            <div class="text">- **Chemical Storage:** Plastics with high chemical resistance are commonly used for storing and transporting corrosive chemicals, acids, and solvents in industrial settings, laboratories, and chemical processing facilities.</div>
+            <div class="text">- **Piping and Tubing:** Chemical-resistant plastics find applications in piping systems, tubing, and fittings for conveying aggressive fluids in industries such as chemical processing, water treatment, and pharmaceutical manufacturing.</div>
+            <div class="text">- **Laboratory Equipment:** Chemical-resistant plastics are used in the fabrication of laboratory equipment, including beakers, vials, containers, and safety goggles, to withstand exposure to various chemicals during experiments and testing procedures.</div>
+            
+            <div class="header">Conclusion</div>
+            <div class="text">Understanding the chemical resistance of plastics is essential for selecting the right materials for specific applications, ensuring durability, safety, and performance in challenging environments. By considering polymer composition, environmental factors, chemical compatibility, and practical applications, engineers and designers can make informed decisions to mitigate the risks of chemical exposure and ensure the reliability of plastic components and systems.</div>
+            
+            <a href="https://www.youtube.com/watch?v=9GMbRG9CZJw" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/9GMbRG9CZJw?si=a53IoVEr7ut-pE9Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=LPThrGVMARA" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/LPThrGVMARA?si=NWMZAPXXouUXEenL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=qn16JtE_vLc" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/qn16JtE_vLc?si=a59dIlZaTGmqyAoF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/revise/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/revise/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="https://davedude1011.github.io/revise/pages/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/revise/index.html', '_self')" style="cursor: pointer;">
+            <a href="/revise/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">D.T.</div>
+            <div class="title">Acrylic Plastic</div>
+            <br>
+            <div class="date">25/01/24</div>
+            <br><br><br>
+            <div class="header">Acrylic Plastic: Properties and Applications</div>
+
+            <div class="text">Acrylic plastic, also known as polymethyl methacrylate (PMMA) or acrylic glass, is a transparent thermoplastic known for its clarity, strength, and versatility. It is widely used in various industries and applications due to its unique properties and ease of fabrication.</div>
+            
+            <div class="header">1. Chemical Composition</div>
+            <div class="text">- **Monomer:** Acrylic plastic is derived from methyl methacrylate (MMA), which polymerizes to form the polymer chains of PMMA.</div>
+            <div class="text">- **Polymer Structure:** PMMA consists of repeating units of methyl methacrylate monomers linked together through ester bonds.</div>
+            
+            <div class="header">2. Key Properties</div>
+            <div class="text">- **Transparency:** Acrylic plastic boasts exceptional optical clarity, often surpassing that of glass. It allows up to 92% of visible light to pass through, making it an ideal substitute for glass in many applications.</div>
+            <div class="text">- **High Strength:** Despite its lightweight nature, acrylic plastic exhibits high impact resistance, making it less prone to shattering compared to glass.</div>
+            <div class="text">- **Weather Resistance:** PMMA is resistant to UV radiation and weathering, making it suitable for outdoor applications without yellowing or deteriorating over time.</div>
+            <div class="text">- **Ease of Fabrication:** Acrylic plastic can be easily machined, drilled, and shaped using conventional tools, allowing for intricate designs and custom fabrication.</div>
+            
+            <div class="header">3. Applications</div>
+            <div class="text">- **Architectural Glazing:** Acrylic sheets are commonly used as a lightweight and durable alternative to glass in windows, skylights, and canopies.</div>
+            <div class="text">- **Signage and Displays:** Acrylic panels are widely used in signage, retail displays, and point-of-purchase fixtures due to their clarity and ease of printing or engraving.</div>
+            <div class="text">- **Aquariums and Fish Tanks:** Acrylic's optical clarity and impact resistance make it a popular choice for manufacturing aquariums and aquatic exhibits.</div>
+            <div class="text">- **Lighting Fixtures:** PMMA is used in the production of light diffusers, lenses, and covers for LED lighting fixtures due to its excellent light transmission properties.</div>
+            <div class="text">- **Medical Devices:** Acrylic plastic is used in medical applications such as dental prosthetics, surgical instruments, and medical implants due to its biocompatibility and sterilizability.</div>
+            
+            <div class="header">4. Limitations</div>
+            <div class="text">- **Scratch Sensitivity:** While acrylic plastic is highly durable, it can be prone to scratching, requiring careful handling and maintenance to preserve its optical clarity.</div>
+            <div class="text">- **Flammability:** PMMA is combustible and may release toxic fumes when burned, requiring proper precautions in fire-prone environments.</div>
+            
+            <div class="header">Conclusion</div>
+            <div class="text">Acrylic plastic offers a compelling combination of optical clarity, strength, and versatility, making it a preferred material in numerous industries and applications. Understanding its properties and applications is essential for harnessing its full potential in various design and manufacturing endeavors.</div>
+            
+            <a href="https://www.youtube.com/watch?v=mAqVmJQHkA8" class="link">Specific Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/mAqVmJQHkA8?si=MDra8ZW20PWsgvcX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <a href="https://www.youtube.com/watch?v=9GMbRG9CZJw" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/9GMbRG9CZJw?si=a53IoVEr7ut-pE9Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=LPThrGVMARA" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/LPThrGVMARA?si=NWMZAPXXouUXEenL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=qn16JtE_vLc" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/qn16JtE_vLc?si=a59dIlZaTGmqyAoF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/revise/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/revise/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

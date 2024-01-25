@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="https://davedude1011.github.io/revise/pages/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/revise/index.html', '_self')" style="cursor: pointer;">
+            <a href="/revise/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">D.T.</div>
+            <div class="title">Plastics</div>
+            <br>
+            <div class="date">25/01/24</div>
+            <br><br><br>
+            <div class="header">Plastics: Definition and Characteristics</div>
+
+            <div class="text">Plastics, also known as polymers, are a class of synthetic or semi-synthetic materials characterized by their malleability, versatility, and ability to be molded into various shapes. These materials are composed of large macromolecules, or polymers, made up of repeated subunits known as monomers. Plastics play a crucial role in modern industries and daily life due to their diverse range of properties and applications.</div>
+            
+            <div class="header">Key Characteristics of Plastics</div>
+            <div class="text">1. **Polymerization:** Plastics are formed through polymerization, a chemical process where monomers react to form long chains of polymers. This process can be controlled to produce plastics with specific properties.</div>
+            <div class="text">2. **Malleability:** Plastics are highly malleable and can be shaped or molded into a wide variety of forms using heat and pressure, enabling the production of intricate designs and functional components.</div>
+            <div class="text">3. **Versatility:** Plastics exhibit a broad range of physical and chemical properties, making them suitable for diverse applications in industries such as packaging, construction, automotive, electronics, and healthcare.</div>
+            <div class="text">4. **Lightweight:** Many plastics are lightweight, contributing to their widespread use in applications where weight is a critical factor, such as in transportation and packaging.</div>
+            <div class="text">5. **Durability:** Plastics can be engineered to have high durability, resisting wear, impact, and harsh environmental conditions, making them suitable for long-lasting applications.</div>
+            <div class="text">6. **Insulating Properties:** Certain plastics have excellent insulating properties, making them valuable in electrical and electronic applications where insulation is crucial.</div>
+            
+            <div class="header">Types of Plastics</div>
+            <div class="text">Plastics can be categorized into several types based on their chemical structure and properties:</div>
+            <div class="text">- **Thermoplastics:** Plastics that can be melted and reshaped multiple times without undergoing significant chemical change.</div>
+            <div class="text">- **Thermosetting Plastics:** Plastics that undergo irreversible chemical changes upon heating and, once set, cannot be melted or reshaped.</div>
+            <div class="text">- **Biodegradable Plastics:** Plastics designed to degrade over time through natural processes, reducing environmental impact.</div>
+            <div class="text">- **Engineering Plastics:** High-performance plastics with enhanced mechanical, thermal, or chemical properties suitable for specialized applications.</div>
+            
+            <div class="header">Environmental Considerations</div>
+            <div class="text">While plastics offer numerous benefits, their environmental impact, particularly in terms of pollution and waste, has raised concerns. Efforts are underway to develop sustainable practices, including recycling, the use of biodegradable alternatives, and the promotion of a circular economy, to mitigate the environmental effects of plastic use.</div>
+            
+            <div class="header">Conclusion</div>
+            <div class="text">Plastics are integral to modern society, providing innovative solutions in various industries. Understanding their characteristics, types, and environmental considerations is crucial for responsible and sustainable use of these versatile materials.</div>
+            
+            <a href="https://www.youtube.com/watch?v=RS7IzU2VJIQ" class="link">Specific Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/RS7IzU2VJIQ?si=dIMQhu55BFlAH17e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <a href="https://www.youtube.com/watch?v=9GMbRG9CZJw" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/9GMbRG9CZJw?si=a53IoVEr7ut-pE9Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=LPThrGVMARA" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/LPThrGVMARA?si=NWMZAPXXouUXEenL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=qn16JtE_vLc" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/qn16JtE_vLc?si=a59dIlZaTGmqyAoF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/revise/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/revise/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

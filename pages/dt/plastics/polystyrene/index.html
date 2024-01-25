@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="https://davedude1011.github.io/revise/pages/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/revise/index.html', '_self')" style="cursor: pointer;">
+            <a href="/revise/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">D.T.</div>
+            <div class="title">Polystyrene</div>
+            <br>
+            <div class="date">25/01/24</div>
+            <br><br><br>
+            <div class="header">Polystyrene (PS)</div>
+
+            <div class="text">Polystyrene (PS) is a versatile thermoplastic polymer known for its rigid and lightweight properties, making it suitable for a wide range of applications. Here's an overview of polystyrene:</div>
+            
+            <div class="header">1. Properties of Polystyrene</div>
+            <div class="text">- **Rigidity:** Polystyrene is rigid and maintains its shape well, making it suitable for applications requiring structural support and dimensional stability.</div>
+            <div class="text">- **Lightweight:** PS is lightweight, offering ease of handling and transportation in various applications.</div>
+            <div class="text">- **Low Cost:** Polystyrene is cost-effective to produce, making it a popular choice for disposable and single-use items.</div>
+            <div class="text">- **Transparency:** PS can be manufactured in transparent or translucent forms, allowing for clear visibility in packaging and display applications.</div>
+            <div class="text">- **Insulation:** Expanded polystyrene (EPS) foam, a variant of PS, offers excellent thermal insulation properties, making it ideal for packaging and construction insulation.</div>
+            <div class="text">- **Versatility:** Polystyrene can be easily molded, extruded, or formed into various shapes, offering versatility in manufacturing processes.</div>
+            
+            <div class="header">2. Applications of Polystyrene</div>
+            <div class="text">- **Packaging:** Polystyrene is widely used in packaging applications such as food containers, disposable cups, trays, and protective packaging due to its lightweight and insulating properties.</div>
+            <div class="text">- **Consumer Products:** PS is used in consumer products such as toys, CD cases, household appliances, and office supplies due to its rigidity and cost-effectiveness.</div>
+            <div class="text">- **Construction:** Expanded polystyrene (EPS) foam is used in construction applications such as insulation boards, building panels, and lightweight concrete additives due to its thermal insulation properties.</div>
+            <div class="text">- **Medical:** PS is utilized in medical applications such as petri dishes, laboratory containers, and disposable medical devices due to its transparency and compatibility with sterilization methods.</div>
+            
+            <div class="header">3. Environmental Considerations</div>
+            <div class="text">- **Recyclability:** Polystyrene is recyclable, but its recycling rate is relatively low due to challenges in collection and processing. However, efforts are being made to increase recycling rates and develop innovative recycling technologies.</div>
+            <div class="text">- **Environmental Impact:** Polystyrene, particularly expanded polystyrene (EPS), has raised concerns due to its non-biodegradable nature and potential for littering. Proper waste management, recycling, and alternatives are being explored to mitigate environmental impact.</div>
+            <div class="text">- **Biodegradable Alternatives:** Biodegradable forms of polystyrene, such as polystyrene-based bioplastics or alternatives like paper-based packaging, are being developed to address environmental concerns and reduce reliance on traditional PS.</div>
+            
+            <div class="header">Conclusion</div>
+            <div class="text">Polystyrene (PS) is a versatile thermoplastic material with a wide range of applications across various industries. Its rigid, lightweight, and cost-effective properties make it suitable for packaging, consumer products, construction, and medical applications. However, environmental considerations regarding its recyclability and biodegradability are driving efforts to develop sustainable alternatives and improve waste management practices.</div>
+            
+            <a href="https://www.youtube.com/watch?v=30KUWA5CrtA" class="link">Specific Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/30KUWA5CrtA?si=UjQCUAFb8c7CKA2G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <a href="https://www.youtube.com/watch?v=9GMbRG9CZJw" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/9GMbRG9CZJw?si=a53IoVEr7ut-pE9Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=LPThrGVMARA" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/LPThrGVMARA?si=NWMZAPXXouUXEenL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=qn16JtE_vLc" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/qn16JtE_vLc?si=a59dIlZaTGmqyAoF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/revise/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/revise/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

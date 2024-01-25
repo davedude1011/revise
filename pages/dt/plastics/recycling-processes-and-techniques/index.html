@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="https://davedude1011.github.io/revise/pages/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/revise/index.html', '_self')" style="cursor: pointer;">
+            <a href="/revise/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">D.T.</div>
+            <div class="title">Recycling Processes and Techniques</div>
+            <br>
+            <div class="date">25/01/24</div>
+            <br><br><br>
+            <div class="header">Recycling Processes and Techniques</div>
+
+            <div class="text">Recycling is a critical component of sustainable waste management, helping to conserve resources, reduce energy consumption, and minimize environmental impact. Plastics recycling involves various processes and techniques to collect, sort, process, and transform plastic waste into new products. Here are some common recycling processes and techniques:</div>
+            
+            <div class="header">1. Collection</div>
+            <div class="text">The first step in the recycling process is the collection of plastic waste from various sources such as households, businesses, and industries. Collection methods may include curbside pickup, drop-off centers, recycling bins, and industrial recycling programs.</div>
+            
+            <div class="header">2. Sorting</div>
+            <div class="text">Once collected, plastic waste is sorted based on its type, color, and composition to separate different types of plastics. Automated sorting technologies such as optical sorting systems, air classifiers, and magnetic separators are used to efficiently separate plastics by polymer type.</div>
+            
+            <div class="header">3. Cleaning</div>
+            <div class="text">After sorting, plastic waste undergoes cleaning to remove contaminants such as dirt, debris, labels, and adhesives. Washing, shredding, and rinsing processes are used to clean the plastic material and prepare it for further processing.</div>
+            
+            <div class="header">4. Size Reduction</div>
+            <div class="text">Large plastic items are typically shredded or granulated into smaller pieces to increase surface area and facilitate melting and processing. Size reduction techniques include shredding, grinding, and pelletizing to produce uniform plastic pellets or flakes.</div>
+            
+            <div class="header">5. Melting and Reprocessing</div>
+            <div class="text">The shredded or granulated plastic material is melted down and reprocessed into new products through various techniques such as extrusion, injection molding, and blow molding. Melting processes involve heating the plastic material to its melting point and shaping it into desired forms using molds or dies.</div>
+            
+            <div class="header">6. Chemical Recycling</div>
+            <div class="text">Chemical recycling, also known as depolymerization or feedstock recycling, involves breaking down plastic polymers into their monomeric or oligomeric constituents using chemical processes. These monomers can then be used to produce new plastics or other chemical products.</div>
+            
+            <div class="header">7. Mechanical Recycling</div>
+            <div class="text">Mechanical recycling involves physically transforming plastic waste into new products without changing its chemical composition. Mechanical recycling processes include shredding, melting, extruding, and molding to produce recycled plastic pellets, sheets, fibers, and other materials.</div>
+            
+            <div class="header">8. Pyrolysis</div>
+            <div class="text">Pyrolysis is a thermal decomposition process that converts plastic waste into fuel, gas, and char in the absence of oxygen. Pyrolysis can produce liquid fuels such as oil, gas fuels such as syngas, and solid char or coke, which can be used as energy sources or raw materials.</div>
+            
+            <div class="header">9. Upcycling</div>
+            <div class="text">Upcycling involves converting plastic waste into higher-value products with improved properties or functionality. Upcycling techniques include repurposing, refurbishing, and redesigning plastic waste into innovative products such as furniture, art, and building materials.</div>
+            
+            <div class="header">10. Circular Economy Initiatives</div>
+            <div class="text">Circular economy initiatives aim to promote closed-loop systems where plastic waste is continuously recycled and reused to minimize waste generation and resource consumption. These initiatives focus on designing products for recyclability, improving collection and sorting infrastructure, and increasing recycling rates through education and awareness programs.</div>
+            
+            <div class="header">Conclusion</div>
+            <div class="text">Recycling processes and techniques play a crucial role in the efficient management of plastic waste and the transition towards a more sustainable and circular economy. By implementing effective recycling strategies and innovations, we can minimize environmental pollution, conserve resources, and create a more resilient and resource-efficient society.</div>
+            
+            <a href="https://www.youtube.com/watch?v=9GMbRG9CZJw" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/9GMbRG9CZJw?si=a53IoVEr7ut-pE9Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=LPThrGVMARA" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/LPThrGVMARA?si=NWMZAPXXouUXEenL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=qn16JtE_vLc" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/qn16JtE_vLc?si=a59dIlZaTGmqyAoF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/revise/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/revise/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>
