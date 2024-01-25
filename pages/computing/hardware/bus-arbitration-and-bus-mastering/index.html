@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="https://davedude1011.github.io/revise/pages/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/revise/index.html', '_self')" style="cursor: pointer;">
+            <a href="/revise/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Computing</div>
+            <div class="title">Bus Arbitration</div>
+            <br>
+            <div class="date">24/01/24</div>
+            <br><br><br>
+            <div class="header">Bus Arbitration and Bus Mastering in CPU Architecture</div>
+
+            <div class="text">In computer architecture, bus arbitration and bus mastering are critical concepts related to the efficient management and utilization of the system's internal buses. Let's delve into these topics to understand their roles in CPU architecture.</div>
+            
+            <div class="header">1. Bus Arbitration</div>
+            <div class="text">- **Definition:** Bus arbitration is the process by which multiple devices connected to the same bus contend for control over it.</div>
+            <div class="text">- **Purpose:** In a multi-device system, such as a computer, various components (CPU, memory, peripherals) may need access to the system bus. Bus arbitration resolves conflicts and determines which device gains control of the bus at a given time.</div>
+            <div class="text">- **Methods:** Common bus arbitration methods include priority-based schemes, round-robin arbitration, and methods based on request and grant signals.</div>
+            
+            <div class="header">2. Bus Mastering</div>
+            <div class="text">- **Definition:** Bus mastering is a feature where a device (usually the CPU) takes control of the system bus without requiring constant intervention from the CPU itself.</div>
+            <div class="text">- **Purpose:** Bus mastering allows a device to initiate data transfers to and from memory or other peripherals without involving the CPU in every step. This enhances overall system efficiency by offloading some tasks from the CPU.</div>
+            <div class="text">- **DMA (Direct Memory Access):** Bus mastering is often associated with DMA controllers, which are responsible for managing data transfers between memory and I/O devices without CPU intervention.</div>
+            
+            <div class="header">3. CPU Architecture and Bus Utilization</div>
+            <div class="text">- **System Bus:** The system bus connects various components like the CPU, memory, and peripherals, allowing them to communicate and share data.</div>
+            <div class="text">- **Control Bus:** Carries signals related to control and coordination, including bus arbitration signals.</div>
+            <div class="text">- **Data Bus:** Facilitates the transfer of data between components.</div>
+            <div class="text">- **Address Bus:** Carries information about the memory location or I/O port being accessed.</div>
+            
+            <div class="header">4. Benefits and Considerations</div>
+            <div class="text">- **Efficiency:** Bus mastering enhances system efficiency by allowing devices to manage certain operations independently.</div>
+            <div class="text">- **Complexity:** While bus mastering can improve efficiency, it also adds complexity to the system design, requiring careful coordination between devices.</div>
+            <div class="text">- **DMA Controllers:** Devices equipped with DMA controllers benefit significantly from bus mastering, as these controllers can efficiently manage data transfers without constant CPU involvement.</div>
+            
+            <div class="header">Conclusion</div>
+            <div class="text">In CPU architecture, bus arbitration and bus mastering are pivotal for ensuring smooth and efficient communication between various components. Understanding these concepts is essential for designing systems that can effectively manage the flow of data and control signals on the system bus.</div>
+            
+            <a href="https://www.youtube.com/watch?v=alYwqzO6ZEQ" class="link">Specific Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/alYwqzO6ZEQ?si=ZJAe0bHNuKAiuimL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <a href="https://www.youtube.com/watch?v=FZGugFqdr60" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/FZGugFqdr60?si=jSChoD8wr6fi-jK5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=IA8au8Qr3lo" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/IA8au8Qr3lo?si=h9Mt_C1LfolfANXU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=PVad0c2cljo" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/PVad0c2cljo?si=-wsC-C0SpeidmjLe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=aBCaCrC3z0k" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/aBCaCrC3z0k?si=smQ7s6qHULmu0VHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=mk_2-BBGZtA" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/mk_2-BBGZtA?si=v95fgYCV6vySPGl2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/revise/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/revise/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

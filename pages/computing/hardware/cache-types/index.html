@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="https://davedude1011.github.io/revise/pages/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/revise/index.html', '_self')" style="cursor: pointer;">
+            <a href="/revise/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Computing</div>
+            <div class="title">Cache Types</div>
+            <br>
+            <div class="date">24/01/24</div>
+            <br><br><br>
+            <div class="header">Types of Caches in Computer Architecture</div>
+
+            <div class="text">Caches are integral components of computer systems designed to store frequently accessed data and improve overall system performance. Different types of caches serve specific purposes within the memory hierarchy. Let's explore the common types of caches in computer architecture.</div>
+            
+            <div class="header">1. L1 Cache (Level 1 Cache)</div>
+            <div class="text">- **Proximity to CPU:** L1 cache is the closest to the CPU and is usually split into separate instruction and data caches.</div>
+            <div class="text">- **Size:** L1 caches are smaller in size to ensure fast access times.</div>
+            <div class="text">- **Speed:** Designed for low-latency access, L1 cache provides rapid storage and retrieval of frequently used instructions and data.</div>
+            
+            <div class="header">2. L2 Cache (Level 2 Cache)</div>
+            <div class="text">- **Located Between L1 and Main Memory:** L2 cache is positioned between L1 cache and main memory.</div>
+            <div class="text">- **Shared or Separate:** Depending on the system architecture, L2 cache may be shared between multiple cores or exist as separate caches for each core.</div>
+            <div class="text">- **Size:** L2 caches are larger than L1 caches, offering additional storage capacity.</div>
+            
+            <div class="header">3. L3 Cache (Level 3 Cache)</div>
+            <div class="text">- **Shared Among Cores:** L3 cache is often shared among multiple processor cores within a system.</div>
+            <div class="text">- **System Level Cache:** Positioned at the system level, L3 cache serves as a larger, shared cache to improve data access for all processor cores.</div>
+            <div class="text">- **Size:** L3 caches are larger than both L1 and L2 caches.</div>
+            
+            <div class="header">4. Inclusive and Exclusive Caches</div>
+            <div class="text">- **Inclusive Caches:** Higher-level caches include all the data present in lower-level caches, promoting simplicity but requiring more storage.</div>
+            <div class="text">- **Exclusive Caches:** Each cache level contains only the data not present in higher-level caches, reducing storage requirements but adding complexity to coherence management.</div>
+            
+            <div class="header">5. Unified Caches</div>
+            <div class="text">- **Combined Instruction and Data Caches:** In some systems, L1 or L2 caches may be unified, meaning they store both instructions and data.</div>
+            <div class="text">- **Versatility:** Unified caches offer flexibility but may have slightly higher access latencies compared to split caches.</div>
+            
+            <div class="header">6. Write-Through and Write-Back Caches</div>
+            <div class="text">- **Write-Through Caches:** Data is written simultaneously to the cache and main memory, ensuring consistency but potentially slowing down write operations.</div>
+            <div class="text">- **Write-Back Caches:** Data is written to the cache first, and then to the main memory when the cache line is replaced. This can improve write performance but requires additional complexity for tracking changes.</div>
+            
+            <div class="header">Conclusion</div>
+            <div class="text">Different types of caches serve specific roles in enhancing data access and system performance. The choice of cache types, sizes, and configurations depends on the design goals and requirements of a particular computer architecture.</div>
+            
+            <a href="https://www.youtube.com/watch?v=6JpLD3PUAZk" class="link">Specific Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/6JpLD3PUAZk?si=0c0rBvZfNu9R70jv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=sHqNMHf2UNI" class="link">Specific Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/sHqNMHf2UNI?si=1bI4K65lwJ_1KdWo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <a href="https://www.youtube.com/watch?v=FZGugFqdr60" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/FZGugFqdr60?si=jSChoD8wr6fi-jK5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=IA8au8Qr3lo" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/IA8au8Qr3lo?si=h9Mt_C1LfolfANXU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=PVad0c2cljo" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/PVad0c2cljo?si=-wsC-C0SpeidmjLe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=aBCaCrC3z0k" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/aBCaCrC3z0k?si=smQ7s6qHULmu0VHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=mk_2-BBGZtA" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/mk_2-BBGZtA?si=v95fgYCV6vySPGl2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/revise/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/revise/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>
