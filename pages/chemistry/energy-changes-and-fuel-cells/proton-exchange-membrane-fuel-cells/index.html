@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="https://davedude1011.github.io/revise/pages/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/revise/index.html', '_self')" style="cursor: pointer;">
+            <a href="/revise/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Chemistry</div>
+            <div class="title">Proton Exchange Membrane Fuel Cells</div>
+            <br>
+            <div class="date">27/01/24</div>
+            <br><br><br>
+            <div class="header">Proton Exchange Membrane Fuel Cells (PEMFCs)</div><br><br>
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Proton_Exchange_Fuel_Cell_Diagram.svg/1024px-Proton_Exchange_Fuel_Cell_Diagram.svg.png" style="filter: invert(1); width: 80%" alt="">
+
+            <div class="text">Proton Exchange Membrane Fuel Cells (PEMFCs) are a type of low-temperature fuel cell that operates at temperatures around 50 to 100 degrees Celsius (122 to 212 degrees Fahrenheit). These fuel cells utilize a solid polymer electrolyte membrane, typically made of a perfluorinated sulfonic acid material, as the proton-conducting medium.</div>
+            
+            <div class="header">1. Operating Principle</div>
+            <div class="text">- **Electrochemical Reaction:** In a PEMFC, hydrogen fuel is supplied to the anode and oxygen (from air) is supplied to the cathode. At the anode, hydrogen molecules (H₂) are split into protons (H⁺) and electrons (e⁻). The protons migrate through the electrolyte membrane to the cathode, while the electrons travel through an external circuit, generating electrical power. At the cathode, oxygen reacts with the protons and electrons to form water (H₂O).</div>
+            
+            <div class="header">2. Advantages</div>
+            <div class="text">- **High Power Density:** PEMFCs offer high power density, enabling compact and lightweight fuel cell systems suitable for various applications, including transportation and portable electronics.</div>
+            <div class="text">- **Fast Start-up:** PEMFCs can start up quickly and respond rapidly to changes in power demand, making them suitable for applications requiring dynamic operation and frequent on/off cycling.</div>
+            <div class="text">- **Low Operating Temperature:** Operating at low temperatures simplifies system design, reduces thermal management requirements, and enhances safety compared to high-temperature fuel cells.</div>
+            
+            <div class="header">3. Challenges</div>
+            <div class="text">- **Hydrogen Infrastructure:** The widespread adoption of PEMFCs is hindered by the limited availability of hydrogen refueling infrastructure, particularly for transportation applications.</div>
+            <div class="text">- **Catalyst Cost:** Platinum-based catalysts are commonly used in PEMFCs, contributing to high system costs. Research efforts focus on developing alternative catalyst materials to reduce costs and improve durability.</div>
+            
+            <div class="header">4. Applications</div>
+            <div class="text">- **Transportation:** PEMFCs are used in fuel cell vehicles (FCVs) as an alternative to internal combustion engines. They offer zero-emission operation, long driving ranges, and rapid refueling, making them promising for passenger cars, buses, and trucks.</div>
+            <div class="text">- **Portable Power:** PEMFCs power a range of portable electronic devices, including laptops, smartphones, drones, and backup power systems. Their high power density and quick start-up make them ideal for mobile and off-grid applications.</div>
+            
+            <div class="header">5. Research and Development</div>
+            <div class="text">- **Membrane Optimization:**
+            
+            <a href="https://www.youtube.com/watch?v=dstRL5xB0Sk" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/dstRL5xB0Sk?si=oOVGihmsNY0TnIup" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=JRIm_a2LDPM" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/JRIm_a2LDPM?si=vPj1X9YGZrcTw36F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=8xeB_O_fyzM" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/8xeB_O_fyzM?si=5XRbpKdtYt1aZDDU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=iJgMuDzkdkI" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/iJgMuDzkdkI?si=32fTxFzQGUe_-Hne" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/revise/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/revise/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

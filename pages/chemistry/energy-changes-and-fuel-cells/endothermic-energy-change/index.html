@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="https://davedude1011.github.io/revise/pages/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/revise/index.html', '_self')" style="cursor: pointer;">
+            <a href="/revise/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Chemistry</div>
+            <div class="title">Endothermic Energy Change</div>
+            <br>
+            <div class="date">27/01/24</div>
+            <br><br><br>
+            <div class="header">Endothermic Energy Change</div><br>
+
+            <img src="https://d20khd7ddkh5ls.cloudfront.net/endothermic_energy_diagram_3.jpeg" width="80%" alt="">
+
+            <div class="text">Endothermic energy change refers to a type of chemical reaction or process in which energy is absorbed from the surroundings, typically in the form of heat. This absorption of energy results in a decrease in temperature of the surroundings. Here's an overview of endothermic energy change:</div>
+            
+            <div class="header">1. Characteristics of Endothermic Reactions</div>
+            <div class="text">- **Absorption of Energy:** Endothermic reactions absorb energy from the surroundings, causing a decrease in temperature in the immediate environment.</div>
+            <div class="text">- **Heat as a Reactant:** In endothermic reactions, heat is considered a reactant, as it is consumed during the process.</div>
+            <div class="text">- **Examples:** Common examples of endothermic reactions include the dissolution of ammonium nitrate in water, the melting of ice, and the evaporation of liquid water.</div>
+            
+            <div class="header">2. Energy Level Diagram</div>
+            <div class="text">- **Energy Profile:** Endothermic reactions can be represented using an energy level diagram, where the reactants start at a lower energy level and absorb energy to reach a higher energy level of the products.</div>
+            <div class="text">- **Activation Energy:** Endothermic reactions typically have higher activation energies, as energy must be supplied to overcome the energy barrier for the reaction to proceed.</div>
+            
+            <div class="header">3. Applications and Importance</div>
+            <div class="text">- **Endothermic Processes:** Endothermic reactions and processes are essential in various industrial and biological systems, including chemical manufacturing, thermal management, and biological metabolism.</div>
+            <div class="text">- **Cooling Effect:** Endothermic reactions are utilized in products such as instant cold packs, which provide a cooling effect when activated by breaking a seal and allowing reactants to mix and undergo an endothermic reaction.</div>
+            
+            <div class="header">4. Thermodynamic Considerations</div>
+            <div class="text">- **Entropy Changes:** Endothermic reactions typically involve an increase in entropy, as the system becomes more disordered due to the absorption of energy.</div>
+            <div class="text">- **Gibbs Free Energy:** Endothermic reactions have positive ΔG values under standard conditions, indicating that they are non-spontaneous in the absence of external energy input.</div>
+            
+            <div class="header">Conclusion</div>
+            <div class="text">Endothermic energy change plays a significant role in chemical reactions, physical processes, and everyday applications. Understanding the principles of endothermic reactions is essential for various fields, from chemistry and engineering to environmental science and medicine.</div>
+            
+            <a href="https://www.youtube.com/watch?v=dstRL5xB0Sk" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/dstRL5xB0Sk?si=oOVGihmsNY0TnIup" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=JRIm_a2LDPM" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/JRIm_a2LDPM?si=vPj1X9YGZrcTw36F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=8xeB_O_fyzM" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/8xeB_O_fyzM?si=5XRbpKdtYt1aZDDU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=iJgMuDzkdkI" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/iJgMuDzkdkI?si=32fTxFzQGUe_-Hne" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/revise/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/revise/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

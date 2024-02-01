@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="https://davedude1011.github.io/revise/pages/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/revise/index.html', '_self')" style="cursor: pointer;">
+            <a href="/revise/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Chemistry</div>
+            <div class="title">Electrolysis Overview</div>
+            <br>
+            <div class="date">27/01/24</div>
+            <br><br><br>
+            <div class="header">Electrolysis: Overview</div>
+
+            <div class="text">Electrolysis is a process that involves the decomposition of a compound into its constituent elements using an electric current. It is widely used in various industries for purposes ranging from metal extraction to chemical synthesis. Here's an overview of electrolysis:</div>
+            
+            <div class="header">1. Principles of Electrolysis</div>
+            <div class="text">- **Electric Current:** Electrolysis requires the passage of an electric current through an electrolyte, a substance that conducts electricity when dissolved or molten.</div>
+            <div class="text">- **Electrodes:** The electric current enters the electrolyte through electrodes, typically made of inert materials like graphite or platinum.</div>
+            <div class="text">- **Electrolyte Composition:** The electrolyte contains ions that migrate towards the electrodes under the influence of the electric field.</div>
+            
+            <div class="header">2. Anode and Cathode Reactions</div>
+            <div class="text">- **Anode:** At the anode (positive electrode), oxidation occurs, leading to the release of electrons. This process generates positive ions.</div>
+            <div class="text">- **Cathode:** At the cathode (negative electrode), reduction takes place, resulting in the gain of electrons. This process produces negative ions.</div>
+            
+            <div class="header">3. Types of Electrolysis</div>
+            <div class="text">- **Aqueous Electrolysis:** In aqueous electrolysis, water serves as the electrolyte, and the products of electrolysis depend on the ions present in the water and any added substances.</div>
+            <div class="text">- **Molten Salt Electrolysis:** In molten salt electrolysis, the electrolyte is a molten salt, and the process is commonly used for metal extraction from ores.</div>
+            
+            <div class="header">4. Applications of Electrolysis</div>
+            <div class="text">- **Metal Extraction:** Electrolysis is used to extract reactive metals such as aluminum and sodium from their ores.</div>
+            <div class="text">- **Chemical Synthesis:** It is employed in the production of various chemicals, including chlorine, hydrogen, and sodium hydroxide.</div>
+            <div class="text">- **Electroplating:** Electrolysis is utilized in electroplating processes to coat surfaces with a layer of metal.</div>
+            
+            <div class="header">5. Efficiency and Considerations</div>
+            <div class="text">- **Energy Consumption:** Electrolysis processes can be energy-intensive, and efforts are made to improve efficiency and reduce energy consumption.</div>
+            <div class="text">- **Environmental Impact:** Some electrolysis processes may generate by-products or consume resources, leading to environmental considerations.</div>
+            
+            <div class="header">Conclusion</div>
+            <div class="text">Electrolysis is a versatile process with widespread applications in industry and research. By harnessing the power of electricity, electrolysis enables the production of essential chemicals and materials, driving innovation and progress across various fields.</div>
+            
+            <a href="https://www.youtube.com/watch?v=ilNOpROacf0&t=17s" class="link">Specific Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/ilNOpROacf0?si=UnatF_JFkcm8aUj3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <a href="https://www.youtube.com/watch?v=dstRL5xB0Sk" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/dstRL5xB0Sk?si=oOVGihmsNY0TnIup" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=JRIm_a2LDPM" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/JRIm_a2LDPM?si=vPj1X9YGZrcTw36F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=8xeB_O_fyzM" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/8xeB_O_fyzM?si=5XRbpKdtYt1aZDDU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=iJgMuDzkdkI" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/iJgMuDzkdkI?si=32fTxFzQGUe_-Hne" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/revise/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/revise/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="https://davedude1011.github.io/revise/pages/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/revise/index.html', '_self')" style="cursor: pointer;">
+            <a href="/revise/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Chemistry</div>
+            <div class="title">Importance of Energy Change</div>
+            <br>
+            <div class="date">27/01/24</div>
+            <br><br><br>
+            <div class="header">Importance of Energy Change</div>
+
+            <div class="text">Energy change is a fundamental concept in physics and chemistry, influencing various natural and industrial processes. Understanding energy changes is crucial for numerous reasons:</div>
+            
+            <div class="header">1. Conservation of Energy</div>
+            <div class="text">- **Law of Conservation:** Energy change reflects the principle of the conservation of energy, which states that energy cannot be created or destroyed, only transformed from one form to another. Tracking energy changes allows us to apply this fundamental law in diverse contexts.</div>
+            
+            <div class="header">2. Predicting Reaction Behavior</div>
+            <div class="text">- **Endothermic vs. Exothermic:** Energy changes, such as those in exothermic and endothermic reactions, provide insights into the behavior of chemical and physical processes. Exothermic reactions release heat energy, while endothermic reactions absorb heat energy. Understanding these differences helps predict reaction outcomes and design reaction pathways.</div>
+            
+            <div class="header">3. Quantifying Energy Transfers</div>
+            <div class="text">- **Energy Units:** Energy changes are quantified using units such as joules (J) or kilojoules (kJ) in the International System of Units (SI). Measuring energy changes allows us to quantify the amount of energy transferred during a process, facilitating comparisons and calculations.</div>
+            
+            <div class="header">4. Driving Natural Processes</div>
+            <div class="text">- **Energy Driving Forces:** Energy changes drive natural processes such as photosynthesis, respiration, and phase changes (e.g., melting, vaporization). These processes rely on the input or release of energy to proceed, influencing biological, geological, and atmospheric phenomena.</div>
+            
+            <div class="header">5. Industrial Applications</div>
+            <div class="text">- **Energy Conversion:** In industrial settings, energy changes are central to processes such as combustion, chemical reactions, and electrical generation. Optimizing energy changes improves process efficiency, reduces resource consumption, and minimizes environmental impacts.</div>
+            
+            <div class="header">6. Environmental Impacts</div>
+            <div class="text">- **Energy Consumption:** Energy changes are closely linked to environmental impacts, including greenhouse gas emissions, air and water pollution, and resource depletion. Managing energy use and promoting efficient energy conversion technologies are critical for mitigating environmental harm.</div>
+            
+            <div class="header">7. Renewable Energy Transition</div>
+            <div class="text">- **Renewable Resources:** Understanding energy changes is essential for harnessing renewable energy sources such as solar, wind, and hydroelectric power. Converting natural energy sources into usable forms requires efficient energy change processes to maximize sustainability and minimize reliance on fossil fuels.</div>
+            
+            <div class="header">Conclusion</div>
+            <div class="text">Energy change is a fundamental concept with broad implications across scientific, industrial, and environmental domains. By studying and optimizing energy changes, we can advance technological innovation, promote sustainability, and address global energy challenges for a more prosperous and sustainable future.</div>
+            
+            <a href="https://www.youtube.com/watch?v=dstRL5xB0Sk" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/dstRL5xB0Sk?si=oOVGihmsNY0TnIup" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=JRIm_a2LDPM" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/JRIm_a2LDPM?si=vPj1X9YGZrcTw36F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=8xeB_O_fyzM" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/8xeB_O_fyzM?si=5XRbpKdtYt1aZDDU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=iJgMuDzkdkI" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/iJgMuDzkdkI?si=32fTxFzQGUe_-Hne" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/revise/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/revise/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="https://davedude1011.github.io/revise/pages/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/revise/index.html', '_self')" style="cursor: pointer;">
+            <a href="/revise/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Chemistry</div>
+            <div class="title">Energy Changes in Electrolysis</div>
+            <br>
+            <div class="date">27/01/24</div>
+            <br><br><br>
+            <div class="header">Energy Changes in Electrolysis</div>
+
+            <div class="text">Electrolysis involves the decomposition of compounds using an electric current, resulting in chemical changes and energy transformations. Here's how energy changes occur during electrolysis:</div>
+            
+            <div class="header">1. Endothermic and Exothermic Reactions</div>
+            <div class="text">- **Endothermic Processes:** Electrolysis often involves endothermic reactions at the electrodes, where energy is absorbed to drive non-spontaneous reactions. For example, water electrolysis requires energy input to break water molecules into hydrogen and oxygen gases.</div>
+            <div class="text">- **Exothermic Processes:** Concurrently, exothermic reactions may occur in the electrolyte solution, such as the release of heat due to chemical reactions between ions. These exothermic processes contribute to the overall energy balance.</div>
+            
+            <div class="header">2. Electrical Energy Input</div>
+            <div class="text">- **External Power Source:** Electrolysis requires an external power source, such as a battery or direct current (DC) power supply, to provide the necessary electrical energy for driving the process.</div>
+            <div class="text">- **Work Done by the Electrical Source:** The electrical energy input is converted into chemical energy in the form of bond dissociation and ionization energies, facilitating the decomposition of the electrolyte.</div>
+            
+            <div class="header">3. Heat Generation</div>
+            <div class="text">- **Ohmic Heating:** The passage of electrical current through the electrolyte can lead to resistive heating, known as ohmic heating, due to the resistance of the electrolyte solution. This heating effect contributes to the overall energy balance but may not be the primary source of energy change in electrolysis.</div>
+            <div class="text">- **Temperature Control:** Controlling the temperature during electrolysis is essential to optimize reaction rates, prevent side reactions, and ensure the safety and efficiency of the process.</div>
+            
+            <div class="header">4. Thermodynamic Considerations</div>
+            <div class="text">- **Gibbs Free Energy:** The overall energy change in electrolysis is governed by thermodynamic principles, including changes in Gibbs free energy (ΔG). For non-spontaneous electrolysis processes, the electrical energy input must exceed the Gibbs free energy change to drive the reaction.</div>
+            <div class="text">- **Energy Efficiency:** Electrolysis efficiency refers to the ratio of the energy stored in the desired products to the total electrical energy input. Maximizing energy efficiency is crucial for sustainable and cost-effective electrolysis processes.</div>
+            
+            <div class="header">Conclusion</div>
+            <div class="text">Energy changes in electrolysis involve a complex interplay of electrical, chemical, and thermal processes. By understanding these energy transformations, researchers and engineers can design and optimize electrolysis systems for various applications, including hydrogen production, metal refining, and chemical synthesis.</div>
+            
+            <a href="https://www.youtube.com/watch?v=dstRL5xB0Sk" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/dstRL5xB0Sk?si=oOVGihmsNY0TnIup" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=JRIm_a2LDPM" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/JRIm_a2LDPM?si=vPj1X9YGZrcTw36F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=8xeB_O_fyzM" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/8xeB_O_fyzM?si=5XRbpKdtYt1aZDDU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=iJgMuDzkdkI" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/iJgMuDzkdkI?si=32fTxFzQGUe_-Hne" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/revise/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/revise/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

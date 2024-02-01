@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="https://davedude1011.github.io/revise/pages/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/revise/index.html', '_self')" style="cursor: pointer;">
+            <a href="/revise/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Chemistry</div>
+            <div class="title">Transportation</div>
+            <br>
+            <div class="date">27/01/24</div>
+            <br><br><br>
+            <div class="header">Uses of Fuel Cells: Transportation</div>
+
+            <div class="text">Fuel cells are emerging as promising power sources for various transportation applications, offering clean, efficient, and sustainable alternatives to conventional internal combustion engines.</div>
+            
+            <div class="header">1. Fuel Cell Vehicles (FCVs)</div>
+            <div class="text">- **Automobiles:** Fuel cell vehicles (FCVs) use hydrogen as fuel to generate electricity through electrochemical reactions in the fuel cell stack, powering electric motors that drive the vehicle. FCVs offer zero-emission transportation, with water vapor as the only byproduct, and provide long driving ranges and quick refueling times, making them suitable for passenger cars, buses, and commercial fleets.</div>
+            <div class="text">- **Trucks and Heavy-Duty Vehicles:** Fuel cell technology is being developed for heavy-duty applications, including trucks, buses, and freight vehicles, where high power, long range, and fast refueling are critical for operational efficiency and environmental sustainability.</div>
+            
+            <div class="header">2. Rail Transportation</div>
+            <div class="text">- **Trains and Locomotives:** Fuel cell systems are integrated into trains and locomotives to provide traction power, reducing reliance on diesel engines and eliminating local air pollution and greenhouse gas emissions. Fuel cell trains offer quiet operation, reduced vibration, and improved energy efficiency compared to conventional locomotives.</div>
+            
+            <div class="header">3. Marine Vessels</div>
+            <div class="text">- **Ferries and Maritime Transport:** Fuel cells are employed in marine vessels, such as passenger ferries, yachts, and maritime research vessels, to provide propulsion and auxiliary power. Fuel cell marine propulsion systems offer zero-emission operation, enhanced maneuverability, and reduced noise and vibration, contributing to cleaner and quieter waterways.</div>
+            
+            <div class="header">4. Aviation</div>
+            <div class="text">- **Aircraft:** Research and development efforts are underway to explore the feasibility of fuel cell technology for aviation applications, including small unmanned aerial vehicles (UAVs), drones, and short-range commuter aircraft. Fuel cells offer potential benefits such as reduced emissions, noise, and operating costs, although challenges related to energy density and system weight must be addressed for larger aircraft.</div>
+            
+            <div class="header">Benefits of Fuel Cells in Transportation</div>
+            <div class="text">- **Zero Emissions:** Fuel cell vehicles and transportation systems produce zero tailpipe emissions, helping to reduce air pollution and combat climate change by eliminating harmful pollutants and greenhouse gas emissions.</div>
+            <div class="text">- **Energy Efficiency:** Fuel cells convert chemical energy directly into electricity with high efficiency, leading to improved energy utilization and reduced overall energy consumption compared to traditional combustion engines.</div>
+            <div class="text">- **Long Range:** Fuel cell vehicles offer long driving ranges and quick refueling times, providing comparable performance to conventional vehicles and overcoming range anxiety associated with battery electric vehicles.</div>
+            <div class="text">- **Versatility:** Fuel cell technology is versatile and adaptable to various transportation modes and applications, offering scalable solutions for passenger transport, freight logistics, and maritime operations.</div>
+            
+            <div class="header">Conclusion</div>
+            <div class="text">Fuel cells hold significant promise as a sustainable and efficient power source for transportation, offering clean and reliable alternatives to conventional fossil fuel-powered vehicles and vessels. Continued research, development, and deployment of fuel cell technology in transportation systems are essential for achieving decarbonization goals and creating a more sustainable mobility future.</div>
+            
+            <a href="https://www.youtube.com/watch?v=dstRL5xB0Sk" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/dstRL5xB0Sk?si=oOVGihmsNY0TnIup" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=JRIm_a2LDPM" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/JRIm_a2LDPM?si=vPj1X9YGZrcTw36F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=8xeB_O_fyzM" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/8xeB_O_fyzM?si=5XRbpKdtYt1aZDDU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=iJgMuDzkdkI" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/iJgMuDzkdkI?si=32fTxFzQGUe_-Hne" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+        
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/revise/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/revise/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>
