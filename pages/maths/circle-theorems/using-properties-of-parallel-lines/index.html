@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="https://davedude1011.github.io/revise/pages/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/revise/index.html', '_self')" style="cursor: pointer;">
+            <a href="/revise/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Maths</div>
+            <div class="title">Parallel Line Properties</div>
+            <br>
+            <div class="date">05/02/24</div>
+            <br><br><br>
+            <div class="header">Using Properties of Parallel Lines for Circle Theorem Questions</div>
+
+            <div class="text">Properties of parallel lines intersecting circles provide valuable insights into the relationships between angles, chords, and tangents within a circle. Leveraging these properties allows for the systematic analysis of circle theorem questions and facilitates the derivation of accurate solutions. Here are key properties of parallel lines often utilized in circle theorem questions:</div>
+            
+            <div class="header">1. Alternate Interior Angles:</div>
+            <div class="text">When a line intersects two parallel lines, alternate interior angles are congruent. In the context of circles, this property applies to angles formed by a tangent and a chord intersecting the circle.</div>
+            
+            <div class="header">2. Corresponding Angles:</div>
+            <div class="text">Corresponding angles are congruent when a line intersects two parallel lines. In the context of circles, corresponding angles can be used to establish relationships between angles formed by parallel chords or secants intersecting the circle.</div>
+            
+            <div class="header">3. Co-Interior Angles:</div>
+            <div class="text">Co-interior angles are supplementary when a line intersects two parallel lines. In the context of circles, this property applies to angles formed by parallel chords or secants intersecting the circle and sharing the same arc.</div>
+            
+            <div class="header">4. Parallel Chords and Tangents:</div>
+            <div class="text">Parallel lines drawn to a circle from an external point create congruent chords and congruent tangent-chord angles. This property is useful for establishing relationships between angles and chords formed by parallel lines intersecting the circle.</div>
+            
+            <div class="header">5. Parallel Secants:</div>
+            <div class="text">Secants parallel to each other intersecting the circle from external points create congruent arcs. This property is instrumental in determining relationships between arcs and angles formed by parallel secants intersecting the circle.</div>
+            
+            <div class="header">By applying the properties of parallel lines,</div>
+            <div class="text">you can systematically analyze circle theorem questions, identify congruent or supplementary angles, and establish relationships between various elements of the circle, ultimately leading to accurate solutions.</div>
+            
+            <a href="https://www.youtube.com/watch?v=3qwP-zMfCDw&list=PLqxP5EuGxPneJqpy4Y69TjaGDEBuQQGjS" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/3qwP-zMfCDw?si=D1bkpUN4hmPeQeAE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=GppOSNTi5OA&t=325s" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/GppOSNTi5OA?si=0ZLNFGrTnRpW5qGI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=iqWdwH071KY" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/iqWdwH071KY?si=qw0olB4uShfJrADQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/revise/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/revise/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

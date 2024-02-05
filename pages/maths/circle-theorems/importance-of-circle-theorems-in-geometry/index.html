@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="https://davedude1011.github.io/revise/pages/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/revise/index.html', '_self')" style="cursor: pointer;">
+            <a href="/revise/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Maths</div>
+            <div class="title">Importance</div>
+            <br>
+            <div class="date">05/02/24</div>
+            <br><br><br>
+            <div class="header">Importance of Circle Theorems in Geometry</div>
+
+            <div class="text">Circle theorems play a crucial role in geometry, providing fundamental principles and tools for analyzing and solving problems related to circles and their components. The importance of circle theorems in geometry can be highlighted in several key aspects:</div>
+            
+            <div class="header">1. Fundamental Understanding:</div>
+            <div class="text">Circle theorems establish foundational concepts and relationships within circle geometry, allowing students to develop a deep understanding of the properties and characteristics of circles.</div>
+            
+            <div class="header">2. Problem-Solving:</div>
+            <div class="text">Circle theorems serve as powerful tools for solving a wide range of geometric problems involving circles, arcs, tangents, chords, and angles. They provide systematic approaches for analyzing and deducing information from given geometric configurations.</div>
+            
+            <div class="header">3. Geometric Constructions:</div>
+            <div class="text">Circle theorems guide geometric constructions involving circles, such as constructing tangents, inscribing polygons, and dividing circles into equal parts. They provide rules and guidelines for creating accurate geometric figures.</div>
+            
+            <div class="header">4. Real-World Applications:</div>
+            <div class="text">Many real-world scenarios involve circular shapes and geometric relationships that can be modeled and analyzed using circle theorems. Applications range from architecture and engineering to physics and astronomy.</div>
+            
+            <div class="header">5. Advanced Mathematics:</div>
+            <div class="text">Circle theorems serve as the foundation for more advanced concepts and topics in geometry and mathematics, including trigonometry, coordinate geometry, and calculus. They provide a framework for understanding higher-level geometric principles.</div>
+            
+            <div class="header">6. Critical Thinking:</div>
+            <div class="text">Studying circle theorems fosters critical thinking and problem-solving skills as students analyze geometric configurations, apply theorems to derive solutions, and explore the relationships between different geometric elements.</div>
+            
+            <div class="header">In summary,</div>
+            <div class="text">Circle theorems are indispensable tools in geometry, providing a systematic framework for understanding, analyzing, and solving problems related to circles. Their importance extends beyond the realm of mathematics, influencing various fields and applications where geometric concepts are applied.</div>
+            
+            <a href="https://www.youtube.com/watch?v=3qwP-zMfCDw&list=PLqxP5EuGxPneJqpy4Y69TjaGDEBuQQGjS" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/3qwP-zMfCDw?si=D1bkpUN4hmPeQeAE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=GppOSNTi5OA&t=325s" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/GppOSNTi5OA?si=0ZLNFGrTnRpW5qGI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=iqWdwH071KY" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/iqWdwH071KY?si=qw0olB4uShfJrADQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/revise/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/revise/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>

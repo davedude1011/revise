@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="https://davedude1011.github.io/revise/pages/style.css">
+        <script type="text/javascript" async
+          src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="top-nav" onclick="window.open('/revise/index.html', '_self')" style="cursor: pointer;">
+            <a href="/revise/index.html" class="top-nav-text">Back to menu</a>
+        </div>
+        <div class="main-block">
+            <div class="buttons">
+                <buttons class="back"></buttons>
+                <buttons class="forward"></buttons>
+            </div>
+            <div class="subject">Maths</div>
+            <div class="title">Angle between Tangents and Chord</div>
+            <br>
+            <div class="date">05/02/24</div>
+            <br><br><br>
+
+            <img src="https://thirdspacelearning.com/wp-content/uploads/2021/09/Alternate-segment-theorem-4-4.svg" style="filter: invert(1); width: 60%;" alt="">
+            <div class="header">Angle between Tangents and Chord</div>
+
+            <div class="text">In circle geometry, the angle between a tangent and a chord drawn from the point of contact of the tangent to the circle is equal to the angle subtended by the chord in the alternate segment.</div>
+            
+            <div class="header">Theorem Statement</div>
+            <div class="text">Given a circle with center \( O \) and a tangent \( PT \) drawn from point \( P \) to the circle, intersecting chord \( AB \) at point \( T \), the angle \( \angle APB \) formed between the tangent \( PT \) and the chord \( AB \) is equal to the angle subtended by chord \( AB \) in the alternate segment.</div>
+            
+            <div class="header">Proof</div>
+            <div class="text">To prove this theorem, consider the following steps:</div>
+            <div class="text">1. Draw a circle with center \( O \) and a tangent \( PT \) intersecting chord \( AB \) at point \( T \).</div>
+            <div class="text">2. Connect points \( A \) and \( P \) to form triangle \( APT \) and points \( B \) and \( P \) to form triangle \( BPT \).</div>
+            <div class="text">3. Since \( PT \) is a tangent to the circle, \( \angle OTP \) is a right angle (tangent-radius theorem).</div>
+            <div class="text">4. Let \( \angle APB = \alpha \) and \( \angle ATB = \beta \).</div>
+            <div class="text">5. By the angle sum property of triangles, \( \angle APT = \alpha \) and \( \angle BPT = \alpha \).</div>
+            <div class="text">6. Since \( \angle ATP \) and \( \angle BTP \) are angles in the same segment, they are equal to \( \beta \) (angles in the same segment are equal).</div>
+            <div class="text">7. Therefore, \( \angle APB = \alpha = \angle ATB \), which proves the theorem.</div>
+            
+            <div class="header">Corollary</div>
+            <div class="text">If two tangents are drawn to a circle from an external point, the angles between the tangents and the chords formed by joining the points of contact are equal in measure.</div>
+            
+            <div class="header">Applications</div>
+            <div class="text">This theorem is used in various geometric constructions and calculations involving circles, such as determining angles in cyclic quadrilaterals and solving problems related to tangents and chords.</div>            
+            
+            <a href="https://www.youtube.com/watch?v=3qwP-zMfCDw&list=PLqxP5EuGxPneJqpy4Y69TjaGDEBuQQGjS" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/3qwP-zMfCDw?si=D1bkpUN4hmPeQeAE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=GppOSNTi5OA&t=325s" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/GppOSNTi5OA?si=0ZLNFGrTnRpW5qGI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            <a href="https://www.youtube.com/watch?v=iqWdwH071KY" class="link">Core Videos</a><br>
+            <iframe src="https://www.youtube.com/embed/iqWdwH071KY?si=qw0olB4uShfJrADQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br><br>
+            
+            <div class="credits">Written by. gpt-3.5</div>
+        </div>
+    </body>
+    <script defer>
+        let ButtonBack = document.querySelector(".back")
+        let ButtonForward = document.querySelector(".forward")
+
+        let MiniMenu = JSON.parse(localStorage.getItem("MiniMenu"))
+        let CurrentPageNumber = Number(localStorage.getItem("PageNumber"))
+
+        console.log(MiniMenu)
+
+        if (CurrentPageNumber > 0) {
+            var BackPosition = CurrentPageNumber-1
+            var BackLink = MiniMenu[CurrentPageNumber-1].Link
+            var BackTitle = MiniMenu[CurrentPageNumber-1].Title
+        }
+        else {
+            var BackPosition = MiniMenu.length-1
+            var BackLink = MiniMenu[MiniMenu.length-1].Link
+            var BackTitle = MiniMenu[MiniMenu.length-1].Title
+        }
+        if (CurrentPageNumber < MiniMenu.length-1) {
+            var ForwardPosition = CurrentPageNumber+1
+            var ForwardLink = MiniMenu[CurrentPageNumber+1].Link
+            var ForwardTitle = MiniMenu[CurrentPageNumber+1].Title
+        }
+        else {
+            var ForwardPosition = 0
+            var ForwardLink = MiniMenu[0].Link
+            var ForwardTitle = MiniMenu[0].Title
+        }
+
+        ButtonBack.textContent = BackTitle
+        ButtonBack.onclick = function() { window.open(`/revise/${BackLink}`, "_self"); localStorage.setItem("PageNumber", BackPosition) }
+        
+        ButtonForward.textContent = ForwardTitle
+        ButtonForward.onclick = function() { window.open(`/revise/${ForwardLink}`, "_self"); localStorage.setItem("PageNumber", ForwardPosition) }
+    </script>
+</html>
