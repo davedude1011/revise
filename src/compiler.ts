@@ -247,6 +247,7 @@ function HandleRestOfCode() {
 
 // @ts-ignore
 let jsonFilePath = 'https://davedude1011.github.io/revise/NodeArray.json';
+console.log(jsonFilePath)
 fetch(jsonFilePath)
   .then(response => response.json())
   .then(data => {
