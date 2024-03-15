@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.00">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="inputRange.css">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/jsplumb@2.15.6/dist/js/jsplumb.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/jsplumb@2.15.6/css/jsplumbtoolkit-defaults.min.css" rel="stylesheet">
+
+        <script src="https://unpkg.com/interactjs/dist/interact.min.js" ></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/toastr@2.1.4/toastr.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/toastr@2.1.4/build/toastr.min.css" rel="stylesheet">
+        
+        <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              tex2jax: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] }
+            });
+        </script>
+
+        <script src="dist/function.js" defer></script>
+    </head>
+    <body>
+      <button class="back-button" onclick="window.open('index.html', '_self')">Back</button>
+      <div class="waypoint-nav-bar-shell waypoint-shell-out">
+        <div class="waypoint-nav-bar"></div>
+        <div class="waypoint-button"></div>
+      </div>
+      <div class="zoom-container">
+        <div class="zoom-value">100%</div>
+        <input type="range" class="zoom-input" step="0.01" min="0.01" max="2.5" value="1" />
+      </div>
+      <div class="node-container">
+        <svg class="line" width="1000000" height="1000000">
+          <line x1="333333" y1="0" x2="333333" y2="1000000" />
+          <line x1="666666" y1="0" x2="666666" y2="1000000" />
+          <line x1="0" y1="333333" x2="1000000" y2="333333" />
+          <line x1="0" y1="666666" x2="1000000" y2="666666" />
+          
+          <line x1="500000" y1="333333" x2="500000" y2="499000" />
+          <line x1="500000" y1="501000" x2="500000" y2="1000000" />
+          <line x1="501000" y1="500000" x2="666666" y2="500000" />
+      
+          <line x1="499000" y1="499000" x2="501000" y2="499000" />
+          <line x1="499000" y1="501000" x2="501000" y2="501000" />
+      
+          <line x1="499000" y1="499000" x2="499000" y2="501000" />
+          <line x1="501000" y1="499000" x2="501000" y2="501000" />
+      </svg>
+      
+        <div class="info-panel">Welcome to Node,<br><br> This is a node based revision tool designed to provide<br>a wide array of GCSE curriculum topics.<br><br>To get started click on one of the topic buttons to narrow<br>down your search</div>
+      </div>
+    </body>
+</html>
