@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="function.js" defer></script>
+        <style>
+            body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh
+}
+
+form {
+    width: 30vw
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+select, textarea, input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+select {
+    height: 40px;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+button {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 2vw;
+}
+
+button:hover {
+    background-color: #005f75;
+}
+        </style>
+    </head>
+    <body>
+        <form id="myForm" action="#" method="POST">
+            <label for="parent">Parent Node:</label><br>
+            <select id="parent" name="parent"></select><br><br>
+
+            <label for="type">Type:</label><br>
+            <select id="type" name="type">
+                <option value="Button">Button</option>
+                <option value="Document">Document</option>
+                <option value="Image">Image</option>
+                <option value="Video">Video</option>
+                <option value="Iframe">Iframe</option>
+            </select><br><br>
+            
+            <label for="content">Content:</label><br>
+            <textarea id="content" name="message"></textarea><br><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+        <button onclick="ExportData()">EXPORT</button>
+    </body>
+</html>
