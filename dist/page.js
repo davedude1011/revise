@@ -103,7 +103,7 @@ function HandleRestOfCode() {
     }
     MakeMovementButtonsAndVideos();
 }
-let jsonFilePath = '../NodeArray.json';
+let jsonFilePath = 'https://davedude1011.github.io/revise/NodeArray.json';
 fetch(jsonFilePath)
     .then(response => response.json())
     .then(data => {

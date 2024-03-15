@@ -1360,7 +1360,7 @@ function HandleRestOfCode() {
         (_a = document.querySelector(".node-container")) === null || _a === void 0 ? void 0 : _a.appendChild(NodeContainer);
     });
 }
-let jsonFilePath = '../NodeArray.json';
+let jsonFilePath = 'https://davedude1011.github.io/revise/NodeArray.json';
 fetch(jsonFilePath)
     .then(response => response.json())
     .then(data => {
