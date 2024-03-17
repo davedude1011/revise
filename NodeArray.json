@@ -49,7 +49,8 @@
             39,
             40,
             1183,
-            1188
+            1188,
+            1214
         ],
         "Pinned": false,
         "TypeData": {
@@ -24685,6 +24686,149 @@
         "TypeData": {
             "Type": "Iframe",
             "URL": "https://www.youtube.com/embed/5OoX_cRLaNM?si=8ebXC1x_HgMIwfWr"
+        },
+        "AnchorPoint": "Continuous"
+    },
+    {
+        "ElementNumber": 1214,
+        "NodeDimensions": [
+            150,
+            50
+        ],
+        "Position": [
+            100.1,
+            100.1
+        ],
+        "Visible": false,
+        "ChildrenNumbers": [
+            1215,
+            1216,
+            1217
+        ],
+        "Pinned": false,
+        "TypeData": {
+            "Type": "Button",
+            "Text": "Points & Gradients using Function Derivatives"
+        },
+        "AnchorPoint": "Continuous"
+    },
+    {
+        "ElementNumber": 1215,
+        "NodeDimensions": [
+            150,
+            50
+        ],
+        "Position": [
+            100.1,
+            100.1
+        ],
+        "Visible": false,
+        "ChildrenNumbers": [
+            1218
+        ],
+        "Pinned": false,
+        "TypeData": {
+            "Type": "Button",
+            "Text": "Finding Points from given Gradient"
+        },
+        "AnchorPoint": "Continuous"
+    },
+    {
+        "ElementNumber": 1216,
+        "NodeDimensions": [
+            150,
+            50
+        ],
+        "Position": [
+            100.1,
+            100.1
+        ],
+        "Visible": false,
+        "ChildrenNumbers": [
+            1219
+        ],
+        "Pinned": false,
+        "TypeData": {
+            "Type": "Button",
+            "Text": "Finding Gradients from given Point"
+        },
+        "AnchorPoint": "Continuous"
+    },
+    {
+        "ElementNumber": 1217,
+        "NodeDimensions": [
+            150,
+            50
+        ],
+        "Position": [
+            100.1,
+            100.1
+        ],
+        "Visible": false,
+        "ChildrenNumbers": [
+            1220
+        ],
+        "Pinned": false,
+        "TypeData": {
+            "Type": "Button",
+            "Text": "Finding turning points"
+        },
+        "AnchorPoint": "Continuous"
+    },
+    {
+        "ElementNumber": 1218,
+        "NodeDimensions": [
+            200,
+            300
+        ],
+        "Position": [
+            100.1,
+            100.1
+        ],
+        "Visible": false,
+        "ChildrenNumbers": [],
+        "Pinned": false,
+        "TypeData": {
+            "Type": "Document",
+            "InnerHTML": "<div class=\"header\">Finding Points on a Function Using Derivatives</div>\n\n<div class=\"text\">Derivatives play a crucial role in calculus, allowing us to determine the rate of change of a function and find points where the function has a specific gradient. Here's a simple method for finding points on a function given its derivative:</div>\n\n<div class=\"sub-header\">Method:</div>\n<div class=\"text\">1. Find the derivative of the function using differentiation techniques.</div>\n<div class=\"text\">2. Set the derivative equal to the desired gradient.</div>\n<div class=\"text\">3. Solve the resulting equation to find the x-values corresponding to the desired gradient.</div>\n<div class=\"text\">4. Substitute the obtained x-values into the original function to find the corresponding y-values.</div>\n\n<div class=\"sub-header\">Example:</div>\n<div class=\"text\">Consider the function f(x) = 2x^2 - 3x + 1.</div>\n<div class=\"text\">1. Find the derivative of f(x) using the power rule: f'(x) = 4x - 3.</div>\n<div class=\"text\">2. Suppose we want to find points on the function where the gradient is 5.</div>\n<div class=\"text\">3. Set the derivative equal to 5: 4x - 3 = 5.</div>\n<div class=\"text\">4. Solve for x: 4x = 8 → x = 2.</div>\n<div class=\"text\">5. Substitute x = 2 into the original function to find the corresponding y-value: f(2) = 2(2)^2 - 3(2) + 1 = 5.</div>\n<div class=\"text\">Therefore, the point (2, 5) lies on the function f(x) where the gradient is 5.</div>\n\n<div class=\"sub-header\">Another Example:</div>\n<div class=\"text\">Consider the function g(x) = 3x^3 + 2x - 4.</div>\n<div class=\"text\">1. Find the derivative of g(x) using the power rule: g'(x) = 9x^2 + 2.</div>\n<div class=\"text\">2. Suppose we want to find points on the function where the gradient is 10.</div>\n<div class=\"text\">3. Set the derivative equal to 10: 9x^2 + 2 = 10.</div>\n<div class=\"text\">4. Solve for x: 9x^2 = 8 → x^2 = 8/9 → x = ±√(8/9).</div>\n<div class=\"text\">5. Substitute the obtained x-values into the original function to find the corresponding y-values.</div>\n\n<div class=\"text\">Using derivatives, we can efficiently find points on a function with a specific gradient, aiding in various mathematical and scientific applications.</div>\n"
+        },
+        "AnchorPoint": "Continuous"
+    },
+    {
+        "ElementNumber": 1219,
+        "NodeDimensions": [
+            200,
+            300
+        ],
+        "Position": [
+            100.1,
+            100.1
+        ],
+        "Visible": false,
+        "ChildrenNumbers": [],
+        "Pinned": false,
+        "TypeData": {
+            "Type": "Document",
+            "InnerHTML": "<div class=\"header\">Finding Gradient from Given Point</div>\n\n<div class=\"text\">To find the gradient of a function at a given point, we can use the derivative of the function. The derivative represents the rate of change of the function at any given point. By evaluating the derivative at the specific point of interest, we can determine the gradient.</div>\n\n<div class=\"sub-header\">Method:</div>\n<div class=\"text\">1. Take the derivative of the function with respect to the variable.</div>\n<div class=\"text\">2. Substitute the given point's x-coordinate into the derivative to find the slope at that point.</div>\n\n<div class=\"sub-header\">Example:</div>\n<div class=\"text\">Consider the function \\( f(x) = x^2 + 3x + 1 \\).</div>\n<div class=\"text\">To find the gradient at the point (2, f(2)):</div>\n<div class=\"text\">1. Calculate the derivative of \\( f(x) \\) with respect to \\( x \\):</div>\n<div class=\"text\">\\( f'(x) = 2x + 3 \\).</div>\n<div class=\"text\">2. Substitute \\( x = 2 \\) into the derivative:</div>\n<div class=\"text\">\\( f'(2) = 2(2) + 3 = 7 \\).</div>\n<div class=\"text\">So, the gradient of the function at the point (2, f(2)) is 7.</div>\n\n<div class=\"sub-header\">Note:</div>\n<div class=\"text\">If the function is represented graphically, the gradient at a point corresponds to the slope of the tangent line to the curve at that point.</div>\n"
+        },
+        "AnchorPoint": "Continuous"
+    },
+    {
+        "ElementNumber": 1220,
+        "NodeDimensions": [
+            200,
+            300
+        ],
+        "Position": [
+            100.1,
+            100.1
+        ],
+        "Visible": false,
+        "ChildrenNumbers": [],
+        "Pinned": false,
+        "TypeData": {
+            "Type": "Document",
+            "InnerHTML": "<div class=\"header\">Finding Turning Point of a Function</div>\n\n<div class=\"text\">To find the turning point of a function, we look for points where the gradient changes sign. This indicates a change in the direction of the function, often corresponding to a maximum or minimum value.</div>\n\n<div class=\"sub-header\">Method:</div>\n<div class=\"text\">1. Take the derivative of the function with respect to the variable.</div>\n<div class=\"text\">2. Find the values of \\( x \\) where the derivative is equal to zero or undefined.</div>\n<div class=\"text\">3. Evaluate the second derivative at these critical points.</div>\n<div class=\"text\">4. If the second derivative is positive at a critical point, it corresponds to a local minimum. If it's negative, it corresponds to a local maximum. If the second derivative is zero or undefined, further analysis may be needed.</div>\n\n<div class=\"sub-header\">Example:</div>\n<div class=\"text\">Consider the function \\( f(x) = x^3 - 3x^2 + 2 \\).</div>\n<div class=\"text\">1. Calculate the first derivative of \\( f(x) \\):</div>\n<div class=\"text\">\\( f'(x) = 3x^2 - 6x \\).</div>\n<div class=\"text\">2. Find the critical points by setting \\( f'(x) = 0 \\):</div>\n<div class=\"text\">\\( 3x^2 - 6x = 0 \\).</div>\n<div class=\"text\">\\( x(3x - 6) = 0 \\).</div>\n<div class=\"text\">\\( x = 0 \\) or \\( x = 2 \\).</div>\n<div class=\"text\">3. Evaluate the second derivative \\( f''(x) = 6x - 6 \\):</div>\n<div class=\"text\">At \\( x = 0 \\): \\( f''(0) = -6 \\) (indicating a local maximum).</div>\n<div class=\"text\">At \\( x = 2 \\): \\( f''(2) = 6 \\) (indicating a local minimum).</div>\n<div class=\"text\">So, the turning points of the function are (0, f(0)) and (2, f(2)).</div>\n\n<div class=\"sub-header\">Note:</div>\n<div class=\"text\">Turning points can also occur at points where the derivative is undefined or where the function changes concavity.</div>\n"
         },
         "AnchorPoint": "Continuous"
     }
