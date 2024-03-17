@@ -24831,5 +24831,103 @@
             "InnerHTML": "<div class=\"header\">Finding Turning Point of a Function</div>\n\n<div class=\"text\">To find the turning point of a function, we look for points where the gradient changes sign. This indicates a change in the direction of the function, often corresponding to a maximum or minimum value.</div>\n\n<div class=\"sub-header\">Method:</div>\n<div class=\"text\">1. Take the derivative of the function with respect to the variable.</div>\n<div class=\"text\">2. Find the values of \\( x \\) where the derivative is equal to zero or undefined.</div>\n<div class=\"text\">3. Evaluate the second derivative at these critical points.</div>\n<div class=\"text\">4. If the second derivative is positive at a critical point, it corresponds to a local minimum. If it's negative, it corresponds to a local maximum. If the second derivative is zero or undefined, further analysis may be needed.</div>\n\n<div class=\"sub-header\">Example:</div>\n<div class=\"text\">Consider the function \\( f(x) = x^3 - 3x^2 + 2 \\).</div>\n<div class=\"text\">1. Calculate the first derivative of \\( f(x) \\):</div>\n<div class=\"text\">\\( f'(x) = 3x^2 - 6x \\).</div>\n<div class=\"text\">2. Find the critical points by setting \\( f'(x) = 0 \\):</div>\n<div class=\"text\">\\( 3x^2 - 6x = 0 \\).</div>\n<div class=\"text\">\\( x(3x - 6) = 0 \\).</div>\n<div class=\"text\">\\( x = 0 \\) or \\( x = 2 \\).</div>\n<div class=\"text\">3. Evaluate the second derivative \\( f''(x) = 6x - 6 \\):</div>\n<div class=\"text\">At \\( x = 0 \\): \\( f''(0) = -6 \\) (indicating a local maximum).</div>\n<div class=\"text\">At \\( x = 2 \\): \\( f''(2) = 6 \\) (indicating a local minimum).</div>\n<div class=\"text\">So, the turning points of the function are (0, f(0)) and (2, f(2)).</div>\n\n<div class=\"sub-header\">Note:</div>\n<div class=\"text\">Turning points can also occur at points where the derivative is undefined or where the function changes concavity.</div>\n"
         },
         "AnchorPoint": "Continuous"
+    },
+    {
+        "ElementNumber": 1221,
+        "NodeDimensions": [
+            150,
+            50
+        ],
+        "Position": [
+            100.1,
+            100.1
+        ],
+        "Visible": false,
+        "ChildrenNumbers": [
+            1221,
+            1222,
+            1223,
+            1224,
+            1225
+        ],
+        "Pinned": false,
+        "TypeData": {
+            "Type": "Button",
+            "Text": "Scale Factor"
+        },
+        "AnchorPoint": "Continuous"
+    },
+    {
+        "ElementNumber": 1222,
+        "NodeDimensions": [
+            200,
+            300
+        ],
+        "Position": [
+            100.1,
+            100.1
+        ],
+        "Visible": false,
+        "ChildrenNumbers": [],
+        "Pinned": false,
+        "TypeData": {
+            "Type": "Document",
+            "InnerHTML": "<div class=\"header\">Scale Factor</div>\n\n<div class=\"text\">The scale factor is a ratio that describes the proportional relationship between corresponding dimensions of two similar geometric figures. It represents the factor by which all lengths in one figure are multiplied (or divided) to obtain the corresponding lengths in the other figure. Scale factors are commonly used in geometry, architecture, map-making, and 3D modeling to represent changes in size or magnification.</div>\n\n<div class=\"sub-header\">Calculation:</div>\n<div class=\"text\">The scale factor (\\( k \\)) can be calculated using the ratio of corresponding lengths, areas, or volumes, depending on the dimensionality of the figures:</div>\n<div class=\"text\">- For 1D (linear) scaling: \\( k = \\frac{{\\text{Length of Larger Figure}}}{{\\text{Length of Smaller Figure}}} \\)</div>\n<div class=\"text\">- For 2D (area) scaling: \\( k = \\sqrt{\\frac{{\\text{Area of Larger Figure}}}{{\\text{Area of Smaller Figure}}}} \\)</div>\n<div class=\"text\">- For 3D (volume) scaling: \\( k = \\sqrt[3]{\\frac{{\\text{Volume of Larger Figure}}}{{\\text{Volume of Smaller Figure}}}} \\)</div>\n\n<div class=\"sub-header\">Transferring Between Dimensions:</div>\n<div class=\"text\">Scale factors can be used to transfer measurements between different dimensions. For example:</div>\n<div class=\"text\">- To convert 1D measurements to 2D, square the scale factor (since area is squared length).</div>\n<div class=\"text\">- To convert 1D measurements to 3D, cube the scale factor (since volume is cubed length).</div>\n<div class=\"text\">- To convert 2D measurements to 3D, multiply the scale factor by the scale factor squared (since volume is squared area).</div>\n\n<div class=\"sub-header\">Example:</div>\n<div class=\"text\">Suppose we have two similar triangles with side lengths of 6 cm and 9 cm. To find the scale factor:</div>\n<div class=\"text\">\\( k = \\frac{9}{6} = \\frac{3}{2} \\).</div>\n<div class=\"text\">So, the scale factor is \\( \\frac{3}{2} \\).</div>\n<div class=\"text\">If we want to transfer measurements to 2D, the new side lengths would be \\( 6 \\times \\frac{3}{2} = 9 \\) cm and \\( 9 \\times \\frac{3}{2} = 13.5 \\) cm.</div>\n\n<div class=\"text\">In summary, the scale factor is a useful tool for quantifying changes in size or magnification between similar geometric figures in different dimensions.</div>\n"
+        },
+        "AnchorPoint": "Continuous"
+    },
+    {
+        "ElementNumber": 1223,
+        "NodeDimensions": [
+            "MANUAL"
+        ],
+        "Position": [
+            100.1,
+            100.1
+        ],
+        "Visible": false,
+        "ChildrenNumbers": [],
+        "Pinned": false,
+        "TypeData": {
+            "Type": "Iframe",
+            "URL": "https://www.youtube.com/embed/8-4KQw8unfY?si=74XCn4AHj5S1n7a5"
+        },
+        "AnchorPoint": "Continuous"
+    },
+    {
+        "ElementNumber": 1224,
+        "NodeDimensions": [
+            "MANUAL"
+        ],
+        "Position": [
+            100.1,
+            100.1
+        ],
+        "Visible": false,
+        "ChildrenNumbers": [],
+        "Pinned": false,
+        "TypeData": {
+            "Type": "Iframe",
+            "URL": "https://www.youtube.com/embed/flXdxUc7wKg?si=ReTdyCnmBkG1Mxkj"
+        },
+        "AnchorPoint": "Continuous"
+    },
+    {
+        "ElementNumber": 1225,
+        "NodeDimensions": [
+            "MANUAL"
+        ],
+        "Position": [
+            100.1,
+            100.1
+        ],
+        "Visible": false,
+        "ChildrenNumbers": [],
+        "Pinned": false,
+        "TypeData": {
+            "Type": "Iframe",
+            "URL": "https://www.youtube.com/embed/Z3SXp8jDbdU?si=89skUebFzRce4Brh"
+        },
+        "AnchorPoint": "Continuous"
     }
 ]
