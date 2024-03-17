@@ -112,7 +112,8 @@
             88,
             89,
             98,
-            106
+            106,
+            1226
         ],
         "Pinned": false,
         "TypeData": {
@@ -24927,6 +24928,141 @@
         "TypeData": {
             "Type": "Iframe",
             "URL": "https://www.youtube.com/embed/Z3SXp8jDbdU?si=89skUebFzRce4Brh"
+        },
+        "AnchorPoint": "Continuous"
+    },
+    {
+        "ElementNumber": 1226,
+        "NodeDimensions": [
+            150,
+            50
+        ],
+        "Position": [
+            100.1,
+            100.1
+        ],
+        "Visible": false,
+        "ChildrenNumbers": [
+            1227,
+            1228,
+            1229,
+            1230,
+            1231,
+            1232
+        ],
+        "Pinned": false,
+        "TypeData": {
+            "Type": "Button",
+            "Text": "Reversable Reactions"
+        },
+        "AnchorPoint": "Continuous"
+    },
+    {
+        "ElementNumber": 1227,
+        "NodeDimensions": [
+            200,
+            300
+        ],
+        "Position": [
+            100.1,
+            100.1
+        ],
+        "Visible": false,
+        "ChildrenNumbers": [],
+        "Pinned": false,
+        "TypeData": {
+            "Type": "Document",
+            "InnerHTML": "<div class=\"header\">Reversible Reactions in Chemistry: Hydrated Copper Sulfate to Anhydrous Copper Sulfate</div>\n\n<div class=\"text\">Reversible reactions are chemical reactions that can proceed in both the forward and reverse directions. They reach a state of dynamic equilibrium where the rates of the forward and reverse reactions are equal, resulting in no net change in the concentrations of reactants and products over time. One classic example of a reversible reaction is the dehydration and rehydration of copper sulfate.</div>\n\n<div class=\"sub-header\">Reaction:</div>\n<div class=\"text\">The reversible reaction involving hydrated copper sulfate (\\( \\text{CuSO}_4 \\cdot x\\text{H}_2\\text{O} \\)) and anhydrous copper sulfate (\\( \\text{CuSO}_4 \\)) can be represented as:</div>\n<div class=\"text\">\\( \\text{CuSO}_4 \\cdot x\\text{H}_2\\text{O} \\) \\( \\rightleftharpoons \\) \\( \\text{CuSO}_4 \\) + \\( x\\text{H}_2\\text{O} \\)</div>\n\n<div class=\"sub-header\">Experimental Example:</div>\n<div class=\"text\">In the laboratory, hydrated copper sulfate (\\( \\text{CuSO}_4 \\cdot 5\\text{H}_2\\text{O} \\)), also known as blue vitriol, can be heated gently in a crucible to remove the water of hydration. As the heating continues, the blue crystals lose their water molecules and turn white, indicating the formation of anhydrous copper sulfate (\\( \\text{CuSO}_4 \\)).</div>\n\n<div class=\"text\">\\( \\text{CuSO}_4 \\cdot 5\\text{H}_2\\text{O} \\) \\( \\xrightarrow{\\text{Heating}} \\) \\( \\text{CuSO}_4 \\) + \\( 5\\text{H}_2\\text{O} \\) (g)</div>\n\n<div class=\"text\">This reaction is reversible. If anhydrous copper sulfate is exposed to moist air, it can absorb water vapor from the atmosphere and revert to hydrated copper sulfate over time. The blue color of the crystals reappears as they regain their water molecules, demonstrating the reversibility of the reaction.</div>\n\n<div class=\"sub-header\">Significance:</div>\n<div class=\"text\">Understanding reversible reactions is crucial in various fields of chemistry, including industrial processes, environmental chemistry, and biochemistry. It allows scientists to control reactions to achieve desired outcomes and optimize reaction conditions for efficiency and sustainability.</div>\n\n<div class=\"text\">In summary, the dehydration and rehydration of copper sulfate serve as a practical example of a reversible reaction, highlighting the dynamic nature of chemical equilibria and the importance of understanding reversible processes in chemistry.</div>\n"
+        },
+        "AnchorPoint": "Continuous"
+    },
+    {
+        "ElementNumber": 1228,
+        "NodeDimensions": [
+            "MANUAL"
+        ],
+        "Position": [
+            100.1,
+            100.1
+        ],
+        "Visible": false,
+        "ChildrenNumbers": [],
+        "Pinned": false,
+        "TypeData": {
+            "Type": "Iframe",
+            "URL": "https://www.youtube.com/embed/Ie2P68YfYWI?si=WqTEEmXReyPl6v_A"
+        },
+        "AnchorPoint": "Continuous"
+    },
+    {
+        "ElementNumber": 1229,
+        "NodeDimensions": [
+            "MANUAL"
+        ],
+        "Position": [
+            100.1,
+            100.1
+        ],
+        "Visible": false,
+        "ChildrenNumbers": [],
+        "Pinned": false,
+        "TypeData": {
+            "Type": "Iframe",
+            "URL": "https://www.youtube.com/embed/R57vTJAJBzA?si=rxw_U410r8M_Rs2n"
+        },
+        "AnchorPoint": "Continuous"
+    },
+    {
+        "ElementNumber": 1230,
+        "NodeDimensions": [
+            "MANUAL"
+        ],
+        "Position": [
+            100.1,
+            100.1
+        ],
+        "Visible": false,
+        "ChildrenNumbers": [],
+        "Pinned": false,
+        "TypeData": {
+            "Type": "Iframe",
+            "URL": "https://www.youtube.com/embed/ty9TczsW5ew?si=twxAm58j2dt0v8It"
+        },
+        "AnchorPoint": "Continuous"
+    },
+    {
+        "ElementNumber": 1231,
+        "NodeDimensions": [
+            "MANUAL"
+        ],
+        "Position": [
+            100.1,
+            100.1
+        ],
+        "Visible": false,
+        "ChildrenNumbers": [],
+        "Pinned": false,
+        "TypeData": {
+            "Type": "Iframe",
+            "URL": "https://www.youtube.com/embed/br8lKynV1Hc?si=ZPFpw2_owsRjRlUt"
+        },
+        "AnchorPoint": "Continuous"
+    },
+    {
+        "ElementNumber": 1232,
+        "NodeDimensions": [
+            "MANUAL"
+        ],
+        "Position": [
+            100.1,
+            100.1
+        ],
+        "Visible": false,
+        "ChildrenNumbers": [],
+        "Pinned": false,
+        "TypeData": {
+            "Type": "Iframe",
+            "URL": "https://www.youtube.com/embed/66qcNNJFy6E?si=JenheAWFeLCPRuPK"
         },
         "AnchorPoint": "Continuous"
     }
